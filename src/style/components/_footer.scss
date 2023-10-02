@@ -1,0 +1,104 @@
+.footer {
+  height: auto;
+  padding-bottom: 4.6rem;
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__year {
+    color: #fff;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.036rem;
+  }
+  &__developer {
+    width: 22.2rem;
+    height: 11.8rem;
+    margin-left: 15rem;
+    transform: rotate(-15deg);
+    border-radius: 50%;
+    border: 2px solid #d9ff5a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Circe';
+    font-size: 1.8rem;
+    font-weight: 350;
+    line-height: normal;
+    b {
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: 700;
+      line-height: normal;
+    }
+    img {
+      width: 4.2rem;
+      height: 4.2rem;
+    }
+  }
+  &__copyright {
+    font-family: 'Gilroy';
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: normal;
+    letter-spacing: 0.036rem;
+  }
+  &__logo{
+    display: none;
+  }
+  &__info{
+    display: none;
+  }
+}
+
+@media (max-width: 48em) {
+  .footer {
+    &_container {
+      display: none;
+    }
+    &__mob {
+      padding: 0 3rem;
+      padding-bottom: 11rem;
+      display: flex;
+      justify-content: space-between;
+    }
+    &__info {
+      width: 19.6rem;
+      display: flex;
+      flex-direction: column;
+      gap: 3.6rem;
+      color: #fff;
+      font-size: 2.6rem;
+      font-weight: 500;
+      line-height: 4rem; /* 153.846% */
+    }
+    &__logo {
+      width: 29.8rem;
+      height: 15.8rem;
+      transform: rotate(-15deg);
+      border-radius: 50%;
+      border: 1px solid #d9ff5a;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      font-family: 'Circe';
+      font-size: 2.6rem;
+      font-weight: 350;
+      line-height: normal;
+      b {
+        color: #fff;
+        font-size: 2.6rem;
+        font-weight: 700;
+        line-height: normal;
+      }
+      img {
+        width: 5rem;
+        height: 5rem;
+      }
+    }
+  }
+}
