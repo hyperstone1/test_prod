@@ -64,6 +64,7 @@ searchBtn.addEventListener('click', (e) => {
       searchContainer.addEventListener('input', (event) => {
         // здесь ваш код для поиска
         console.log(event.target.value);
+        document.body.style.overflow = 'hidden';
         if (!result.classList.contains('visible')) {
           result.classList.add('visible');
         }
@@ -82,6 +83,7 @@ searchBtn.addEventListener('click', (e) => {
       searchBarClose.addEventListener('click', () => {
         searchContainer.classList.add('opac');
         result.classList.add('opac');
+        document.body.style.overflow = 'auto';
         setTimeout(() => {
           searchContainer.classList.remove('opac');
           headerContainer.contains(searchContainer)

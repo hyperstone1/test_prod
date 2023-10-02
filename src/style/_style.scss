@@ -3138,7 +3138,9 @@
       text-transform: uppercase;
     }
     &__list {
-      height: 127rem;
+      // height: 127rem;
+      height: calc(100% - 20rem);
+      gap: 10rem;
       overflow-y: auto;
       flex-wrap: nowrap;
       flex-direction: column;
