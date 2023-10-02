@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const inputEmail = document.querySelectorAll('.form__input-email');
   const inputPass = document.querySelectorAll('.form__input-pass');
 
-  const linkContacts = document.querySelector('.link-contacts');
+  const linkContacts = document.querySelectorAll('.link-contacts');
   const contacts = document.querySelector('.contacts');
   const close = contacts.querySelector('.contacts__close');
   const productClose = document.querySelector('.product__close');
@@ -75,8 +75,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-  linkContacts.addEventListener('click', () => {
-    contacts.classList.add('visible');
+  linkContacts.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      contacts.classList.add('visible');
+    });
   });
 
   close &&
