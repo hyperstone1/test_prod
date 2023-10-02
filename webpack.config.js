@@ -11,7 +11,7 @@ const devtool = devMode ? 'source-map' : undefined;
 // Определите точки входа для ваших страниц
 const entryPoints = {
   index: path.resolve(__dirname, 'src', 'index.js'),
-  // order: path.resolve(__dirname, 'src', 'index.js'),
+  order: path.resolve(__dirname, 'src', 'index.js'),
   // mirrors: path.resolve(__dirname, 'src', 'index.js'),
   // lamps: path.resolve(__dirname, 'src', 'index.js'),
   // chairs: path.resolve(__dirname, 'src', 'index.js'),
