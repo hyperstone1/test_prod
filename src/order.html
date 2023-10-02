@@ -3,7 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Главная</title>
+    <title>Заказ</title>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ffac2b37-9f44-43d8-8e3e-92f15073c2d1"
+      type="text/javascript"
+    ></script>
   </head>
   <body>
     <header class="header">
@@ -35,9 +39,21 @@
           </button>
           <button data-modal="login" class="header__controls-user control">
             <img src="./assets/images/common/user.svg" alt="Личный кабинет" />
+            <div class="cabinet">
+              <ul class="cabinet__list">
+                <li data-modal="login" class="cabinet__list-item">Войти</li>
+                <li data-modal="register" class="cabinet__list-item">Зарегистрироваться</li>
+              </ul>
+              <ul class="cabinet__list authorized">
+                <li class="cabinet__list-item">Выйти</li>
+              </ul>
+            </div>
           </button>
           <button data-modal="cart" class="header__controls-cart control">
             <img src="./assets/images/common/cart.svg" alt="Корзина" />
+          </button>
+          <button data-modal="cart" class="header__controls-contacts--mob link-contacts">
+            <img src="./assets/images/common/phone.svg" alt="контакты" />
           </button>
 
           <div class="modal">
@@ -280,10 +296,12 @@
                 </div>
                 <div class="card__total">
                   <div class="card__total-text">Итого</div>
-                  <div class="card__total-sum">
-                    <div class="card__total-sum--number">450 000</div>
-                    <div class="card__total-sum--currency">₽</div>
-                  </div>
+                  <a href="./order.html" class="card__total-sum">
+                    <div class="card__total-sum--text">
+                      <div class="card__total-sum--number">450 000</div>
+                      <div class="card__total-sum--currency">₽</div>
+                    </div>
+                  </a>
                 </div>
               </div>
 
@@ -552,6 +570,410 @@
       </div>
     </section>
 
+    <section class="result">
+      <div class="result_container">
+        <div class="result__title">результаты поиска</div>
+        <div class="result__list">
+          <div class="result__card">
+            <div class="result__card-color">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+              >
+                <circle
+                  cx="10.5"
+                  cy="10.5"
+                  r="8.5"
+                  fill="#29D0D9"
+                  stroke="white"
+                  stroke-width="3"
+                />
+              </svg>
+            </div>
+            <div class="result__card-img">
+              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+            </div>
+            <div class="result__card-content">
+              <div class="result__card-info">
+                <div class="result__card-info--name">
+                  <div class="result__card-color--mob">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="8"
+                        fill="#FFC4A5"
+                        stroke="white"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </div>
+                  Kristin
+                </div>
+                <div class="result__card-info--category">Зеркало напольное</div>
+              </div>
+              <div class="result__card-bottom">
+                <div class="result__card-price">
+                  <div class="result__card-price--count">150 000</div>
+                  <div class="result__card-price--currency">₽</div>
+                  <div class="result__card-price--old">
+                    <div class="result__card-price--count">150 000</div>
+                    <div class="result__card-price--currency">₽</div>
+                  </div>
+                </div>
+                <button class="result__card-buy">
+                  <div class="result__card-buy--icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                  </div>
+                  <span class="result__card-buy--text">Купить</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="result__card">
+            <div class="result__card-color">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+              >
+                <circle
+                  cx="10.5"
+                  cy="10.5"
+                  r="8.5"
+                  fill="#29D0D9"
+                  stroke="white"
+                  stroke-width="3"
+                />
+              </svg>
+            </div>
+            <div class="result__card-img">
+              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+            </div>
+            <div class="result__card-content">
+              <div class="result__card-info">
+                <div class="result__card-info--name">
+                  <div class="result__card-color--mob">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="8"
+                        fill="#FA8EEF"
+                        stroke="white"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </div>
+                  Kristin
+                </div>
+                <div class="result__card-info--category">Зеркало напольное</div>
+              </div>
+              <div class="result__card-bottom">
+                <div class="result__card-price">
+                  <div class="result__card-price--count">150 000</div>
+                  <div class="result__card-price--currency">₽</div>
+                  <div class="result__card-price--old">
+                    <div class="result__card-price--count">150 000</div>
+                    <div class="result__card-price--currency">₽</div>
+                  </div>
+                </div>
+                <button class="result__card-buy">
+                  <div class="result__card-buy--icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                  </div>
+                  <span class="result__card-buy--text">Купить</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="result__card">
+            <div class="result__card-color">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+              >
+                <circle
+                  cx="10.5"
+                  cy="10.5"
+                  r="8.5"
+                  fill="#29D0D9"
+                  stroke="white"
+                  stroke-width="3"
+                />
+              </svg>
+            </div>
+            <div class="result__card-img">
+              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+            </div>
+            <div class="result__card-content">
+              <div class="result__card-info">
+                <div class="result__card-info--name">
+                  <div class="result__card-color--mob">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="8"
+                        fill="#29D0D9"
+                        stroke="white"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </div>
+                  Kristin
+                </div>
+                <div class="result__card-info--category">Зеркало напольное</div>
+              </div>
+              <div class="result__card-bottom">
+                <div class="result__card-price">
+                  <div class="result__card-price--count">150 000</div>
+                  <div class="result__card-price--currency">₽</div>
+                  <div class="result__card-price--old">
+                    <div class="result__card-price--count">150 000</div>
+                    <div class="result__card-price--currency">₽</div>
+                  </div>
+                </div>
+                <button class="result__card-buy">
+                  <div class="result__card-buy--icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                  </div>
+                  <span class="result__card-buy--text">Купить</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="result__card">
+            <div class="result__card-color">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+              >
+                <circle
+                  cx="10.5"
+                  cy="10.5"
+                  r="8.5"
+                  fill="#29D0D9"
+                  stroke="white"
+                  stroke-width="3"
+                />
+              </svg>
+            </div>
+            <div class="result__card-img">
+              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+            </div>
+            <div class="result__card-content">
+              <div class="result__card-info">
+                <div class="result__card-info--name">
+                  <div class="result__card-color--mob">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="8"
+                        fill="#89D5FF"
+                        stroke="white"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </div>
+                  Kristin
+                </div>
+                <div class="result__card-info--category">Зеркало напольное</div>
+              </div>
+              <div class="result__card-bottom">
+                <div class="result__card-price">
+                  <div class="result__card-price--count">150 000</div>
+                  <div class="result__card-price--currency">₽</div>
+                  <div class="result__card-price--old">
+                    <div class="result__card-price--count">150 000</div>
+                    <div class="result__card-price--currency">₽</div>
+                  </div>
+                </div>
+                <button class="result__card-buy">
+                  <div class="result__card-buy--icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                  </div>
+                  <span class="result__card-buy--text">Купить</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="result__card">
+            <div class="result__card-color">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+              >
+                <circle
+                  cx="10.5"
+                  cy="10.5"
+                  r="8.5"
+                  fill="#29D0D9"
+                  stroke="white"
+                  stroke-width="3"
+                />
+              </svg>
+            </div>
+            <div class="result__card-img">
+              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+            </div>
+            <div class="result__card-content">
+              <div class="result__card-info">
+                <div class="result__card-info--name">
+                  <div class="result__card-color--mob">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="8"
+                        fill="#89D5FF"
+                        stroke="white"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </div>
+                  Kristin
+                </div>
+                <div class="result__card-info--category">Зеркало напольное</div>
+              </div>
+              <div class="result__card-bottom">
+                <div class="result__card-price">
+                  <div class="result__card-price--count">150 000</div>
+                  <div class="result__card-price--currency">₽</div>
+                  <div class="result__card-price--old">
+                    <div class="result__card-price--count">150 000</div>
+                    <div class="result__card-price--currency">₽</div>
+                  </div>
+                </div>
+                <button class="result__card-buy">
+                  <div class="result__card-buy--icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                  </div>
+                  <span class="result__card-buy--text">Купить</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="result__card">
+            <div class="result__card-color">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="21"
+                height="21"
+                viewBox="0 0 21 21"
+                fill="none"
+              >
+                <circle
+                  cx="10.5"
+                  cy="10.5"
+                  r="8.5"
+                  fill="#29D0D9"
+                  stroke="white"
+                  stroke-width="3"
+                />
+              </svg>
+            </div>
+            <div class="result__card-img">
+              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+            </div>
+            <div class="result__card-content">
+              <div class="result__card-info">
+                <div class="result__card-info--name">
+                  <div class="result__card-color--mob">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                    >
+                      <circle
+                        cx="10"
+                        cy="10"
+                        r="8"
+                        fill="#FFC4A5"
+                        stroke="white"
+                        stroke-width="3"
+                      />
+                    </svg>
+                  </div>
+                  Kristin
+                </div>
+                <div class="result__card-info--category">Зеркало напольное</div>
+              </div>
+              <div class="result__card-bottom">
+                <div class="result__card-price">
+                  <div class="result__card-price--count">150 000</div>
+                  <div class="result__card-price--currency">₽</div>
+                  <div class="result__card-price--old">
+                    <div class="result__card-price--count">150 000</div>
+                    <div class="result__card-price--currency">₽</div>
+                  </div>
+                </div>
+                <button class="result__card-buy">
+                  <div class="result__card-buy--icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                  </div>
+                  <span class="result__card-buy--text">Купить</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="result__null">
+          <div class="result__null-title">NO RESULTS</div>
+          <div class="result__null-img">
+            <img src="./assets/images/common/no_result.png" alt="no result" />
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="contacts">
       <div class="contacts_container container">
         <div class="contacts__content">
@@ -649,6 +1071,46 @@
         </div>
       </div>
     </section>
+    <script>
+      const width = window.innerWidth;
+      ymaps.ready(function () {
+        const contacts = document.querySelector('.contacts');
+        const map = document.getElementById('map');
+        if (map) {
+          var myMap = new ymaps.Map(
+              'map',
+              {
+                center: [55.751574, 37.573856],
+                zoom: 16,
+                controls: [],
+                hideFooter: true,
+                // behaviors: ['default'],
+              },
+              {
+                searchControlProvider: 'yandex#search',
+              },
+            ),
+            myPlacemark1 = new ymaps.Placemark(
+              [55.751574, 37.573856],
+              {},
+              {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: './assets/images/placemark.svg',
+                // Размеры метки.
+                iconImageSize: [70, 96],
+              },
+            );
+          //   myMap.container.fitToViewport();
+          myMap.setType('yandex#map');
+
+          myMap.geoObjects.add(myPlacemark1);
+          contacts.style.opacity = '1';
+        }
+      });
+    </script>
 
     <footer class="footer">
       <div class="footer_container container">

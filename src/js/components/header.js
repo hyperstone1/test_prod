@@ -67,6 +67,9 @@ searchBtn.addEventListener('click', (e) => {
         document.body.style.overflow = 'hidden';
         if (!result.classList.contains('visible')) {
           result.classList.add('visible');
+          if (window.innerWidth > 769) {
+            header.classList.add('back');
+          }
         }
         if (event.target.value.trim() !== '') {
           result.querySelector('.result__list').classList.add('visible');
@@ -82,6 +85,9 @@ searchBtn.addEventListener('click', (e) => {
       const searchBarClose = document.querySelector('.search_bar__close');
       searchBarClose.addEventListener('click', () => {
         searchContainer.classList.add('opac');
+        if (window.innerWidth > 769) {
+          header.classList.remove('back');
+        }
         result.classList.add('opac');
         document.body.style.overflow = 'auto';
         setTimeout(() => {

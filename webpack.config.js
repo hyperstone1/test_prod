@@ -30,9 +30,9 @@ const htmlPlugins = Object.keys(entryPoints).map((entryName) => {
 });
 
 module.exports = {
-  // mode,
-  // target,
-  // devtool,
+  mode,
+  target,
+  devtool,
   devServer: {
     port: 3000,
     open: true,
@@ -42,6 +42,7 @@ module.exports = {
   entry: {
     main: path.resolve(__dirname, 'src', 'index.js'),
   },
+
   output: {
     //куда выводит билд
     path: path.resolve(__dirname, 'dist'),
@@ -52,16 +53,6 @@ module.exports = {
     filename: '[name].js',
     // assetModuleFilename: 'assets/images',
   },
-  plugins: [
-    //сборщик html
-    // new HtmlWebpackPlugin({
-    //   template: path.resolve(__dirname, 'src', 'index.html'),
-    // }),
-    ...htmlPlugins,
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-    }),
-  ],
   optimization: {
     minimizer: [
       '...',
@@ -88,7 +79,20 @@ module.exports = {
         ],
       }),
     ],
+    minimize: false, // Отключение минификации
+    // mangle: false, // Отключение замены имен переменных
   },
+  plugins: [
+    //сборщик html
+    // new HtmlWebpackPlugin({
+    //   template: path.resolve(__dirname, 'src', 'index.html'),
+    // }),
+    ...htmlPlugins,
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+    }),
+  ],
+
   module: {
     rules: [
       //html

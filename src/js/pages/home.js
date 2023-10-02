@@ -28,6 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const listClose = document.querySelector('.list__close');
   const list = document.querySelector('.list');
 
+  // const cartBtn = document.querySelector('. cart-btn');
+
+  // cartBtn.addEventListener('click', () => {
+
+  // })
+
   categoriesCard.forEach((card) => {
     card.addEventListener('click', () => {
       const category = card.dataset.category;
@@ -51,15 +57,16 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
-  listClose.addEventListener('click', () => {
-    list.classList.remove('visible');
-    categoryList.forEach((list) => {
+  listClose &&
+    listClose.addEventListener('click', () => {
       list.classList.remove('visible');
+      categoryList.forEach((list) => {
+        list.classList.remove('visible');
+      });
+      categoriesCard.forEach((item) => {
+        item.classList.remove('active');
+      });
     });
-    categoriesCard.forEach((item) => {
-      item.classList.remove('active');
-    });
-  });
 
   bannerBuyBtn.length > 0 &&
     bannerBuyBtn.forEach((btn) => {
