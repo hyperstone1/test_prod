@@ -1267,7 +1267,9 @@
     }
   }
 }
-
+.hidden {
+  display: none;
+}
 .contacts {
   display: none;
   position: fixed;
