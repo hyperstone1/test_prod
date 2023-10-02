@@ -30,9 +30,9 @@ const htmlPlugins = Object.keys(entryPoints).map((entryName) => {
 });
 
 module.exports = {
-  mode,
-  target,
-  devtool,
+  // mode,
+  // target,
+  // devtool,
   devServer: {
     port: 3000,
     open: true,

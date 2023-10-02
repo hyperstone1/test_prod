@@ -1283,6 +1283,9 @@
   }
   &_container {
     padding: 6rem;
+    overflow-y: auto;
+    height: 97.4rem;
+    overflow-x: clip;
   }
   &-title {
     margin-bottom: 4rem;

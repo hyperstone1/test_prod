@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Главная</title>
+    <script
+      src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=ffac2b37-9f44-43d8-8e3e-92f15073c2d1"
+      type="text/javascript"
+    ></script>
   </head>
   <body>
     <header class="header">
@@ -3598,6 +3602,46 @@
         </clipPath>
       </defs>
     </svg>
+    <script>
+      const width = window.innerWidth;
+      ymaps.ready(function () {
+        const contacts = document.querySelector('.contacts');
+        const map = document.getElementById('map');
+        if (map) {
+          var myMap = new ymaps.Map(
+              'map',
+              {
+                center: [55.751574, 37.573856],
+                zoom: 16,
+                controls: [],
+                hideFooter: true,
+                // behaviors: ['default'],
+              },
+              {
+                searchControlProvider: 'yandex#search',
+              },
+            ),
+            myPlacemark1 = new ymaps.Placemark(
+              [55.751574, 37.573856],
+              {},
+              {
+                // Опции.
+                // Необходимо указать данный тип макета.
+                iconLayout: 'default#image',
+                // Своё изображение иконки метки.
+                iconImageHref: './assets/images/placemark.svg',
+                // Размеры метки.
+                iconImageSize: width < 768 ? [14, 14] : [50, 50],
+              },
+            );
+          //   myMap.container.fitToViewport();
+          myMap.setType('yandex#map');
+
+          myMap.geoObjects.add(myPlacemark1);
+          contacts.style.opacity = '1';
+        }
+      });
+    </script>
 
     <footer class="footer">
       <div class="footer_container container">

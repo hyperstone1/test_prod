@@ -39,13 +39,12 @@ document.addEventListener('DOMContentLoaded', () => {
           categoriesCard.forEach((item) => {
             item.classList.remove('active');
           });
-          card.classList.add('active');
+          card.classList.toggle('active');
           const container = list.closest('.list');
           console.log('container: ', container);
           container.classList.add('visible');
           list.classList.add('visible');
           console.log(list);
-
           return;
         }
       });
