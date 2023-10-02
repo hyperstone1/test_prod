@@ -141,8 +141,9 @@
             position: relative;
             opacity: 0;
             z-index: 2;
-            font-size: 2.8rem;
-            transition: font-size 0.7 ease-in-out;
+            // font-size: 2.8rem;
+            transform: scale(1.5);
+            transition: transform 0.7 ease-in-out;
             animation: textOpacTitle 1s ease-in-out;
             &--mob {
               display: block;
@@ -268,7 +269,7 @@
           opacity: 0;
           &--title,
           &--info {
-            transform: translate(10rem, 15rem) translateZ(0);
+            transform: translate(10rem, 15rem) translateZ(0) scale(1);
           }
         }
         &-name {
@@ -330,7 +331,8 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -32.6rem) translateZ(0);
-      transition: all 0.7s ease-in-out;
+      transition: width 0.7s ease-in-out, height 0.7s ease-in-out, transform 0.7s ease-in-out;
+      will-change: width, height;
     }
     &-img {
       position: relative;
@@ -377,8 +379,8 @@
         line-height: 1;
         text-align: center;
         text-transform: uppercase;
-        transform: translate(0rem, 0rem);
-        transition: transform 0.7s ease-in-out, font-size 0.7s ease-in-out;
+        transform: translate(0rem, 0rem) scale(1);
+        transition: transform 0.7s ease-in-out;
         animation: textApearTitleNormal 0.7s ease-in-out;
         &--mob {
           display: none;
@@ -2381,7 +2383,8 @@
         }
         .banner__card-text--title,
         .banner__card-text--title--mob {
-          font-size: 4.6rem;
+          font-size: 4.5rem;
+          margin-bottom: 3.4rem;
         }
         .banner__card-text--info {
         }
