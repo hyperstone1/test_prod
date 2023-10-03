@@ -217,45 +217,15 @@
       }
       .banner__buy {
         position: relative;
+        bottom: 0;
+        right: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         width: 35.57rem;
         height: 13.46rem;
+        transform: translate(0, 0);
         animation: btnshow 0.7s ease-in-out;
-
-        &-btn {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          gap: 1.1rem;
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-          border: 2px solid #d9ff5a;
-          font-size: 2rem;
-          font-weight: 500;
-          line-height: 1.2; /* 24px */
-          z-index: 2;
-        }
-        &-icon {
-          width: 2.4rem;
-          height: 2.4rem;
-        }
-        &::after {
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 100%;
-          transform: rotate(-13.492deg) translateZ(0);
-          border-radius: 50%;
-          border: 2px solid #d9ff5a;
-          background: rgba(255, 255, 255, 0.19);
-          backdrop-filter: blur(15.13515853881836px);
-          z-index: 1;
-        }
       }
     }
     &.blur {
@@ -480,7 +450,48 @@
     }
   }
   &__buy {
-    display: none;
+    position: absolute;
+    right: 3.6rem;
+    bottom: 10.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35.57rem;
+    height: 13.46rem;
+    transform: translate(-40rem, 40rem);
+    transition: transform 0.7s ease-in-out;
+    &-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.1rem;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      border: 2px solid #d9ff5a;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.2; /* 24px */
+      z-index: 2;
+    }
+    &-icon {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotate(-13.492deg) translateZ(0);
+      border-radius: 50%;
+      border: 2px solid #d9ff5a;
+      background: rgba(255, 255, 255, 0.19);
+      backdrop-filter: blur(15.13515853881836px);
+      z-index: 1;
+    }
   }
 }
 .title {
@@ -2393,8 +2404,10 @@
         }
         .banner__buy {
           position: absolute;
-          bottom: 44rem;
+          bottom: 41rem;
           right: 0;
+          width: 40.3rem;
+          height: 15.6rem;
           &-btn {
             border-width: 1px;
           }
