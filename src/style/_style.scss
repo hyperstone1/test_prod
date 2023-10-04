@@ -2430,9 +2430,10 @@
     }
   }
   .categories {
+    overflow-x: hidden;
     &__list {
-      overflow-x: hidden;
       padding-bottom: 7rem;
+      padding-right: 5rem;
       &-wrapper {
         justify-content: start;
       }

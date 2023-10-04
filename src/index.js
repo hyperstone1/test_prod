@@ -29,12 +29,22 @@ const swiper1 = new Swiper('.blog__list', {
   modules: [Navigation, Pagination],
   on: {
     init: function (swiper) {
-      console.log(swiper.slides);
-      blogCountCurrent.textContent = swiper.activeIndex + 3;
-      blogCountLast.textContent = swiper.slides.length;
+      if (window.innerWidth < 769) {
+        console.log(swiper.slides);
+        blogCountCurrent.textContent = 1;
+        blogCountLast.textContent = swiper.slides.length;
+      } else {
+        console.log(swiper.slides);
+        blogCountCurrent.textContent = swiper.activeIndex + 3;
+        blogCountLast.textContent = swiper.slides.length;
+      }
     },
     slideChange: function (swiper) {
-      blogCountCurrent.textContent = swiper.activeIndex + 3;
+      if (window.innerWidth < 769) {
+        blogCountCurrent.textContent = swiper.activeIndex + 1;
+      } else {
+        blogCountCurrent.textContent = swiper.activeIndex + 3;
+      }
     },
   },
   breakpoints: {
