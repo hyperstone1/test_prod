@@ -1,0 +1,1483 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header_container container">
+        <a href="./index.html" class="header__logo">
+          <img src="./assets/images/common/Elfen lied.svg" alt="Elfen lied" />
+        </a>
+        <div class="header__wrapper">
+          <button class="header__catalog">
+            <div class="header__catalog-icon">
+              <img src="./assets/images/common/menu_icon.svg" alt="Каталог" />
+            </div>
+            <div class="header__catalog-menu">Каталог</div>
+          </button>
+          <ul class="header__menu">
+            <li class="header__menu-link"><a href="#">Новости</a></li>
+            <li class="header__menu-link link-contacts"><a href="#">Контакты</a></li>
+          </ul>
+          <button class="header__search">
+            <div class="header__search-icon">
+              <img src="./assets/images/common/search_icon.svg" alt="Поиск" />
+            </div>
+            <div class="header__search-text">Поиск...</div>
+          </button>
+        </div>
+        <div class="header__controls">
+          <button data-modal="favorites" class="header__controls-favorites control">
+            <img src="./assets/images/common/favorites.svg" alt="Закладки" />
+          </button>
+          <button data-modal="login" class="header__controls-user control">
+            <img src="./assets/images/common/user.svg" alt="Личный кабинет" />
+          </button>
+          <button data-modal="cart" class="header__controls-cart control">
+            <img src="./assets/images/common/cart.svg" alt="Корзина" />
+          </button>
+
+          <div class="modal">
+            <div class="modal_container">
+              <button class="modal__close">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="36"
+                  height="36"
+                  viewBox="0 0 36 36"
+                  fill="none"
+                >
+                  <path
+                    d="M27 9L9 27"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M9 9L27 27"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </button>
+
+              <div class="favorites">
+                <div class="modal__title">товары в избранном</div>
+                <div class="card__list">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="./assets/images/common/cart_1.png" alt="coppelia" />
+                    </div>
+                    <div class="card__content">
+                      <div class="card__content-container">
+                        <div class="card__content-wrapper">
+                          <div class="card__item-title">
+                            <div data-color="#29D0D9" class="card__item-title--color"></div>
+                            <span class="card__item-title--name">coppelia</span>
+                          </div>
+                          <span class="card__item-title--category">Лампа настольная</span>
+                        </div>
+                        <button class="card__item-favorite--btn">
+                          <img src="./assets/images/common/favorites_btn.svg" alt="" />
+                        </button>
+                      </div>
+                      <div class="card__price">
+                        <!-- <div class="card__price-text">итого:</div> -->
+                        <div class="card__price-total">150 000 <b>₽</b></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="./assets/images/common/cart_2.png" alt="Facchetta" />
+                    </div>
+                    <div class="card__content">
+                      <div class="card__content-container">
+                        <div class="card__content-wrapper">
+                          <div class="card__item-title">
+                            <div data-color="#29D0D9" class="card__item-title--color"></div>
+                            <span class="card__item-title--name">Facchetta</span>
+                          </div>
+                          <span class="card__item-title--category">Лампа настольная</span>
+                        </div>
+                        <button class="card__item-favorite--btn">
+                          <img src="./assets/images/common/favorites_btn.svg" alt="" />
+                        </button>
+                      </div>
+                      <div class="card__price">
+                        <!-- <div class="card__price-text">итого:</div> -->
+                        <div class="card__price-total">150 000 <b>₽</b></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="./assets/images/common/cart_3.png" alt="coppelia" />
+                    </div>
+                    <div class="card__content">
+                      <div class="card__content-container">
+                        <div class="card__content-wrapper">
+                          <div class="card__item-title">
+                            <div data-color="#29D0D9" class="card__item-title--color"></div>
+                            <span class="card__item-title--name">coppelia</span>
+                          </div>
+                          <span class="card__item-title--category">Лампа настольная</span>
+                        </div>
+                        <button class="card__item-favorite--btn">
+                          <img src="./assets/images/common/favorites_btn.svg" alt="" />
+                        </button>
+                      </div>
+                      <div class="card__price">
+                        <!-- <div class="card__price-text">итого:</div> -->
+                        <div class="card__price-total">150 000 <b>₽</b></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="./assets/images/common/cart_3.png" alt="coppelia" />
+                    </div>
+                    <div class="card__content">
+                      <div class="card__content-container">
+                        <div class="card__content-wrapper">
+                          <div class="card__item-title">
+                            <div data-color="#29D0D9" class="card__item-title--color"></div>
+                            <span class="card__item-title--name">coppelia</span>
+                          </div>
+                          <span class="card__item-title--category">Лампа настольная</span>
+                        </div>
+                        <button class="card__item-favorite--btn">
+                          <img src="./assets/images/common/favorites_btn.svg" alt="" />
+                        </button>
+                      </div>
+                      <div class="card__price">
+                        <!-- <div class="card__price-text">итого:</div> -->
+                        <div class="card__price-total">150 000 <b>₽</b></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="cart">
+                <div class="modal__title">Ваша корзина</div>
+
+                <div class="card__list">
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="./assets/images/common/cart_1.png" alt="coppelia" />
+                    </div>
+                    <div class="card__content">
+                      <div class="card__content-container">
+                        <div class="card__content-wrapper">
+                          <div class="card__item-title">
+                            <div data-color="#29D0D9" class="card__item-title--color"></div>
+                            <span class="card__item-title--name">coppelia</span>
+                          </div>
+                          <span class="card__item-title--category">Лампа настольная</span>
+                        </div>
+                        <button class="card__item-cart--btn">
+                          <img src="./assets/images/common/trash.svg" alt="Убрать" />
+                        </button>
+                      </div>
+                      <div class="card__price">
+                        <div class="card__price-total">150 000 <b>₽</b></div>
+                        <div class="card__price-counter">
+                          <div class="card__price-counter--minus">-</div>
+                          <div class="card__price-counter--count">1</div>
+                          <div class="card__price-counter--plus">+</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="./assets/images/common/cart_1.png" alt="coppelia" />
+                    </div>
+                    <div class="card__content">
+                      <div class="card__content-container">
+                        <div class="card__content-wrapper">
+                          <div class="card__item-title">
+                            <div data-color="#29D0D9" class="card__item-title--color"></div>
+                            <span class="card__item-title--name">coppelia</span>
+                          </div>
+                          <span class="card__item-title--category">Лампа настольная</span>
+                        </div>
+                        <button class="card__item-cart--btn">
+                          <img src="./assets/images/common/trash.svg" alt="Убрать" />
+                        </button>
+                      </div>
+                      <div class="card__price">
+                        <div class="card__price-total">150 000 <b>₽</b></div>
+                        <div class="card__price-counter">
+                          <div class="card__price-counter--minus">-</div>
+                          <div class="card__price-counter--count">1</div>
+                          <div class="card__price-counter--plus">+</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="./assets/images/common/cart_1.png" alt="coppelia" />
+                    </div>
+                    <div class="card__content">
+                      <div class="card__content-container">
+                        <div class="card__content-wrapper">
+                          <div class="card__item-title">
+                            <div data-color="#29D0D9" class="card__item-title--color"></div>
+                            <span class="card__item-title--name">coppelia</span>
+                          </div>
+                          <span class="card__item-title--category">Лампа настольная</span>
+                        </div>
+                        <button class="card__item-cart--btn">
+                          <img src="./assets/images/common/trash.svg" alt="Убрать" />
+                        </button>
+                      </div>
+                      <div class="card__price">
+                        <div class="card__price-total">150 000 <b>₽</b></div>
+                        <div class="card__price-counter">
+                          <div class="card__price-counter--minus">-</div>
+                          <div class="card__price-counter--count">1</div>
+                          <div class="card__price-counter--plus">+</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card__item">
+                    <div class="card__item-img">
+                      <img src="./assets/images/common/cart_1.png" alt="coppelia" />
+                    </div>
+                    <div class="card__content">
+                      <div class="card__content-container">
+                        <div class="card__content-wrapper">
+                          <div class="card__item-title">
+                            <div data-color="#29D0D9" class="card__item-title--color"></div>
+                            <span class="card__item-title--name">coppelia</span>
+                          </div>
+                          <span class="card__item-title--category">Лампа настольная</span>
+                        </div>
+                        <button class="card__item-cart--btn">
+                          <img src="./assets/images/common/trash.svg" alt="Убрать" />
+                        </button>
+                      </div>
+                      <div class="card__price">
+                        <div class="card__price-total">150 000 <b>₽</b></div>
+                        <div class="card__price-counter">
+                          <div class="card__price-counter--minus">-</div>
+                          <div class="card__price-counter--count">1</div>
+                          <div class="card__price-counter--plus">+</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card__total">
+                  <div class="card__total-text">Итого</div>
+                  <a href="./order.html" class="card__total-sum">
+                    <div class="card__total-sum--number">450 000</div>
+                    <div class="card__total-sum--currency">₽</div>
+                  </a>
+                </div>
+              </div>
+
+              <div class="login">
+                <div class="modal__title">Вход</div>
+                <form class="form form-login" action="#">
+                  <div class="form__wrapper">
+                    <input
+                      name="email"
+                      type="text"
+                      class="form__input form__input-email"
+                      placeholder="E-MAIL"
+                    />
+                  </div>
+                  <div class="form__wrapper">
+                    <input
+                      name="pass"
+                      type="password"
+                      class="form__input form__input-pass"
+                      placeholder="ПАРОЛЬ"
+                    />
+                  </div>
+                  <button class="form-btn">Войти</button>
+                </form>
+                <div class="form__navigation">
+                  <span class="form__navigation-text">нет аккаунта?</span>
+                  <a href="#register" class="form__navigation-link link-register"
+                    >Регистрация <img src="./assets/images/common/arrow.svg" alt="Регистрация"
+                  /></a>
+                </div>
+              </div>
+
+              <div class="register">
+                <div class="modal__title">Регистрация</div>
+                <form class="form form-register" action="#">
+                  <div class="form__wrapper">
+                    <input
+                      name="email"
+                      type="text"
+                      class="form__input form__input-email"
+                      placeholder="E-MAIL"
+                    />
+                  </div>
+                  <div class="form__wrapper">
+                    <input
+                      name="pass"
+                      type="password"
+                      class="form__input form__input-pass"
+                      placeholder="ПАРОЛЬ"
+                    />
+                  </div>
+                  <div class="form__wrapper">
+                    <input
+                      type="password"
+                      class="form__input pass-confirm"
+                      placeholder="ПОДВЕТРДИТЕ ПАРОЛЬ"
+                    />
+                  </div>
+                  <button class="form-btn">Регистрация</button>
+                </form>
+                <div class="form__navigation">
+                  <a href="#login" class="form__navigation-link link-login">
+                    <img src="./assets/images/common/arrow.svg" alt="" />
+                    Вход</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="banner">
+      <div class="banner_container">
+        <div class="banner__slider">
+          <div class="banner__card">
+            <div class="banner__card-image">
+              <div class="banner__card-img">
+                <img src="./assets/images/common/banner_lamp_1.png" alt="" />
+                <div class="banner__card-shadow">
+                  <img src="./assets/images/common/drop_shadow_card.png" alt="" />
+                </div>
+                <div class="banner__card-name">Benjamin Moore</div>
+              </div>
+            </div>
+            <div class="banner__card-toast">Товар дня</div>
+            <div class="banner__content">
+              <div class="banner__card-text">
+                <div class="banner__title">
+                  <div class="banner__card-text--title">Светильник</div>
+                  <div class="banner__card-text--title--mob">Светильник</div>
+                </div>
+                <div class="banner__info">
+                  <div class="banner__card-text--info">
+                    Функциональная дизайнерская лампа для создания максимально комфортного освещения
+                  </div>
+                  <div class="banner__card-text--info--mob">
+                    Функциональная дизайнерская лампа для создания максимально комфортного освещения
+                  </div>
+                </div>
+                <div class="banner__price">
+                  <div class="banner__price-wrapper">
+                    <div class="banner__price-text">150 000</div>
+                    <div class="banner__price-currency">₽</div>
+                  </div>
+                  <div class="banner__price-wrapper--hidden">
+                    <div class="banner__price-text">150 000</div>
+                    <div class="banner__price-currency">₽</div>
+                  </div>
+                </div>
+              </div>
+              <div class="banner__buy">
+                <button class="banner__buy-btn btn">
+                  <div class="banner__buy-icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="Купить" />
+                  </div>
+                  <div class="banner__buy-text">Купить</div>
+                </button>
+              </div>
+            </div>
+            <div class="banner__slide">
+              <div class="banner__slide-text">Слайд</div>
+              <div class="banner__slide-number">01</div>
+            </div>
+          </div>
+          <div class="banner__card">
+            <div class="banner__card-image">
+              <div class="banner__card-img">
+                <img src="./assets/images/common/banner_kreslo.png" alt="" />
+                <div class="banner__card-shadow">
+                  <img src="./assets/images/common/drop_shadow_card.png" alt="" />
+                </div>
+                <div class="banner__card-name">Paint Here Glory</div>
+              </div>
+            </div>
+            <div class="banner__card-toast">Товар дня</div>
+            <div class="banner__content">
+              <div class="banner__card-text">
+                <div class="banner__title">
+                  <div class="banner__card-text--title">Светильник</div>
+                  <div class="banner__card-text--title--mob">Светильник</div>
+                </div>
+                <div class="banner__info">
+                  <div class="banner__card-text--info">
+                    Функциональная дизайнерская лампа для создания максимально комфортного освещения
+                  </div>
+                  <div class="banner__card-text--info--mob">
+                    Функциональная дизайнерская лампа для создания максимально комфортного освещения
+                  </div>
+                </div>
+                <div class="banner__price">
+                  <div class="banner__price-wrapper">
+                    <div class="banner__price-text">150 000</div>
+                    <div class="banner__price-currency">₽</div>
+                  </div>
+                  <div class="banner__price-wrapper--hidden">
+                    <div class="banner__price-text">150 000</div>
+                    <div class="banner__price-currency">₽</div>
+                  </div>
+                </div>
+              </div>
+              <div class="banner__buy">
+                <button class="banner__buy-btn btn">
+                  <div class="banner__buy-icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="Купить" />
+                  </div>
+                  <div class="banner__buy-text">Купить</div>
+                </button>
+              </div>
+            </div>
+            <div class="banner__slide">
+              <div class="banner__slide-text">Слайд</div>
+              <div class="banner__slide-number">02</div>
+            </div>
+          </div>
+          <div class="banner__card">
+            <div class="banner__card-image">
+              <div class="banner__card-img">
+                <img src="./assets/images/common/banner_lamp_2.png" alt="" />
+                <div class="banner__card-shadow">
+                  <img src="./assets/images/common/drop_shadow_card.png" alt="" />
+                </div>
+                <div class="banner__card-name">Benjamin Moore</div>
+              </div>
+            </div>
+            <div class="banner__card-toast">Товар дня</div>
+            <div class="banner__content">
+              <div class="banner__card-text">
+                <div class="banner__title">
+                  <div class="banner__card-text--title">Светильник</div>
+                  <div class="banner__card-text--title--mob">Светильник</div>
+                </div>
+                <div class="banner__info">
+                  <div class="banner__card-text--info">
+                    Функциональная дизайнерская лампа для создания максимально комфортного освещения
+                  </div>
+                  <div class="banner__card-text--info--mob">
+                    Функциональная дизайнерская лампа для создания максимально комфортного освещения
+                  </div>
+                </div>
+                <div class="banner__price">
+                  <div class="banner__price-wrapper">
+                    <div class="banner__price-text">150 000</div>
+                    <div class="banner__price-currency">₽</div>
+                  </div>
+                  <div class="banner__price-wrapper--hidden">
+                    <div class="banner__price-text">150 000</div>
+                    <div class="banner__price-currency">₽</div>
+                  </div>
+                </div>
+              </div>
+              <div class="banner__buy">
+                <button class="banner__buy-btn btn">
+                  <div class="banner__buy-icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="Купить" />
+                  </div>
+                  <div class="banner__buy-text">Купить</div>
+                </button>
+              </div>
+            </div>
+            <div class="banner__slide">
+              <div class="banner__slide-text">Слайд</div>
+              <div class="banner__slide-number">03</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="categories">
+      <div class="categories_container container">
+        <h2 class="categories__title title">категории</h2>
+        <div class="categories__list">
+          <a href="./mirrors.html" class="categories__card">
+            <div class="categories__card-wrapper">
+              <div class="categories__card-title">напольные зеркала</div>
+              <div class="categories__card-img">
+                <img src="./assets/images/category/mirrors.png" alt="mirrors" />
+              </div>
+              <div class="categories__card-chapter">
+                <svg
+                  width="8.9rem"
+                  height="19.6rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 89.175 192.03"
+                >
+                  <!-- Создаем path, начиная с правого нижнего угла и заканчивая левым верхним углом SVG. -->
+                  <path id="curve" d="M 89.175 192.03 Q 10 89.175 40 0" fill="none" />
+
+                  <!-- Создаем текст, который следует по этой дуге. -->
+                  <text class="arc-heading__subheading" font-size="16">
+                    <textPath href="#curve" startOffset="0%">
+                      <tspan class="arc-heading__subheading">изготовление на заказ</tspan>
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+              <div class="categories__card-count">
+                <div class="categories__card-count--text">
+                  <div data-count="4" class="categories__card-count--number">4</div>
+                  <div class="categories__card-count--pieces">шт</div>
+                </div>
+              </div>
+            </div>
+            <button class="categories__card-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34"
+                height="64"
+                viewBox="0 0 34 34"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_2910_577)">
+                  <path
+                    d="M27 22.6667C25.94 22.6667 24.3571 23.7051 23.0286 24.7562C21.3143 26.1077 19.8186 27.7227 18.6771 29.5743C17.8214 30.9627 17 32.6457 17 34M17 34C17 32.6457 16.1786 30.9612 15.3229 29.5743C14.18 27.7227 12.6843 26.1077 10.9729 24.7562C9.64286 23.7051 8.05714 22.6667 7 22.6667M17 34L17 -1.11265e-06"
+                    stroke="#D9FF5A"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2910_577">
+                    <rect
+                      width="34"
+                      height="34"
+                      fill="white"
+                      transform="translate(34 34) rotate(-180)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </a>
+          <a href="./lamps.html" class="categories__card active">
+            <div class="categories__card-wrapper">
+              <div class="categories__card-title">напольные зеркала</div>
+              <div class="categories__card-img">
+                <img src="./assets/images/category/mirrors.png" alt="mirrors" />
+              </div>
+              <div class="categories__card-chapter">
+                <svg
+                  width="8.9rem"
+                  height="19.6rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 89.175 192.03"
+                >
+                  <!-- Создаем path, начиная с правого нижнего угла и заканчивая левым верхним углом SVG. -->
+                  <path id="curve" d="M 89.175 192.03 Q 10 89.175 40 0" fill="none" />
+
+                  <!-- Создаем текст, который следует по этой дуге. -->
+                  <text class="arc-heading__subheading" font-size="16">
+                    <textPath href="#curve" startOffset="0%">
+                      <tspan class="arc-heading__subheading">изготовление на заказ</tspan>
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+              <div class="categories__card-count">
+                <div class="categories__card-count--text">
+                  <div data-count="4" class="categories__card-count--number">4</div>
+                  <div class="categories__card-count--pieces">шт</div>
+                </div>
+              </div>
+            </div>
+            <button class="categories__card-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34"
+                height="64"
+                viewBox="0 0 34 34"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_2910_577)">
+                  <path
+                    d="M27 22.6667C25.94 22.6667 24.3571 23.7051 23.0286 24.7562C21.3143 26.1077 19.8186 27.7227 18.6771 29.5743C17.8214 30.9627 17 32.6457 17 34M17 34C17 32.6457 16.1786 30.9612 15.3229 29.5743C14.18 27.7227 12.6843 26.1077 10.9729 24.7562C9.64286 23.7051 8.05714 22.6667 7 22.6667M17 34L17 -1.11265e-06"
+                    stroke="#D9FF5A"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2910_577">
+                    <rect
+                      width="34"
+                      height="34"
+                      fill="white"
+                      transform="translate(34 34) rotate(-180)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </a>
+          <a href="./chairs.html" class="categories__card">
+            <div class="categories__card-wrapper">
+              <div class="categories__card-title">напольные зеркала</div>
+              <div class="categories__card-img">
+                <img src="./assets/images/category/mirrors.png" alt="mirrors" />
+              </div>
+              <div class="categories__card-chapter">
+                <svg
+                  width="8.9rem"
+                  height="19.6rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 89.175 192.03"
+                >
+                  <!-- Создаем path, начиная с правого нижнего угла и заканчивая левым верхним углом SVG. -->
+                  <path id="curve" d="M 89.175 192.03 Q 10 89.175 40 0" fill="none" />
+
+                  <!-- Создаем текст, который следует по этой дуге. -->
+                  <text class="arc-heading__subheading" font-size="16">
+                    <textPath href="#curve" startOffset="0%">
+                      <tspan class="arc-heading__subheading">изготовление на заказ</tspan>
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+              <div class="categories__card-count">
+                <div class="categories__card-count--text">
+                  <div data-count="4" class="categories__card-count--number">4</div>
+                  <div class="categories__card-count--pieces">шт</div>
+                </div>
+              </div>
+            </div>
+            <button class="categories__card-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34"
+                height="64"
+                viewBox="0 0 34 34"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_2910_577)">
+                  <path
+                    d="M27 22.6667C25.94 22.6667 24.3571 23.7051 23.0286 24.7562C21.3143 26.1077 19.8186 27.7227 18.6771 29.5743C17.8214 30.9627 17 32.6457 17 34M17 34C17 32.6457 16.1786 30.9612 15.3229 29.5743C14.18 27.7227 12.6843 26.1077 10.9729 24.7562C9.64286 23.7051 8.05714 22.6667 7 22.6667M17 34L17 -1.11265e-06"
+                    stroke="#D9FF5A"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2910_577">
+                    <rect
+                      width="34"
+                      height="34"
+                      fill="white"
+                      transform="translate(34 34) rotate(-180)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </a>
+          <a href="./tables.html" class="categories__card">
+            <div class="categories__card-wrapper">
+              <div class="categories__card-title">напольные зеркала</div>
+              <div class="categories__card-img">
+                <img src="./assets/images/category/mirrors.png" alt="mirrors" />
+              </div>
+              <div class="categories__card-chapter">
+                <svg
+                  width="8.9rem"
+                  height="19.6rem"
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 89.175 192.03"
+                >
+                  <!-- Создаем path, начиная с правого нижнего угла и заканчивая левым верхним углом SVG. -->
+                  <path id="curve" d="M 89.175 192.03 Q 10 89.175 40 0" fill="none" />
+
+                  <!-- Создаем текст, который следует по этой дуге. -->
+                  <text class="arc-heading__subheading" font-size="16">
+                    <textPath href="#curve" startOffset="0%">
+                      <tspan class="arc-heading__subheading">изготовление на заказ</tspan>
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+              <div class="categories__card-count">
+                <div class="categories__card-count--text">
+                  <div data-count="4" class="categories__card-count--number">4</div>
+                  <div class="categories__card-count--pieces">шт</div>
+                </div>
+              </div>
+            </div>
+            <button class="categories__card-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="34"
+                height="64"
+                viewBox="0 0 34 34"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_2910_577)">
+                  <path
+                    d="M27 22.6667C25.94 22.6667 24.3571 23.7051 23.0286 24.7562C21.3143 26.1077 19.8186 27.7227 18.6771 29.5743C17.8214 30.9627 17 32.6457 17 34M17 34C17 32.6457 16.1786 30.9612 15.3229 29.5743C14.18 27.7227 12.6843 26.1077 10.9729 24.7562C9.64286 23.7051 8.05714 22.6667 7 22.6667M17 34L17 -1.11265e-06"
+                    stroke="#D9FF5A"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_2910_577">
+                    <rect
+                      width="34"
+                      height="34"
+                      fill="white"
+                      transform="translate(34 34) rotate(-180)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
+            </button>
+          </a>
+        </div>
+        <div class="category__list">
+          <div class="category__list-wrapper">
+            <button class="category__list-filter">
+              <svg
+                width="23"
+                height="22"
+                viewBox="0 0 23 22"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M20.1623 0H2.38455C2.08986 0 1.80725 0.116448 1.59887 0.323727C1.3905 0.531005 1.27344 0.812136 1.27344 1.10527V3.96793C1.27344 4.54598 1.5101 5.11409 1.92122 5.52304L7.9401 11.5103V19.8949C7.94032 20.0832 7.98885 20.2683 8.0811 20.4328C8.17335 20.5972 8.30627 20.7355 8.46726 20.8346C8.62826 20.9336 8.81201 20.9902 9.00111 20.9988C9.19021 21.0075 9.37841 20.968 9.54788 20.8841L13.9923 18.6736C14.369 18.4857 14.6068 18.1032 14.6068 17.6843V11.5103L20.6257 5.52304C21.0368 5.11409 21.2734 4.54598 21.2734 3.96793V1.10527C21.2734 0.812136 21.1564 0.531005 20.948 0.323727C20.7396 0.116448 20.457 0 20.1623 0Z"
+                  fill="#D9FF5A"
+                />
+              </svg>
+              фильтры
+            </button>
+            <div class="category__list-info">20 позиций в категории</div>
+          </div>
+          <div class="result__list category">
+            <div class="result__card">
+              <div class="result__card-color"></div>
+              <div class="result__card-img">
+                <img src="./assets/images/lamps/lamp_1.png" alt="" />
+              </div>
+              <div class="result__card-info">
+                <div class="result__card-info--name">Kristin</div>
+                <div class="result__card-info--category">Зеркало напольное</div>
+              </div>
+              <div class="result__card-bottom">
+                <div class="result__card-price">
+                  <div class="result__card-price--count">150 000</div>
+                  <div class="result__card-price--currency">₽</div>
+                </div>
+                <button class="result__card-buy">
+                  <div class="result__card-buy--icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                  </div>
+                  <span class="result__card-buy--text">Купить</span>
+                </button>
+              </div>
+            </div>
+            <div class="result__card">
+              <div class="result__card-color"></div>
+              <div class="result__card-img">
+                <img src="./assets/images/lamps/lamp_2.png" alt="" />
+              </div>
+              <div class="result__card-info">
+                <div class="result__card-info--name">Kristin</div>
+                <div class="result__card-info--category">Зеркало напольное</div>
+              </div>
+              <div class="result__card-bottom">
+                <div class="result__card-price">
+                  <div class="result__card-price--count">150 000</div>
+                  <div class="result__card-price--currency">₽</div>
+                </div>
+                <button class="result__card-buy">
+                  <div class="result__card-buy--icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                  </div>
+                  <span class="result__card-buy--text">Купить</span>
+                </button>
+              </div>
+            </div>
+            <div class="result__card">
+              <div class="result__card-color"></div>
+              <div class="result__card-img">
+                <img src="./assets/images/lamps/lamp_3.png" alt="" />
+              </div>
+              <div class="result__card-info">
+                <div class="result__card-info--name">Kristin</div>
+                <div class="result__card-info--category">Зеркало напольное</div>
+              </div>
+              <div class="result__card-bottom">
+                <div class="result__card-price">
+                  <div class="result__card-price--count">150 000</div>
+                  <div class="result__card-price--currency">₽</div>
+                </div>
+                <button class="result__card-buy">
+                  <div class="result__card-buy--icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                  </div>
+                  <span class="result__card-buy--text">Купить</span>
+                </button>
+              </div>
+            </div>
+            <div class="result__card">
+              <div class="result__card-color"></div>
+              <div class="result__card-img">
+                <img src="./assets/images/lamps/lamp_3.png" alt="" />
+              </div>
+              <div class="result__card-info">
+                <div class="result__card-info--name">Kristin</div>
+                <div class="result__card-info--category">Зеркало напольное</div>
+              </div>
+              <div class="result__card-bottom">
+                <div class="result__card-price">
+                  <div class="result__card-price--count">150 000</div>
+                  <div class="result__card-price--currency">₽</div>
+                </div>
+                <button class="result__card-buy">
+                  <div class="result__card-buy--icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                  </div>
+                  <span class="result__card-buy--text">Купить</span>
+                </button>
+              </div>
+            </div>
+            <div class="result__card">
+              <div class="result__card-color"></div>
+              <div class="result__card-img">
+                <img src="./assets/images/lamps/lamp_4.png" alt="" />
+              </div>
+              <div class="result__card-info">
+                <div class="result__card-info--name">Kristin</div>
+                <div class="result__card-info--category">Зеркало напольное</div>
+              </div>
+              <div class="result__card-bottom">
+                <div class="result__card-price">
+                  <div class="result__card-price--count">150 000</div>
+                  <div class="result__card-price--currency">₽</div>
+                </div>
+                <button class="result__card-buy">
+                  <div class="result__card-buy--icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                  </div>
+                  <span class="result__card-buy--text">Купить</span>
+                </button>
+              </div>
+            </div>
+            <div class="result__card">
+              <div class="result__card-color"></div>
+              <div class="result__card-img">
+                <img src="./assets/images/lamps/lamp_5.png" alt="" />
+              </div>
+              <div class="result__card-info">
+                <div class="result__card-info--name">Kristin</div>
+                <div class="result__card-info--category">Зеркало напольное</div>
+              </div>
+              <div class="result__card-bottom">
+                <div class="result__card-price">
+                  <div class="result__card-price--count">150 000</div>
+                  <div class="result__card-price--currency">₽</div>
+                </div>
+                <button class="result__card-buy">
+                  <div class="result__card-buy--icon">
+                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                  </div>
+                  <span class="result__card-buy--text">Купить</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <button class="btn">
+            Загрузить еще
+            <svg
+              width="25"
+              height="24"
+              viewBox="0 0 25 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M18.1087 14L12.112 20L6.11523 14"
+                stroke="#D9FF5A"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M12.1133 4V21"
+                stroke="#D9FF5A"
+                stroke-width="2"
+                stroke-miterlimit="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+    <section class="greetings">
+      <div class="greetings__lines">
+        <div class="greetings__lines-lavender">
+          <span>creating a great art</span>
+          <div class="greetings__lines-star">
+            <img src="./assets/images/common/star.svg" alt="" />
+          </div>
+          <span>creating a great art</span>
+          <div class="greetings__lines-star">
+            <img src="./assets/images/common/star.svg" alt="" />
+          </div>
+          <span>creating a great art</span>
+          <div class="greetings__lines-star">
+            <img src="./assets/images/common/star.svg" alt="" />
+          </div>
+          <span>creating a great art</span>
+          <div class="greetings__lines-star">
+            <img src="./assets/images/common/star.svg" alt="" />
+          </div>
+          <span>creating a great art</span>
+        </div>
+        <div class="greetings__lines-blue">
+          <span>creating a great art</span>
+          <div class="greetings__lines-star">
+            <img src="./assets/images/common/star.svg" alt="" />
+          </div>
+          <span>creating a great art</span>
+          <div class="greetings__lines-star">
+            <img src="./assets/images/common/star.svg" alt="" />
+          </div>
+          <span>creating a great art</span>
+          <div class="greetings__lines-star">
+            <img src="./assets/images/common/star.svg" alt="" />
+          </div>
+          <span>creating a great art</span>
+          <div class="greetings__lines-star">
+            <img src="./assets/images/common/star.svg" alt="" />
+          </div>
+          <span>creating a great art</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="blog">
+      <div class="blog_container container">
+        <div class="blog__top title">
+          <div class="blog__title">
+            <div class="blog__list-pagination swiper-pagination"></div>
+            <div class="blog__title-text">Блог</div>
+          </div>
+          <div class="blog__count">
+            <div class="blog__count-current">1</div>
+            <div class="blog__count-last">4</div>
+          </div>
+        </div>
+        <div class="blog__list">
+          <div class="blog__list-wrapper swiper-wrapper">
+            <div class="blog__card swiper-slide">
+              <div class="blog__card-wrapper">
+                <div class="blog__card-content">
+                  <div class="blog__card-top">
+                    <div class="blog__card-number">01</div>
+                    <div class="blog__card-brand">Laura Busche</div>
+                  </div>
+                  <div class="blog__card-title">новая коллекция кресел</div>
+                  <div class="blog__card-date">14 Января 2023</div>
+                </div>
+                <div class="blog__card-img">
+                  <div class="blog__card-img--container">
+                    <img src="./assets/images/common/blog_1test.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="blog__card-time">
+                <span class="blog__card-time--number">3</span>
+                мин
+              </div>
+            </div>
+            <div class="blog__card swiper-slide">
+              <div class="blog__card-wrapper">
+                <div class="blog__card-content">
+                  <div class="blog__card-top">
+                    <div class="blog__card-number">02</div>
+                    <div class="blog__card-brand">Laura Busche</div>
+                  </div>
+                  <div class="blog__card-title">Световой дизайн в интерьере</div>
+                  <div class="blog__card-date">14 Января 2023</div>
+                </div>
+                <div class="blog__card-img">
+                  <div class="blog__card-img--container">
+                    <img src="./assets/images/common/blog_2.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="blog__card-time">
+                <span class="blog__card-time--number">3</span>
+                мин
+              </div>
+            </div>
+            <div class="blog__card swiper-slide">
+              <div class="blog__card-wrapper">
+                <div class="blog__card-content">
+                  <div class="blog__card-top">
+                    <div class="blog__card-number">03</div>
+                    <div class="blog__card-brand">Laura Busche</div>
+                  </div>
+                  <div class="blog__card-title">как выбрать шкаф в спальню</div>
+                  <div class="blog__card-date">14 Января 2023</div>
+                </div>
+                <div class="blog__card-img">
+                  <div class="blog__card-img--container">
+                    <img src="./assets/images/common/blog_3.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="blog__card-time">
+                <span class="blog__card-time--number">3</span>
+                мин
+              </div>
+            </div>
+            <div class="blog__card swiper-slide">
+              <div class="blog__card-wrapper">
+                <div class="blog__card-content">
+                  <div class="blog__card-top">
+                    <div class="blog__card-number">04</div>
+                    <div class="blog__card-brand">Laura Busche</div>
+                  </div>
+                  <div class="blog__card-title">новая коллекция кресел</div>
+                  <div class="blog__card-date">14 Января 2023</div>
+                </div>
+                <div class="blog__card-img">
+                  <div class="blog__card-img--container">
+                    <img src="./assets/images/common/blog_1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="blog__card-time">
+                <span class="blog__card-time--number">3</span>
+                мин
+              </div>
+            </div>
+            <div class="blog__card swiper-slide">
+              <div class="blog__card-wrapper">
+                <div class="blog__card-content">
+                  <div class="blog__card-top">
+                    <div class="blog__card-number">05</div>
+                    <div class="blog__card-brand">Laura Busche</div>
+                  </div>
+                  <div class="blog__card-title">новая коллекция кресел</div>
+                  <div class="blog__card-date">14 Января 2023</div>
+                </div>
+                <div class="blog__card-img">
+                  <div class="blog__card-img--container">
+                    <img src="./assets/images/common/blog_1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="blog__card-time">
+                <span class="blog__card-time--number">3</span>
+                мин
+              </div>
+            </div>
+            <div class="blog__card swiper-slide">
+              <div class="blog__card-wrapper">
+                <div class="blog__card-content">
+                  <div class="blog__card-top">
+                    <div class="blog__card-number">06</div>
+                    <div class="blog__card-brand">Laura Busche</div>
+                  </div>
+                  <div class="blog__card-title">новая коллекция кресел</div>
+                  <div class="blog__card-date">14 Января 2023</div>
+                </div>
+                <div class="blog__card-img">
+                  <div class="blog__card-img--container">
+                    <img src="./assets/images/common/blog_1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="blog__card-time">
+                <span class="blog__card-time--number">3</span>
+                мин
+              </div>
+            </div>
+            <div class="blog__card swiper-slide">
+              <div class="blog__card-wrapper">
+                <div class="blog__card-content">
+                  <div class="blog__card-top">
+                    <div class="blog__card-number">07</div>
+                    <div class="blog__card-brand">Laura Busche</div>
+                  </div>
+                  <div class="blog__card-title">новая коллекция кресел</div>
+                  <div class="blog__card-date">14 Января 2023</div>
+                </div>
+                <div class="blog__card-img">
+                  <div class="blog__card-img--container">
+                    <img src="./assets/images/common/blog_1.png" alt="" />
+                  </div>
+                </div>
+              </div>
+              <div class="blog__card-time">
+                <span class="blog__card-time--number">3</span>
+                мин
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contacts">
+      <div class="contacts_container container">
+        <div class="contacts__content">
+          <button class="contacts__close">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="36"
+              viewBox="0 0 36 36"
+              fill="none"
+            >
+              <path
+                d="M27 9L9 27"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M9 9L27 27"
+                stroke="white"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+          <div class="contacts__wrapper">
+            <div class="contacts__info">
+              <div class="contacts__address">
+                <div class="contacts__address-title contacts-title">Адрес</div>
+                <div class="contacts__address-info">
+                  <div class="contacts__address-city">Москва</div>
+                  <div class="contacts__address-street">Хохловский переулок д. 11, стр. 3</div>
+                </div>
+
+                <button class="contacts__address-btn">
+                  Адрес на карте
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="24"
+                    viewBox="0 0 16 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M9 1C9 0.447715 8.55228 0 8 0C7.44772 0 7 0.447715 7 1L9 1ZM7.29289 23.7071C7.68342 24.0976 8.31658 24.0976 8.70711 23.7071L15.0711 17.3431C15.4616 16.9526 15.4616 16.3195 15.0711 15.9289C14.6805 15.5384 14.0474 15.5384 13.6569 15.9289L8 21.5858L2.34315 15.9289C1.95262 15.5384 1.31946 15.5384 0.928932 15.9289C0.538408 16.3195 0.538408 16.9526 0.928932 17.3431L7.29289 23.7071ZM7 1L7 23H9L9 1L7 1Z"
+                      fill="white"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div class="contacts__phone">
+                <div class="contacts__phone-title contacts-title">Телефон</div>
+                <div class="contacts__phone-info">
+                  <div class="contacts__phone-number">+7 (495) 621-26-17</div>
+                  <div class="contacts__phone-subtitle">Ответим на все вопросы</div>
+                </div>
+                <div class="contacts__social">
+                  <div class="contacts__social-link">
+                    <img src="./assets/images/common/telegram.svg" alt="telegram" />
+                  </div>
+                  <div class="contacts__social-link">
+                    <img src="./assets/images/common/twitter.svg" alt="twitter" />
+                  </div>
+                  <div class="contacts__social-link">
+                    <img src="./assets/images/common/linkedin.svg" alt="linkedin" />
+                  </div>
+                  <div class="contacts__social-link">
+                    <img src="./assets/images/common/facebook.svg" alt="facebook" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contacts__request">
+              <div class="contacts__request-title contacts-title">Форма обратной связи</div>
+              <form class="contacts__form" method="#">
+                <div class="form__wrapper">
+                  <input
+                    name="email"
+                    type="text"
+                    class="form__input form__input-email"
+                    placeholder="E-MAIL"
+                  />
+                </div>
+                <div class="form__wrapper">
+                  <input type="text" class="form__input pass-confirm" placeholder="Cообщение" />
+                </div>
+                <button class="form-btn">Отправить</button>
+              </form>
+            </div>
+          </div>
+
+          <div id="map" class="contacts__map"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="result">
+      <div class="result_container">
+        <div class="result__title">результаты поиска</div>
+        <div class="result__list">
+          <div class="result__card">
+            <div class="result__card-color"></div>
+            <div class="result__card-img">
+              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+            </div>
+            <div class="result__card-info">
+              <div class="result__card-info--name">Kristin</div>
+              <div class="result__card-info--category">Зеркало напольное</div>
+            </div>
+            <div class="result__card-bottom">
+              <div class="result__card-price">
+                <div class="result__card-price--count">150 000</div>
+                <div class="result__card-price--currency">₽</div>
+              </div>
+              <button class="result__card-buy">
+                <div class="result__card-buy--icon">
+                  <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                </div>
+                <span class="result__card-buy--text">Купить</span>
+              </button>
+            </div>
+          </div>
+          <div class="result__card">
+            <div class="result__card-color"></div>
+            <div class="result__card-img">
+              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+            </div>
+            <div class="result__card-info">
+              <div class="result__card-info--name">Kristin</div>
+              <div class="result__card-info--category">Зеркало напольное</div>
+            </div>
+            <div class="result__card-bottom">
+              <div class="result__card-price">
+                <div class="result__card-price--count">150 000</div>
+                <div class="result__card-price--currency">₽</div>
+              </div>
+              <button class="result__card-buy">
+                <div class="result__card-buy--icon">
+                  <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                </div>
+                <span class="result__card-buy--text">Купить</span>
+              </button>
+            </div>
+          </div>
+          <div class="result__card">
+            <div class="result__card-color"></div>
+            <div class="result__card-img">
+              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+            </div>
+            <div class="result__card-info">
+              <div class="result__card-info--name">Kristin</div>
+              <div class="result__card-info--category">Зеркало напольное</div>
+            </div>
+            <div class="result__card-bottom">
+              <div class="result__card-price">
+                <div class="result__card-price--count">150 000</div>
+                <div class="result__card-price--currency">₽</div>
+              </div>
+              <button class="result__card-buy">
+                <div class="result__card-buy--icon">
+                  <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                </div>
+                <span class="result__card-buy--text">Купить</span>
+              </button>
+            </div>
+          </div>
+          <div class="result__card">
+            <div class="result__card-color"></div>
+            <div class="result__card-img">
+              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+            </div>
+            <div class="result__card-info">
+              <div class="result__card-info--name">Kristin</div>
+              <div class="result__card-info--category">Зеркало напольное</div>
+            </div>
+            <div class="result__card-bottom">
+              <div class="result__card-price">
+                <div class="result__card-price--count">150 000</div>
+                <div class="result__card-price--currency">₽</div>
+              </div>
+              <button class="result__card-buy">
+                <div class="result__card-buy--icon">
+                  <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                </div>
+                <span class="result__card-buy--text">Купить</span>
+              </button>
+            </div>
+          </div>
+          <div class="result__card">
+            <div class="result__card-color"></div>
+            <div class="result__card-img">
+              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+            </div>
+            <div class="result__card-info">
+              <div class="result__card-info--name">Kristin</div>
+              <div class="result__card-info--category">Зеркало напольное</div>
+            </div>
+            <div class="result__card-bottom">
+              <div class="result__card-price">
+                <div class="result__card-price--count">150 000</div>
+                <div class="result__card-price--currency">₽</div>
+              </div>
+              <button class="result__card-buy">
+                <div class="result__card-buy--icon">
+                  <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                </div>
+                <span class="result__card-buy--text">Купить</span>
+              </button>
+            </div>
+          </div>
+          <div class="result__card">
+            <div class="result__card-color"></div>
+            <div class="result__card-img">
+              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+            </div>
+            <div class="result__card-info">
+              <div class="result__card-info--name">Kristin</div>
+              <div class="result__card-info--category">Зеркало напольное</div>
+            </div>
+            <div class="result__card-bottom">
+              <div class="result__card-price">
+                <div class="result__card-price--count">150 000</div>
+                <div class="result__card-price--currency">₽</div>
+              </div>
+              <button class="result__card-buy">
+                <div class="result__card-buy--icon">
+                  <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                </div>
+                <span class="result__card-buy--text">Купить</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="result__null">
+          <div class="result__null-title">NO RESULTS</div>
+          <div class="result__null-img">
+            <img src="./assets/images/common/no_result.png" alt="no result" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="product">
+      <div class="product_container">
+        <div class="product__left">
+          <span class="product__left-article">Арт. GNM007</span>
+          <div class="product__left-color">
+            <div class="product__left-color--text">Цвет:</div>
+            <div class="product__left-color--value">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="22"
+                height="22"
+                viewBox="0 0 22 22"
+                fill="none"
+              >
+                <circle
+                  cx="11"
+                  cy="11"
+                  r="9.5"
+                  transform="rotate(90 11 11)"
+                  fill="#9381D8"
+                  stroke="white"
+                  stroke-width="3"
+                />
+              </svg>
+              <span class="product__left-color--name">Лаванда</span>
+            </div>
+          </div>
+        </div>
+        <div class="product__img">
+          <img src="./assets/images/common/banner_lamp_1.png" alt="Benjamin Moore" />
+        </div>
+        <div class="product__name">Benjamin Moore</div>
+        <div class="product__right">
+          <button class="product__close">
+            закрыть <img src="./assets/images/common/close.svg" alt="закрыть" />
+          </button>
+          <div class="product__right-favorites">
+            <img src="./assets/images/common/favorites__btn.svg" alt="" />
+          </div>
+          <div class="product__right-height">
+            <div class="product__right-height--text">Высота:</div>
+            <div class="product__right-height--value">60см</div>
+          </div>
+        </div>
+        <div class="product__bottom">
+          <div class="product__bottom-description">
+            Функциональная дизайнерская лампа для создания максимально комфортного освещения
+          </div>
+          <div class="product__info">
+            <div class="product__info-name">Santa Trinita</div>
+            <div class="product__info-price">150 000 <span>₽</span></div>
+          </div>
+          <div class="product__bottom-btn btn-buy">
+            <img src="./assets/images/common/cart_yellow.svg" alt="Купить" /> Купить
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" width="0" height="0" viewBox="0 0 580 343" fill="none">
+      <defs>
+        <clipPath id="card_clip" clipPathUnits="objectBoundingBox">
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M337 0.766602C314.909 0.766602 297 18.6752 297 40.7666L297 76.7666C297 80.6326 293.866 83.7666 290 83.7666C286.134 83.7666 283 80.6326 283 76.7666L283 40.7666C283 18.6752 265.091 0.766602 243 0.766602L40 0.766602C17.9086 0.766602 0 18.6752 0 40.7666L0 302.767C0 324.858 17.9086 342.767 40 342.767L103.183 342.767C110.089 342.767 115.821 337.668 117.975 331.107C126.859 304.051 150.891 284.767 179.5 284.767C207.965 284.767 232.606 303.858 242.59 330.699C245.062 337.347 251.433 342.519 258.007 339.856C272.663 333.92 283 319.551 283 302.767V266.767C283 262.901 286.134 259.767 290 259.767C293.866 259.767 297 262.901 297 266.767V302.767C297 324.858 314.909 342.767 337 342.767L540 342.767C562.091 342.767 580 324.858 580 302.767L580 40.7666C580 18.6752 562.091 0.766602 540 0.766602L337 0.766602Z"
+            fill="#CBB6FF"
+            width="100%"
+            height="100%"
+            transform="scale(0.00173, 0.00290)"
+          />
+        </clipPath>
+      </defs>
+    </svg>
+
+    <footer class="footer">
+      <div class="footer_container container">
+        <div class="footer__year">@2023</div>
+        <div class="footer__developer">
+          <img src="./assets/images/common/rd.svg" alt="" />
+          <div class="footer__developer-name"><b>Request</b> Design</div>
+        </div>
+        <div class="footer__copyright">Все права защищены</div>
+      </div>
+    </footer>
+  </body>
+</html>
