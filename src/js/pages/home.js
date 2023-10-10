@@ -1,3 +1,5 @@
+import { product } from '../utils/constants';
+
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.banner__card');
   const bannerContainer = document.querySelector('.banner__slider');
@@ -17,56 +19,32 @@ document.addEventListener('DOMContentLoaded', () => {
   const contacts = document.querySelector('.contacts');
   const close = contacts.querySelector('.contacts__close');
   const productClose = document.querySelector('.product__close');
-  const product = document.querySelector('.product');
 
   //кнопки купить
   const resultCardBuy = document.querySelectorAll('.result__card-buy');
   const bannerBuyBtn = document.querySelectorAll('.banner__buy-btn');
-
-  const categoriesCard = document.querySelectorAll('.categories__card');
-  const categoryList = document.querySelectorAll('.category__list');
-  const listClose = document.querySelector('.list__close');
-  const list = document.querySelector('.list');
 
   // const cartBtn = document.querySelector('. cart-btn');
 
   // cartBtn.addEventListener('click', () => {
 
   // })
+  const btnFavorites = document.querySelectorAll('.product__right-favorites');
+  const cardBtnFavorites = document.querySelectorAll('.card__item-favorite--btn');
 
-  categoriesCard.forEach((card) => {
-    card.addEventListener('click', () => {
-      const category = card.dataset.category;
-      categoryList.forEach((list) => {
-        if (list.classList.contains(category)) {
-          categoryList.forEach((list) => {
-            list.classList.remove('visible');
-          });
-          categoriesCard.forEach((item) => {
-            item.classList.remove('active');
-          });
-          card.classList.toggle('active');
-          const container = list.closest('.list');
-          console.log('container: ', container);
-          container.classList.add('visible');
-          list.classList.add('visible');
-          console.log(list);
-          return;
-        }
-      });
+  const categoryCards = document.querySelectorAll('.category__list .result__card');
+
+  btnFavorites.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
     });
   });
 
-  listClose &&
-    listClose.addEventListener('click', () => {
-      list.classList.remove('visible');
-      categoryList.forEach((list) => {
-        list.classList.remove('visible');
-      });
-      categoriesCard.forEach((item) => {
-        item.classList.remove('active');
-      });
+  cardBtnFavorites.forEach((btn) => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
     });
+  });
 
   bannerBuyBtn.length > 0 &&
     bannerBuyBtn.forEach((btn) => {
@@ -75,12 +53,12 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
 
-  resultCardBuy.length > 0 &&
-    resultCardBuy.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        product.classList.add('visible');
-      });
-    });
+  // resultCardBuy.length > 0 &&
+  //   resultCardBuy.forEach((btn) => {
+  //     btn.addEventListener('click', () => {
+  //       product.classList.add('visible');
+  //     });
+  //   });
 
   linkContacts.forEach((btn) => {
     btn.addEventListener('click', () => {
@@ -159,6 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isEmailValid && isPassValid) {
         const data = new FormData(form);
         modal.classList.remove(dataModal);
+
         localStorage.setItem('auth', true);
         oldPrices.forEach((item) => {
           item.classList.add('visible');
@@ -215,23 +194,27 @@ document.addEventListener('DOMContentLoaded', () => {
     control.addEventListener('click', (e) => {
       if (!control.classList.contains('header__controls-user')) {
         const dataModal = control.dataset.modal;
-        const modalType = modal.querySelector(`.${dataModal}`);
-        headerControls.forEach((item) => {
-          const dataModal1 = item.dataset.modal;
-          const modalType1 = modal.querySelector(`.${dataModal1}`);
-          modalType1.classList.remove('visible');
-          modal.classList.remove(dataModal1);
-        });
+        if (modal.classList.contains(dataModal)) {
+          modal.classList.remove(dataModal);
+        } else {
+          const modalType = modal.querySelector(`.${dataModal}`);
+          headerControls.forEach((item) => {
+            const dataModal1 = item.dataset.modal;
+            const modalType1 = modal.querySelector(`.${dataModal1}`);
+            modalType1.classList.remove('visible');
+            modal.classList.remove(dataModal1);
+          });
 
-        modalTypes.forEach((item) => {
-          const modalType1 = modal.querySelector(`.${item}`);
-          modalType1.classList.remove('visible');
-          modal.classList.remove(item);
-        });
+          modalTypes.forEach((item) => {
+            const modalType1 = modal.querySelector(`.${item}`);
+            modalType1.classList.remove('visible');
+            modal.classList.remove(item);
+          });
 
-        modalType.classList.add('visible');
-        console.log(modalType);
-        modal.classList.add(dataModal);
+          modalType.classList.add('visible');
+          console.log(modalType);
+          modal.classList.add(dataModal);
+        }
       }
     });
   });

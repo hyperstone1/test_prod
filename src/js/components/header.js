@@ -26,6 +26,7 @@ cabinetItems.forEach((item) => {
     });
 
     console.log(modal);
+
     const dataModal1 = item.dataset.modal;
     if (dataModal1) {
       const modalType1 = document.querySelector(`.${dataModal1}`);

@@ -16,14 +16,15 @@
           <img src="./assets/images/common/Elfen lied.svg" alt="Elfen lied" />
         </a>
         <div class="header__wrapper">
-          <button class="header__catalog">
+          <a href="#categories" class="header__catalog">
             <div class="header__catalog-icon">
               <img src="./assets/images/common/menu_icon.svg" alt="Каталог" />
             </div>
             <div class="header__catalog-menu">Каталог</div>
-          </button>
+          </a>
+
           <ul class="header__menu">
-            <li class="header__menu-link"><a href="#">Новости</a></li>
+            <li class="header__menu-link"><a href="#blog">Блог</a></li>
             <li class="header__menu-link link-contacts"><a href="#">Контакты</a></li>
           </ul>
           <button class="header__search">
@@ -99,8 +100,31 @@
                           </div>
                           <span class="card__item-title--category">Лампа настольная</span>
                         </div>
-                        <button class="card__item-favorite--btn">
-                          <img src="./assets/images/common/favorites_btn.svg" alt="" />
+                        <button class="card__item-favorite--btn active">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="79"
+                            height="79"
+                            viewBox="0 0 79 79"
+                            fill="none"
+                          >
+                            <circle cx="39.5" cy="39.5" r="39.5" fill="white" fill-opacity="0.19" />
+                            <circle
+                              cx="39.5"
+                              cy="39.5"
+                              r="38.5"
+                              stroke="#FFB1F7"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M49.2265 30.8566C48.6645 30.268 47.9972 29.8011 47.2628 29.4825C46.5284 29.164 45.7412 29 44.9463 29C44.1513 29 43.3641 29.164 42.6297 29.4825C41.8953 29.8011 41.228 30.268 40.666 30.8566L39.4997 32.0775L38.3334 30.8566C37.1982 29.6682 35.6585 29.0006 34.0531 29.0006C32.4478 29.0006 30.9081 29.6682 29.7729 30.8566C28.6377 32.0449 28 33.6566 28 35.3372C28 37.0177 28.6377 38.6295 29.7729 39.8178L30.9393 41.0387L39.4997 50L48.0602 41.0387L49.2265 39.8178C49.7887 39.2295 50.2348 38.531 50.5391 37.7622C50.8434 36.9934 51 36.1694 51 35.3372C51 34.505 50.8434 33.681 50.5391 32.9122C50.2348 32.1434 49.7887 31.4449 49.2265 30.8566Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M49.2265 30.8566L48.5032 31.5471L48.5036 31.5475L49.2265 30.8566ZM44.9463 29V30V29ZM40.666 30.8566L41.3891 31.5473L41.3893 31.5471L40.666 30.8566ZM39.4997 32.0775L38.7766 32.7682L39.4997 33.5252L40.2228 32.7682L39.4997 32.0775ZM38.3334 30.8566L37.6103 31.5473L37.6103 31.5473L38.3334 30.8566ZM29.7729 39.8178L30.496 39.1271L30.496 39.1271L29.7729 39.8178ZM30.9393 41.0387L30.2162 41.7295L30.2162 41.7295L30.9393 41.0387ZM39.4997 50L38.7766 50.6908L39.4997 51.4477L40.2228 50.6908L39.4997 50ZM48.0602 41.0387L48.7832 41.7295L48.7832 41.7295L48.0602 41.0387ZM49.2265 39.8178L48.5036 39.1269L48.5034 39.1271L49.2265 39.8178ZM49.9497 30.166C49.2971 29.4825 48.5197 28.9377 47.6607 28.5651L46.8649 30.3999C47.4747 30.6645 48.0319 31.0535 48.5032 31.5471L49.9497 30.166ZM47.6607 28.5651C46.8016 28.1925 45.8791 28 44.9463 28V30C45.6033 30 46.2552 30.1355 46.8649 30.3999L47.6607 28.5651ZM44.9463 28C44.0134 28 43.0909 28.1925 42.2318 28.5651L43.0276 30.3999C43.6374 30.1355 44.2892 30 44.9463 30V28ZM42.2318 28.5651C41.3728 28.9377 40.5954 29.4825 39.9428 30.166L41.3893 31.5471C41.8606 31.0535 42.4178 30.6645 43.0276 30.3999L42.2318 28.5651ZM39.9429 30.1658L38.7766 31.3867L40.2228 32.7682L41.3891 31.5473L39.9429 30.1658ZM40.2228 31.3867L39.0565 30.1658L37.6103 31.5473L38.7766 32.7682L40.2228 31.3867ZM39.0565 30.1658C37.7376 28.7852 35.9389 28.0006 34.0531 28.0006L34.0531 30.0006C35.3782 30.0006 36.6587 30.5512 37.6103 31.5473L39.0565 30.1658ZM34.0531 28.0006C32.1674 28.0006 30.3687 28.7852 29.0498 30.1658L30.496 31.5473C31.4476 30.5512 32.7281 30.0006 34.0531 30.0006L34.0531 28.0006ZM29.0498 30.1658C27.7325 31.5448 27 33.4058 27 35.3372L29 35.3372C29 33.9074 29.543 32.545 30.496 31.5473L29.0498 30.1658ZM27 35.3372C27 37.2686 27.7325 39.1295 29.0498 40.5086L30.496 39.1271C29.543 38.1294 29 36.7669 29 35.3372L27 35.3372ZM29.0498 40.5086L30.2162 41.7295L31.6624 40.348L30.496 39.1271L29.0498 40.5086ZM30.2162 41.7295L38.7766 50.6908L40.2228 49.3092L31.6624 40.348L30.2162 41.7295ZM40.2228 50.6908L48.7832 41.7295L47.3371 40.348L38.7766 49.3092L40.2228 50.6908ZM48.7832 41.7295L49.9496 40.5086L48.5034 39.1271L47.3371 40.348L48.7832 41.7295ZM49.9494 40.5087C50.6023 39.8256 51.1179 39.017 51.4689 38.1302L49.6093 37.3942C49.3517 38.045 48.9752 38.6334 48.5036 39.1269L49.9494 40.5087ZM51.4689 38.1302C51.8199 37.2435 52 36.2945 52 35.3372H50C50 36.0442 49.8669 36.7433 49.6093 37.3942L51.4689 38.1302ZM52 35.3372C52 34.3798 51.8199 33.4309 51.4689 32.5441L49.6093 33.2802C49.8669 33.9311 50 34.6302 50 35.3372H52ZM51.4689 32.5441C51.1179 31.6573 50.6023 30.8487 49.9494 30.1656L48.5036 31.5475C48.9752 32.041 49.3517 32.6294 49.6093 33.2802L51.4689 32.5441Z"
+                              fill="#FFB1F7"
+                            />
+                          </svg>
                         </button>
                       </div>
                       <div class="card__price">
@@ -122,8 +146,31 @@
                           </div>
                           <span class="card__item-title--category">Лампа настольная</span>
                         </div>
-                        <button class="card__item-favorite--btn">
-                          <img src="./assets/images/common/favorites_btn.svg" alt="" />
+                        <button class="card__item-favorite--btn active">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="79"
+                            height="79"
+                            viewBox="0 0 79 79"
+                            fill="none"
+                          >
+                            <circle cx="39.5" cy="39.5" r="39.5" fill="white" fill-opacity="0.19" />
+                            <circle
+                              cx="39.5"
+                              cy="39.5"
+                              r="38.5"
+                              stroke="#FFB1F7"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M49.2265 30.8566C48.6645 30.268 47.9972 29.8011 47.2628 29.4825C46.5284 29.164 45.7412 29 44.9463 29C44.1513 29 43.3641 29.164 42.6297 29.4825C41.8953 29.8011 41.228 30.268 40.666 30.8566L39.4997 32.0775L38.3334 30.8566C37.1982 29.6682 35.6585 29.0006 34.0531 29.0006C32.4478 29.0006 30.9081 29.6682 29.7729 30.8566C28.6377 32.0449 28 33.6566 28 35.3372C28 37.0177 28.6377 38.6295 29.7729 39.8178L30.9393 41.0387L39.4997 50L48.0602 41.0387L49.2265 39.8178C49.7887 39.2295 50.2348 38.531 50.5391 37.7622C50.8434 36.9934 51 36.1694 51 35.3372C51 34.505 50.8434 33.681 50.5391 32.9122C50.2348 32.1434 49.7887 31.4449 49.2265 30.8566Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M49.2265 30.8566L48.5032 31.5471L48.5036 31.5475L49.2265 30.8566ZM44.9463 29V30V29ZM40.666 30.8566L41.3891 31.5473L41.3893 31.5471L40.666 30.8566ZM39.4997 32.0775L38.7766 32.7682L39.4997 33.5252L40.2228 32.7682L39.4997 32.0775ZM38.3334 30.8566L37.6103 31.5473L37.6103 31.5473L38.3334 30.8566ZM29.7729 39.8178L30.496 39.1271L30.496 39.1271L29.7729 39.8178ZM30.9393 41.0387L30.2162 41.7295L30.2162 41.7295L30.9393 41.0387ZM39.4997 50L38.7766 50.6908L39.4997 51.4477L40.2228 50.6908L39.4997 50ZM48.0602 41.0387L48.7832 41.7295L48.7832 41.7295L48.0602 41.0387ZM49.2265 39.8178L48.5036 39.1269L48.5034 39.1271L49.2265 39.8178ZM49.9497 30.166C49.2971 29.4825 48.5197 28.9377 47.6607 28.5651L46.8649 30.3999C47.4747 30.6645 48.0319 31.0535 48.5032 31.5471L49.9497 30.166ZM47.6607 28.5651C46.8016 28.1925 45.8791 28 44.9463 28V30C45.6033 30 46.2552 30.1355 46.8649 30.3999L47.6607 28.5651ZM44.9463 28C44.0134 28 43.0909 28.1925 42.2318 28.5651L43.0276 30.3999C43.6374 30.1355 44.2892 30 44.9463 30V28ZM42.2318 28.5651C41.3728 28.9377 40.5954 29.4825 39.9428 30.166L41.3893 31.5471C41.8606 31.0535 42.4178 30.6645 43.0276 30.3999L42.2318 28.5651ZM39.9429 30.1658L38.7766 31.3867L40.2228 32.7682L41.3891 31.5473L39.9429 30.1658ZM40.2228 31.3867L39.0565 30.1658L37.6103 31.5473L38.7766 32.7682L40.2228 31.3867ZM39.0565 30.1658C37.7376 28.7852 35.9389 28.0006 34.0531 28.0006L34.0531 30.0006C35.3782 30.0006 36.6587 30.5512 37.6103 31.5473L39.0565 30.1658ZM34.0531 28.0006C32.1674 28.0006 30.3687 28.7852 29.0498 30.1658L30.496 31.5473C31.4476 30.5512 32.7281 30.0006 34.0531 30.0006L34.0531 28.0006ZM29.0498 30.1658C27.7325 31.5448 27 33.4058 27 35.3372L29 35.3372C29 33.9074 29.543 32.545 30.496 31.5473L29.0498 30.1658ZM27 35.3372C27 37.2686 27.7325 39.1295 29.0498 40.5086L30.496 39.1271C29.543 38.1294 29 36.7669 29 35.3372L27 35.3372ZM29.0498 40.5086L30.2162 41.7295L31.6624 40.348L30.496 39.1271L29.0498 40.5086ZM30.2162 41.7295L38.7766 50.6908L40.2228 49.3092L31.6624 40.348L30.2162 41.7295ZM40.2228 50.6908L48.7832 41.7295L47.3371 40.348L38.7766 49.3092L40.2228 50.6908ZM48.7832 41.7295L49.9496 40.5086L48.5034 39.1271L47.3371 40.348L48.7832 41.7295ZM49.9494 40.5087C50.6023 39.8256 51.1179 39.017 51.4689 38.1302L49.6093 37.3942C49.3517 38.045 48.9752 38.6334 48.5036 39.1269L49.9494 40.5087ZM51.4689 38.1302C51.8199 37.2435 52 36.2945 52 35.3372H50C50 36.0442 49.8669 36.7433 49.6093 37.3942L51.4689 38.1302ZM52 35.3372C52 34.3798 51.8199 33.4309 51.4689 32.5441L49.6093 33.2802C49.8669 33.9311 50 34.6302 50 35.3372H52ZM51.4689 32.5441C51.1179 31.6573 50.6023 30.8487 49.9494 30.1656L48.5036 31.5475C48.9752 32.041 49.3517 32.6294 49.6093 33.2802L51.4689 32.5441Z"
+                              fill="#FFB1F7"
+                            />
+                          </svg>
                         </button>
                       </div>
                       <div class="card__price">
@@ -145,8 +192,31 @@
                           </div>
                           <span class="card__item-title--category">Лампа настольная</span>
                         </div>
-                        <button class="card__item-favorite--btn">
-                          <img src="./assets/images/common/favorites_btn.svg" alt="" />
+                        <button class="card__item-favorite--btn active">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="79"
+                            height="79"
+                            viewBox="0 0 79 79"
+                            fill="none"
+                          >
+                            <circle cx="39.5" cy="39.5" r="39.5" fill="white" fill-opacity="0.19" />
+                            <circle
+                              cx="39.5"
+                              cy="39.5"
+                              r="38.5"
+                              stroke="#FFB1F7"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M49.2265 30.8566C48.6645 30.268 47.9972 29.8011 47.2628 29.4825C46.5284 29.164 45.7412 29 44.9463 29C44.1513 29 43.3641 29.164 42.6297 29.4825C41.8953 29.8011 41.228 30.268 40.666 30.8566L39.4997 32.0775L38.3334 30.8566C37.1982 29.6682 35.6585 29.0006 34.0531 29.0006C32.4478 29.0006 30.9081 29.6682 29.7729 30.8566C28.6377 32.0449 28 33.6566 28 35.3372C28 37.0177 28.6377 38.6295 29.7729 39.8178L30.9393 41.0387L39.4997 50L48.0602 41.0387L49.2265 39.8178C49.7887 39.2295 50.2348 38.531 50.5391 37.7622C50.8434 36.9934 51 36.1694 51 35.3372C51 34.505 50.8434 33.681 50.5391 32.9122C50.2348 32.1434 49.7887 31.4449 49.2265 30.8566Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M49.2265 30.8566L48.5032 31.5471L48.5036 31.5475L49.2265 30.8566ZM44.9463 29V30V29ZM40.666 30.8566L41.3891 31.5473L41.3893 31.5471L40.666 30.8566ZM39.4997 32.0775L38.7766 32.7682L39.4997 33.5252L40.2228 32.7682L39.4997 32.0775ZM38.3334 30.8566L37.6103 31.5473L37.6103 31.5473L38.3334 30.8566ZM29.7729 39.8178L30.496 39.1271L30.496 39.1271L29.7729 39.8178ZM30.9393 41.0387L30.2162 41.7295L30.2162 41.7295L30.9393 41.0387ZM39.4997 50L38.7766 50.6908L39.4997 51.4477L40.2228 50.6908L39.4997 50ZM48.0602 41.0387L48.7832 41.7295L48.7832 41.7295L48.0602 41.0387ZM49.2265 39.8178L48.5036 39.1269L48.5034 39.1271L49.2265 39.8178ZM49.9497 30.166C49.2971 29.4825 48.5197 28.9377 47.6607 28.5651L46.8649 30.3999C47.4747 30.6645 48.0319 31.0535 48.5032 31.5471L49.9497 30.166ZM47.6607 28.5651C46.8016 28.1925 45.8791 28 44.9463 28V30C45.6033 30 46.2552 30.1355 46.8649 30.3999L47.6607 28.5651ZM44.9463 28C44.0134 28 43.0909 28.1925 42.2318 28.5651L43.0276 30.3999C43.6374 30.1355 44.2892 30 44.9463 30V28ZM42.2318 28.5651C41.3728 28.9377 40.5954 29.4825 39.9428 30.166L41.3893 31.5471C41.8606 31.0535 42.4178 30.6645 43.0276 30.3999L42.2318 28.5651ZM39.9429 30.1658L38.7766 31.3867L40.2228 32.7682L41.3891 31.5473L39.9429 30.1658ZM40.2228 31.3867L39.0565 30.1658L37.6103 31.5473L38.7766 32.7682L40.2228 31.3867ZM39.0565 30.1658C37.7376 28.7852 35.9389 28.0006 34.0531 28.0006L34.0531 30.0006C35.3782 30.0006 36.6587 30.5512 37.6103 31.5473L39.0565 30.1658ZM34.0531 28.0006C32.1674 28.0006 30.3687 28.7852 29.0498 30.1658L30.496 31.5473C31.4476 30.5512 32.7281 30.0006 34.0531 30.0006L34.0531 28.0006ZM29.0498 30.1658C27.7325 31.5448 27 33.4058 27 35.3372L29 35.3372C29 33.9074 29.543 32.545 30.496 31.5473L29.0498 30.1658ZM27 35.3372C27 37.2686 27.7325 39.1295 29.0498 40.5086L30.496 39.1271C29.543 38.1294 29 36.7669 29 35.3372L27 35.3372ZM29.0498 40.5086L30.2162 41.7295L31.6624 40.348L30.496 39.1271L29.0498 40.5086ZM30.2162 41.7295L38.7766 50.6908L40.2228 49.3092L31.6624 40.348L30.2162 41.7295ZM40.2228 50.6908L48.7832 41.7295L47.3371 40.348L38.7766 49.3092L40.2228 50.6908ZM48.7832 41.7295L49.9496 40.5086L48.5034 39.1271L47.3371 40.348L48.7832 41.7295ZM49.9494 40.5087C50.6023 39.8256 51.1179 39.017 51.4689 38.1302L49.6093 37.3942C49.3517 38.045 48.9752 38.6334 48.5036 39.1269L49.9494 40.5087ZM51.4689 38.1302C51.8199 37.2435 52 36.2945 52 35.3372H50C50 36.0442 49.8669 36.7433 49.6093 37.3942L51.4689 38.1302ZM52 35.3372C52 34.3798 51.8199 33.4309 51.4689 32.5441L49.6093 33.2802C49.8669 33.9311 50 34.6302 50 35.3372H52ZM51.4689 32.5441C51.1179 31.6573 50.6023 30.8487 49.9494 30.1656L48.5036 31.5475C48.9752 32.041 49.3517 32.6294 49.6093 33.2802L51.4689 32.5441Z"
+                              fill="#FFB1F7"
+                            />
+                          </svg>
                         </button>
                       </div>
                       <div class="card__price">
@@ -168,8 +238,31 @@
                           </div>
                           <span class="card__item-title--category">Лампа настольная</span>
                         </div>
-                        <button class="card__item-favorite--btn">
-                          <img src="./assets/images/common/favorites_btn.svg" alt="" />
+                        <button class="card__item-favorite--btn active">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="79"
+                            height="79"
+                            viewBox="0 0 79 79"
+                            fill="none"
+                          >
+                            <circle cx="39.5" cy="39.5" r="39.5" fill="white" fill-opacity="0.19" />
+                            <circle
+                              cx="39.5"
+                              cy="39.5"
+                              r="38.5"
+                              stroke="#FFB1F7"
+                              stroke-width="2"
+                            />
+                            <path
+                              d="M49.2265 30.8566C48.6645 30.268 47.9972 29.8011 47.2628 29.4825C46.5284 29.164 45.7412 29 44.9463 29C44.1513 29 43.3641 29.164 42.6297 29.4825C41.8953 29.8011 41.228 30.268 40.666 30.8566L39.4997 32.0775L38.3334 30.8566C37.1982 29.6682 35.6585 29.0006 34.0531 29.0006C32.4478 29.0006 30.9081 29.6682 29.7729 30.8566C28.6377 32.0449 28 33.6566 28 35.3372C28 37.0177 28.6377 38.6295 29.7729 39.8178L30.9393 41.0387L39.4997 50L48.0602 41.0387L49.2265 39.8178C49.7887 39.2295 50.2348 38.531 50.5391 37.7622C50.8434 36.9934 51 36.1694 51 35.3372C51 34.505 50.8434 33.681 50.5391 32.9122C50.2348 32.1434 49.7887 31.4449 49.2265 30.8566Z"
+                              fill="white"
+                            />
+                            <path
+                              d="M49.2265 30.8566L48.5032 31.5471L48.5036 31.5475L49.2265 30.8566ZM44.9463 29V30V29ZM40.666 30.8566L41.3891 31.5473L41.3893 31.5471L40.666 30.8566ZM39.4997 32.0775L38.7766 32.7682L39.4997 33.5252L40.2228 32.7682L39.4997 32.0775ZM38.3334 30.8566L37.6103 31.5473L37.6103 31.5473L38.3334 30.8566ZM29.7729 39.8178L30.496 39.1271L30.496 39.1271L29.7729 39.8178ZM30.9393 41.0387L30.2162 41.7295L30.2162 41.7295L30.9393 41.0387ZM39.4997 50L38.7766 50.6908L39.4997 51.4477L40.2228 50.6908L39.4997 50ZM48.0602 41.0387L48.7832 41.7295L48.7832 41.7295L48.0602 41.0387ZM49.2265 39.8178L48.5036 39.1269L48.5034 39.1271L49.2265 39.8178ZM49.9497 30.166C49.2971 29.4825 48.5197 28.9377 47.6607 28.5651L46.8649 30.3999C47.4747 30.6645 48.0319 31.0535 48.5032 31.5471L49.9497 30.166ZM47.6607 28.5651C46.8016 28.1925 45.8791 28 44.9463 28V30C45.6033 30 46.2552 30.1355 46.8649 30.3999L47.6607 28.5651ZM44.9463 28C44.0134 28 43.0909 28.1925 42.2318 28.5651L43.0276 30.3999C43.6374 30.1355 44.2892 30 44.9463 30V28ZM42.2318 28.5651C41.3728 28.9377 40.5954 29.4825 39.9428 30.166L41.3893 31.5471C41.8606 31.0535 42.4178 30.6645 43.0276 30.3999L42.2318 28.5651ZM39.9429 30.1658L38.7766 31.3867L40.2228 32.7682L41.3891 31.5473L39.9429 30.1658ZM40.2228 31.3867L39.0565 30.1658L37.6103 31.5473L38.7766 32.7682L40.2228 31.3867ZM39.0565 30.1658C37.7376 28.7852 35.9389 28.0006 34.0531 28.0006L34.0531 30.0006C35.3782 30.0006 36.6587 30.5512 37.6103 31.5473L39.0565 30.1658ZM34.0531 28.0006C32.1674 28.0006 30.3687 28.7852 29.0498 30.1658L30.496 31.5473C31.4476 30.5512 32.7281 30.0006 34.0531 30.0006L34.0531 28.0006ZM29.0498 30.1658C27.7325 31.5448 27 33.4058 27 35.3372L29 35.3372C29 33.9074 29.543 32.545 30.496 31.5473L29.0498 30.1658ZM27 35.3372C27 37.2686 27.7325 39.1295 29.0498 40.5086L30.496 39.1271C29.543 38.1294 29 36.7669 29 35.3372L27 35.3372ZM29.0498 40.5086L30.2162 41.7295L31.6624 40.348L30.496 39.1271L29.0498 40.5086ZM30.2162 41.7295L38.7766 50.6908L40.2228 49.3092L31.6624 40.348L30.2162 41.7295ZM40.2228 50.6908L48.7832 41.7295L47.3371 40.348L38.7766 49.3092L40.2228 50.6908ZM48.7832 41.7295L49.9496 40.5086L48.5034 39.1271L47.3371 40.348L48.7832 41.7295ZM49.9494 40.5087C50.6023 39.8256 51.1179 39.017 51.4689 38.1302L49.6093 37.3942C49.3517 38.045 48.9752 38.6334 48.5036 39.1269L49.9494 40.5087ZM51.4689 38.1302C51.8199 37.2435 52 36.2945 52 35.3372H50C50 36.0442 49.8669 36.7433 49.6093 37.3942L51.4689 38.1302ZM52 35.3372C52 34.3798 51.8199 33.4309 51.4689 32.5441L49.6093 33.2802C49.8669 33.9311 50 34.6302 50 35.3372H52ZM51.4689 32.5441C51.1179 31.6573 50.6023 30.8487 49.9494 30.1656L48.5036 31.5475C48.9752 32.041 49.3517 32.6294 49.6093 33.2802L51.4689 32.5441Z"
+                              fill="#FFB1F7"
+                            />
+                          </svg>
                         </button>
                       </div>
                       <div class="card__price">
@@ -205,9 +298,9 @@
                       <div class="card__price">
                         <div class="card__price-total">150 000 <b>₽</b></div>
                         <div class="card__price-counter">
-                          <div class="card__price-counter--minus">-</div>
-                          <div class="card__price-counter--count">1</div>
-                          <div class="card__price-counter--plus">+</div>
+                          <button class="card__price-counter--minus">-</button>
+                          <button class="card__price-counter--count">1</button>
+                          <button class="card__price-counter--plus">+</button>
                         </div>
                       </div>
                     </div>
@@ -232,9 +325,9 @@
                       <div class="card__price">
                         <div class="card__price-total">150 000 <b>₽</b></div>
                         <div class="card__price-counter">
-                          <div class="card__price-counter--minus">-</div>
-                          <div class="card__price-counter--count">1</div>
-                          <div class="card__price-counter--plus">+</div>
+                          <button class="card__price-counter--minus">-</button>
+                          <button class="card__price-counter--count">1</button>
+                          <button class="card__price-counter--plus">+</button>
                         </div>
                       </div>
                     </div>
@@ -259,9 +352,9 @@
                       <div class="card__price">
                         <div class="card__price-total">150 000 <b>₽</b></div>
                         <div class="card__price-counter">
-                          <div class="card__price-counter--minus">-</div>
-                          <div class="card__price-counter--count">1</div>
-                          <div class="card__price-counter--plus">+</div>
+                          <button class="card__price-counter--minus">-</button>
+                          <button class="card__price-counter--count">1</button>
+                          <button class="card__price-counter--plus">+</button>
                         </div>
                       </div>
                     </div>
@@ -286,9 +379,9 @@
                       <div class="card__price">
                         <div class="card__price-total">150 000 <b>₽</b></div>
                         <div class="card__price-counter">
-                          <div class="card__price-counter--minus">-</div>
-                          <div class="card__price-counter--count">1</div>
-                          <div class="card__price-counter--plus">+</div>
+                          <button class="card__price-counter--minus">-</button>
+                          <button class="card__price-counter--count">1</button>
+                          <button class="card__price-counter--plus">+</button>
                         </div>
                       </div>
                     </div>
@@ -374,7 +467,7 @@
         </div>
       </div>
     </header>
-    <section class="banner">
+    <section class="banner wow fadeIn" data-wow-duration="2s">
       <div class="banner_container">
         <div class="banner__slider swiper-wrapper">
           <div class="banner__card swiper-slide">
@@ -430,7 +523,7 @@
           <div class="banner__card swiper-slide">
             <div class="banner__card-image">
               <div class="banner__card-img">
-                <img src="./assets/images/common/banner_kreslo.png" alt="" />
+                <img src="./assets/images/common/chair.png" alt="" />
                 <div class="banner__card-shadow">
                   <img src="./assets/images/common/drop_shadow_card.png" alt="" />
                 </div>
@@ -477,10 +570,11 @@
               <div class="banner__slide-number">02</div>
             </div>
           </div>
+
           <div class="banner__card swiper-slide">
             <div class="banner__card-image">
               <div class="banner__card-img">
-                <img src="./assets/images/common/banner_lamp_2.png" alt="" />
+                <img src="./assets/images/common/table_banner.png" alt="" />
                 <div class="banner__card-shadow">
                   <img src="./assets/images/common/drop_shadow_card.png" alt="" />
                 </div>
@@ -532,16 +626,16 @@
       </div>
     </section>
 
-    <section class="categories">
+    <section id="categories" class="categories">
       <div class="categories_container container">
-        <h2 class="categories__title title">категории</h2>
+        <h2 class="categories__title title wow bounceInLeft" data-wow-duration="1.6s">категории</h2>
         <div class="categories__list">
           <div class="categories__list-wrapper swiper-wrapper">
-            <div data-category="mirrors" class="categories__card swiper-slide">
+            <div data-category="mirrors" class="categories__card swiper-slide wow fadeInLeftBig">
               <div class="categories__card-wrapper">
                 <div class="categories__card-title">напольные зеркала</div>
                 <div class="categories__card-img">
-                  <img src="./assets/images/category/mirrors.png" alt="mirrors" />
+                  <img src="./assets/images/common/category_1.png" alt="mirrors" />
                 </div>
                 <div class="categories__card-chapter">
                   <svg
@@ -597,11 +691,11 @@
                 </svg>
               </button>
             </div>
-            <div data-category="lamps" class="categories__card swiper-slide">
+            <div data-category="lamps" class="categories__card swiper-slide wow fadeInUpBig">
               <div class="categories__card-wrapper">
                 <div class="categories__card-title">торшеры и лампы</div>
                 <div class="categories__card-img">
-                  <img src="./assets/images/category/lamps.png" alt="mirrors" />
+                  <img src="./assets/images/common/category_2.png" alt="mirrors" />
                 </div>
                 <div class="categories__card-chapter">
                   <svg
@@ -657,11 +751,11 @@
                 </svg>
               </button>
             </div>
-            <div data-category="chairs" class="categories__card swiper-slide">
+            <div data-category="chairs" class="categories__card swiper-slide wow fadeInDownBig">
               <div class="categories__card-wrapper">
                 <div class="categories__card-title">кресла и стулья</div>
                 <div class="categories__card-img">
-                  <img src="./assets/images/category/chairs.png" alt="mirrors" />
+                  <img src="./assets/images/common/category_3.png" alt="mirrors" />
                 </div>
                 <div class="categories__card-chapter">
                   <svg
@@ -717,11 +811,11 @@
                 </svg>
               </button>
             </div>
-            <div data-category="tables" class="categories__card swiper-slide">
+            <div data-category="tables" class="categories__card swiper-slide wow fadeInRightBig">
               <div class="categories__card-wrapper">
                 <div class="categories__card-title">столы и тумбы</div>
                 <div class="categories__card-img">
-                  <img src="./assets/images/category/tables.png" alt="mirrors" />
+                  <img src="./assets/images/common/category_4.png" alt="mirrors" />
                 </div>
                 <div class="categories__card-chapter">
                   <svg
@@ -783,7 +877,7 @@
           <div class="list__close">
             <img src="./assets/images/common/close.svg" alt="" />
           </div>
-          <div class="category__list mirrors">
+          <div data-category="mirrors" class="category__list mirrors">
             <div class="category__list-wrapper">
               <button class="category__list-filter">
                 <svg
@@ -892,7 +986,7 @@
             </div>
             <div class="result__list category">
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -934,7 +1028,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -957,7 +1051,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -999,7 +1093,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -1022,7 +1116,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -1064,7 +1158,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -1087,7 +1181,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -1129,7 +1223,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -1152,7 +1246,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -1194,7 +1288,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -1217,7 +1311,267 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                  >
+                    <circle
+                      cx="10.5"
+                      cy="10.5"
+                      r="8.5"
+                      fill="#29D0D9"
+                      stroke="white"
+                      stroke-width="3"
+                    />
+                  </svg>
+                </div>
+                <div class="result__card-img">
+                  <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
+                </div>
+                <div class="result__card-content">
+                  <div class="result__card-info">
+                    <div class="result__card-info--name">
+                      <div class="result__card-color--mob">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <circle
+                            cx="10"
+                            cy="10"
+                            r="8"
+                            fill="#FFC4A5"
+                            stroke="white"
+                            stroke-width="3"
+                          />
+                        </svg>
+                      </div>
+                      <div class="result__card-name">Kristin</div>
+                    </div>
+                    <div class="result__card-info--category">Зеркало напольное</div>
+                  </div>
+                  <div class="result__card-bottom">
+                    <div class="result__card-price">
+                      <div class="result__card-price--count">150 000</div>
+                      <div class="result__card-price--currency">₽</div>
+                      <div class="result__card-price--old">
+                        <div class="result__card-price--count">150 000</div>
+                        <div class="result__card-price--currency">₽</div>
+                      </div>
+                    </div>
+                    <button class="result__card-buy">
+                      <div class="result__card-buy--icon">
+                        <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                      </div>
+                      <span class="result__card-buy--text">Купить</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="result__card">
+                <div data-color="#29D0D9" class="result__card-color">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                  >
+                    <circle
+                      cx="10.5"
+                      cy="10.5"
+                      r="8.5"
+                      fill="#29D0D9"
+                      stroke="white"
+                      stroke-width="3"
+                    />
+                  </svg>
+                </div>
+                <div class="result__card-img">
+                  <img src="./assets/images/mirrors/mirrors_2.png" alt="" />
+                </div>
+                <div class="result__card-content">
+                  <div class="result__card-info">
+                    <div class="result__card-info--name">
+                      <div class="result__card-color--mob">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <circle
+                            cx="10"
+                            cy="10"
+                            r="8"
+                            fill="#FA8EEF"
+                            stroke="white"
+                            stroke-width="3"
+                          />
+                        </svg>
+                      </div>
+                      <div class="result__card-name">Kristin</div>
+                    </div>
+                    <div class="result__card-info--category">Зеркало напольное</div>
+                  </div>
+                  <div class="result__card-bottom">
+                    <div class="result__card-price">
+                      <div class="result__card-price--count">150 000</div>
+                      <div class="result__card-price--currency">₽</div>
+                      <div class="result__card-price--old">
+                        <div class="result__card-price--count">150 000</div>
+                        <div class="result__card-price--currency">₽</div>
+                      </div>
+                    </div>
+                    <button class="result__card-buy">
+                      <div class="result__card-buy--icon">
+                        <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                      </div>
+                      <span class="result__card-buy--text">Купить</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="result__card">
+                <div data-color="#29D0D9" class="result__card-color">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                  >
+                    <circle
+                      cx="10.5"
+                      cy="10.5"
+                      r="8.5"
+                      fill="#29D0D9"
+                      stroke="white"
+                      stroke-width="3"
+                    />
+                  </svg>
+                </div>
+                <div class="result__card-img">
+                  <img src="./assets/images/mirrors/mirrors_3.png" alt="" />
+                </div>
+                <div class="result__card-content">
+                  <div class="result__card-info">
+                    <div class="result__card-info--name">
+                      <div class="result__card-color--mob">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <circle
+                            cx="10"
+                            cy="10"
+                            r="8"
+                            fill="#29D0D9"
+                            stroke="white"
+                            stroke-width="3"
+                          />
+                        </svg>
+                      </div>
+                      <div class="result__card-name">Kristin</div>
+                    </div>
+                    <div class="result__card-info--category">Зеркало напольное</div>
+                  </div>
+                  <div class="result__card-bottom">
+                    <div class="result__card-price">
+                      <div class="result__card-price--count">150 000</div>
+                      <div class="result__card-price--currency">₽</div>
+                      <div class="result__card-price--old">
+                        <div class="result__card-price--count">150 000</div>
+                        <div class="result__card-price--currency">₽</div>
+                      </div>
+                    </div>
+                    <button class="result__card-buy">
+                      <div class="result__card-buy--icon">
+                        <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                      </div>
+                      <span class="result__card-buy--text">Купить</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="result__card">
+                <div data-color="#29D0D9" class="result__card-color">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="21"
+                    height="21"
+                    viewBox="0 0 21 21"
+                    fill="none"
+                  >
+                    <circle
+                      cx="10.5"
+                      cy="10.5"
+                      r="8.5"
+                      fill="#29D0D9"
+                      stroke="white"
+                      stroke-width="3"
+                    />
+                  </svg>
+                </div>
+                <div class="result__card-img">
+                  <img src="./assets/images/mirrors/mirrors_4.png" alt="" />
+                </div>
+                <div class="result__card-content">
+                  <div class="result__card-info">
+                    <div class="result__card-info--name">
+                      <div class="result__card-color--mob">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="20"
+                          viewBox="0 0 20 20"
+                          fill="none"
+                        >
+                          <circle
+                            cx="10"
+                            cy="10"
+                            r="8"
+                            fill="#89D5FF"
+                            stroke="white"
+                            stroke-width="3"
+                          />
+                        </svg>
+                      </div>
+                      <div class="result__card-name">Kristin</div>
+                    </div>
+                    <div class="result__card-info--category">Зеркало напольное</div>
+                  </div>
+                  <div class="result__card-bottom">
+                    <div class="result__card-price">
+                      <div class="result__card-price--count">150 000</div>
+                      <div class="result__card-price--currency">₽</div>
+                      <div class="result__card-price--old">
+                        <div class="result__card-price--count">150 000</div>
+                        <div class="result__card-price--currency">₽</div>
+                      </div>
+                    </div>
+                    <button class="result__card-buy">
+                      <div class="result__card-buy--icon">
+                        <img src="./assets/images/common/cart_yellow.svg" alt="" />
+                      </div>
+                      <span class="result__card-buy--text">Купить</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="result__card">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -1253,13 +1607,13 @@
                             cx="10"
                             cy="10"
                             r="8"
-                            fill="#FFC4A5"
+                            fill="#89D5FF"
                             stroke="white"
                             stroke-width="3"
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -1282,7 +1636,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn">
+            <button class="btn btn-load">
               Загрузить еще
               <svg
                 width="25"
@@ -1310,7 +1664,7 @@
               </svg>
             </button>
           </div>
-          <div class="category__list lamps">
+          <div data-category="lamps" class="category__list lamps">
             <div class="category__list-wrapper">
               <button class="category__list-filter">
                 <svg
@@ -1419,7 +1773,7 @@
             </div>
             <div class="result__list category">
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -1438,7 +1792,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/lamps/lamp_1.png" alt="" />
+                  <img src="./assets/images/lamps/lamps_1.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -1461,7 +1815,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -1484,7 +1838,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -1503,7 +1857,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/lamps/lamp_2.png" alt="" />
+                  <img src="./assets/images/lamps/lamps_2.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -1526,7 +1880,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -1549,7 +1903,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -1568,7 +1922,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/lamps/lamp_3.png" alt="" />
+                  <img src="./assets/images/lamps/lamps_3.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -1591,7 +1945,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -1614,7 +1968,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -1633,7 +1987,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/lamps/lamp_4.png" alt="" />
+                  <img src="./assets/images/lamps/lamps_4.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -1656,7 +2010,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -1679,7 +2033,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -1698,7 +2052,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/lamps/lamp_5.png" alt="" />
+                  <img src="./assets/images/lamps/lamps_5.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -1721,72 +2075,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
-                    </div>
-                    <div class="result__card-info--category">Зеркало напольное</div>
-                  </div>
-                  <div class="result__card-bottom">
-                    <div class="result__card-price">
-                      <div class="result__card-price--count">150 000</div>
-                      <div class="result__card-price--currency">₽</div>
-                      <div class="result__card-price--old">
-                        <div class="result__card-price--count">150 000</div>
-                        <div class="result__card-price--currency">₽</div>
-                      </div>
-                    </div>
-                    <button class="result__card-buy">
-                      <div class="result__card-buy--icon">
-                        <img src="./assets/images/common/cart_yellow.svg" alt="" />
-                      </div>
-                      <span class="result__card-buy--text">Купить</span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <div class="result__card">
-                <div class="result__card-color">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="21"
-                    height="21"
-                    viewBox="0 0 21 21"
-                    fill="none"
-                  >
-                    <circle
-                      cx="10.5"
-                      cy="10.5"
-                      r="8.5"
-                      fill="#29D0D9"
-                      stroke="white"
-                      stroke-width="3"
-                    />
-                  </svg>
-                </div>
-                <div class="result__card-img">
-                  <img src="./assets/images/lamps/lamp_6.png" alt="" />
-                </div>
-                <div class="result__card-content">
-                  <div class="result__card-info">
-                    <div class="result__card-info--name">
-                      <div class="result__card-color--mob">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="20"
-                          height="20"
-                          viewBox="0 0 20 20"
-                          fill="none"
-                        >
-                          <circle
-                            cx="10"
-                            cy="10"
-                            r="8"
-                            fill="#FFC4A5"
-                            stroke="white"
-                            stroke-width="3"
-                          />
-                        </svg>
-                      </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -1809,7 +2098,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn">
+            <button class="btn btn-load">
               Загрузить еще
               <svg
                 width="25"
@@ -1837,7 +2126,7 @@
               </svg>
             </button>
           </div>
-          <div class="category__list chairs">
+          <div data-category="chairs" class="category__list chairs">
             <div class="category__list-wrapper">
               <button class="category__list-filter">
                 <svg
@@ -1946,7 +2235,7 @@
             </div>
             <div class="result__list category">
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -1965,7 +2254,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/chairs/chairs_1_short.png" alt="" />
+                  <img src="./assets/images/chairs/chairs_1.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -1988,7 +2277,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -2011,7 +2300,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -2030,7 +2319,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/chairs/chairs_2_short.png" alt="" />
+                  <img src="./assets/images/chairs/chairs_2.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -2053,7 +2342,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -2076,7 +2365,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -2095,7 +2384,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/chairs/chairs_3_short.png" alt="" />
+                  <img src="./assets/images/chairs/chairs_3.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -2118,7 +2407,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -2141,7 +2430,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -2160,7 +2449,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/chairs/chairs_4_short.png" alt="" />
+                  <img src="./assets/images/chairs/chairs_4.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -2183,7 +2472,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -2206,7 +2495,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -2225,7 +2514,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/chairs/chairs_5_short.png" alt="" />
+                  <img src="./assets/images/chairs/chairs_5.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -2248,7 +2537,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -2271,7 +2560,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn">
+            <button class="btn btn-load">
               Загрузить еще
               <svg
                 width="25"
@@ -2299,7 +2588,7 @@
               </svg>
             </button>
           </div>
-          <div class="category__list tables">
+          <div data-category="tables" class="category__list tables">
             <div class="category__list-wrapper">
               <button class="category__list-filter">
                 <svg
@@ -2408,7 +2697,7 @@
             </div>
             <div class="result__list category">
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -2427,7 +2716,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/tables/tables_1_short.png" alt="" />
+                  <img src="./assets/images/tables/tables_1.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -2450,7 +2739,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -2473,7 +2762,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -2492,7 +2781,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/tables/tables_2_short.png" alt="" />
+                  <img src="./assets/images/tables/tables_2.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -2515,7 +2804,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -2538,7 +2827,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -2557,7 +2846,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/tables/tables_3_short.png" alt="" />
+                  <img src="./assets/images/tables/tables_3.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -2580,7 +2869,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -2603,7 +2892,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -2622,7 +2911,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/tables/tables_4_short.png" alt="" />
+                  <img src="./assets/images/tables/tables_4.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -2645,7 +2934,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -2668,7 +2957,7 @@
                 </div>
               </div>
               <div class="result__card">
-                <div class="result__card-color">
+                <div data-color="#29D0D9" class="result__card-color">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -2687,7 +2976,7 @@
                   </svg>
                 </div>
                 <div class="result__card-img">
-                  <img src="./assets/images/tables/tables_5_short.png" alt="" />
+                  <img src="./assets/images/tables/tables_5.png" alt="" />
                 </div>
                 <div class="result__card-content">
                   <div class="result__card-info">
@@ -2710,7 +2999,7 @@
                           />
                         </svg>
                       </div>
-                      Kristin
+                      <div class="result__card-name">Kristin</div>
                     </div>
                     <div class="result__card-info--category">Зеркало напольное</div>
                   </div>
@@ -2733,7 +3022,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn">
+            <button class="btn btn-load">
               Загрузить еще
               <svg
                 width="25"
@@ -2764,52 +3053,88 @@
         </div>
       </div>
     </section>
-    <section class="greetings">
+    <section class="greetings animate__bounce">
       <div class="greetings__lines">
         <div class="greetings__lines-lavender">
-          <span>creating a great art</span>
-          <div class="greetings__lines-star">
-            <img src="./assets/images/common/star.svg" alt="" />
+          <div class="greetings__lines-container line_1">
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
           </div>
-          <span>creating a great art</span>
-          <div class="greetings__lines-star">
-            <img src="./assets/images/common/star.svg" alt="" />
-          </div>
-          <span>creating a great art</span>
-          <div class="greetings__lines-star">
-            <img src="./assets/images/common/star.svg" alt="" />
-          </div>
-          <span>creating a great art</span>
-          <div class="greetings__lines-star">
-            <img src="./assets/images/common/star.svg" alt="" />
-          </div>
-          <span>creating a great art</span>
         </div>
         <div class="greetings__lines-blue">
-          <span>creating a great art</span>
-          <div class="greetings__lines-star">
-            <img src="./assets/images/common/star.svg" alt="" />
+          <div class="greetings__lines-container line_2">
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
+            <div class="greetings__lines-star">
+              <img src="./assets/images/common/star.svg" alt="" />
+            </div>
+            <span>creating a great art</span>
           </div>
-          <span>creating a great art</span>
-          <div class="greetings__lines-star">
-            <img src="./assets/images/common/star.svg" alt="" />
-          </div>
-          <span>creating a great art</span>
-          <div class="greetings__lines-star">
-            <img src="./assets/images/common/star.svg" alt="" />
-          </div>
-          <span>creating a great art</span>
-          <div class="greetings__lines-star">
-            <img src="./assets/images/common/star.svg" alt="" />
-          </div>
-          <span>creating a great art</span>
         </div>
       </div>
     </section>
 
-    <section class="blog">
+    <section id="blog" class="blog">
       <div class="blog_container container">
-        <div class="blog__top title">
+        <div class="blog__top title wow rollIn" data-wow-duration="1s">
           <div class="blog__title">
             <div class="blog__list-pagination swiper-pagination"></div>
             <div class="blog__title-text">Блог</div>
@@ -2819,7 +3144,7 @@
             <div class="blog__count-last">4</div>
           </div>
         </div>
-        <div class="blog__list">
+        <div class="blog__list wow lightSpeedIn">
           <div class="blog__list-wrapper swiper-wrapper">
             <div class="blog__card swiper-slide">
               <div class="blog__card-wrapper">
@@ -3076,7 +3401,7 @@
         <div class="result__title">результаты поиска</div>
         <div class="result__list">
           <div class="result__card">
-            <div class="result__card-color">
+            <div data-color="#29D0D9" class="result__card-color">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
@@ -3118,7 +3443,7 @@
                       />
                     </svg>
                   </div>
-                  Kristin
+                  <div class="result__card-name">Kristin</div>
                 </div>
                 <div class="result__card-info--category">Зеркало напольное</div>
               </div>
@@ -3141,7 +3466,7 @@
             </div>
           </div>
           <div class="result__card">
-            <div class="result__card-color">
+            <div data-color="#29D0D9" class="result__card-color">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
@@ -3183,7 +3508,7 @@
                       />
                     </svg>
                   </div>
-                  Kristin
+                  <div class="result__card-name">Kristin</div>
                 </div>
                 <div class="result__card-info--category">Зеркало напольное</div>
               </div>
@@ -3206,7 +3531,7 @@
             </div>
           </div>
           <div class="result__card">
-            <div class="result__card-color">
+            <div data-color="#29D0D9" class="result__card-color">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
@@ -3248,7 +3573,7 @@
                       />
                     </svg>
                   </div>
-                  Kristin
+                  <div class="result__card-name">Kristin</div>
                 </div>
                 <div class="result__card-info--category">Зеркало напольное</div>
               </div>
@@ -3271,7 +3596,7 @@
             </div>
           </div>
           <div class="result__card">
-            <div class="result__card-color">
+            <div data-color="#29D0D9" class="result__card-color">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
@@ -3313,7 +3638,7 @@
                       />
                     </svg>
                   </div>
-                  Kristin
+                  <div class="result__card-name">Kristin</div>
                 </div>
                 <div class="result__card-info--category">Зеркало напольное</div>
               </div>
@@ -3336,7 +3661,7 @@
             </div>
           </div>
           <div class="result__card">
-            <div class="result__card-color">
+            <div data-color="#29D0D9" class="result__card-color">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="21"
@@ -3378,72 +3703,7 @@
                       />
                     </svg>
                   </div>
-                  Kristin
-                </div>
-                <div class="result__card-info--category">Зеркало напольное</div>
-              </div>
-              <div class="result__card-bottom">
-                <div class="result__card-price">
-                  <div class="result__card-price--count">150 000</div>
-                  <div class="result__card-price--currency">₽</div>
-                  <div class="result__card-price--old">
-                    <div class="result__card-price--count">150 000</div>
-                    <div class="result__card-price--currency">₽</div>
-                  </div>
-                </div>
-                <button class="result__card-buy">
-                  <div class="result__card-buy--icon">
-                    <img src="./assets/images/common/cart_yellow.svg" alt="" />
-                  </div>
-                  <span class="result__card-buy--text">Купить</span>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div class="result__card">
-            <div class="result__card-color">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="21"
-                height="21"
-                viewBox="0 0 21 21"
-                fill="none"
-              >
-                <circle
-                  cx="10.5"
-                  cy="10.5"
-                  r="8.5"
-                  fill="#29D0D9"
-                  stroke="white"
-                  stroke-width="3"
-                />
-              </svg>
-            </div>
-            <div class="result__card-img">
-              <img src="./assets/images/mirrors/mirrors_1.png" alt="" />
-            </div>
-            <div class="result__card-content">
-              <div class="result__card-info">
-                <div class="result__card-info--name">
-                  <div class="result__card-color--mob">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 20 20"
-                      fill="none"
-                    >
-                      <circle
-                        cx="10"
-                        cy="10"
-                        r="8"
-                        fill="#FFC4A5"
-                        stroke="white"
-                        stroke-width="3"
-                      />
-                    </svg>
-                  </div>
-                  Kristin
+                  <div class="result__card-name">Kristin</div>
                 </div>
                 <div class="result__card-info--category">Зеркало напольное</div>
               </div>
@@ -3505,15 +3765,32 @@
         </div>
         <div class="product__img">
           <img src="./assets/images/common/banner_lamp_1.png" alt="Benjamin Moore" />
+          <div class="product__name">Benjamin Moore</div>
         </div>
-        <div class="product__name">Benjamin Moore</div>
         <div class="product__right">
           <button class="product__close">
             закрыть <img src="./assets/images/common/close.svg" alt="закрыть" />
           </button>
-          <div class="product__right-favorites">
-            <img src="./assets/images/common/favorites__btn.svg" alt="" />
-          </div>
+          <button class="product__right-favorites">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="79"
+              height="79"
+              viewBox="0 0 79 79"
+              fill="none"
+            >
+              <circle cx="39.5" cy="39.5" r="39.5" fill="white" fill-opacity="0.19" />
+              <circle cx="39.5" cy="39.5" r="38.5" stroke="#FFB1F7" stroke-width="2" />
+              <path
+                d="M49.2265 30.8566C48.6645 30.268 47.9972 29.8011 47.2628 29.4825C46.5284 29.164 45.7412 29 44.9463 29C44.1513 29 43.3641 29.164 42.6297 29.4825C41.8953 29.8011 41.228 30.268 40.666 30.8566L39.4997 32.0775L38.3334 30.8566C37.1982 29.6682 35.6585 29.0006 34.0531 29.0006C32.4478 29.0006 30.9081 29.6682 29.7729 30.8566C28.6377 32.0449 28 33.6566 28 35.3372C28 37.0177 28.6377 38.6295 29.7729 39.8178L30.9393 41.0387L39.4997 50L48.0602 41.0387L49.2265 39.8178C49.7887 39.2295 50.2348 38.531 50.5391 37.7622C50.8434 36.9934 51 36.1694 51 35.3372C51 34.505 50.8434 33.681 50.5391 32.9122C50.2348 32.1434 49.7887 31.4449 49.2265 30.8566Z"
+                fill="white"
+              />
+              <path
+                d="M49.2265 30.8566L48.5032 31.5471L48.5036 31.5475L49.2265 30.8566ZM44.9463 29V30V29ZM40.666 30.8566L41.3891 31.5473L41.3893 31.5471L40.666 30.8566ZM39.4997 32.0775L38.7766 32.7682L39.4997 33.5252L40.2228 32.7682L39.4997 32.0775ZM38.3334 30.8566L37.6103 31.5473L37.6103 31.5473L38.3334 30.8566ZM29.7729 39.8178L30.496 39.1271L30.496 39.1271L29.7729 39.8178ZM30.9393 41.0387L30.2162 41.7295L30.2162 41.7295L30.9393 41.0387ZM39.4997 50L38.7766 50.6908L39.4997 51.4477L40.2228 50.6908L39.4997 50ZM48.0602 41.0387L48.7832 41.7295L48.7832 41.7295L48.0602 41.0387ZM49.2265 39.8178L48.5036 39.1269L48.5034 39.1271L49.2265 39.8178ZM49.9497 30.166C49.2971 29.4825 48.5197 28.9377 47.6607 28.5651L46.8649 30.3999C47.4747 30.6645 48.0319 31.0535 48.5032 31.5471L49.9497 30.166ZM47.6607 28.5651C46.8016 28.1925 45.8791 28 44.9463 28V30C45.6033 30 46.2552 30.1355 46.8649 30.3999L47.6607 28.5651ZM44.9463 28C44.0134 28 43.0909 28.1925 42.2318 28.5651L43.0276 30.3999C43.6374 30.1355 44.2892 30 44.9463 30V28ZM42.2318 28.5651C41.3728 28.9377 40.5954 29.4825 39.9428 30.166L41.3893 31.5471C41.8606 31.0535 42.4178 30.6645 43.0276 30.3999L42.2318 28.5651ZM39.9429 30.1658L38.7766 31.3867L40.2228 32.7682L41.3891 31.5473L39.9429 30.1658ZM40.2228 31.3867L39.0565 30.1658L37.6103 31.5473L38.7766 32.7682L40.2228 31.3867ZM39.0565 30.1658C37.7376 28.7852 35.9389 28.0006 34.0531 28.0006L34.0531 30.0006C35.3782 30.0006 36.6587 30.5512 37.6103 31.5473L39.0565 30.1658ZM34.0531 28.0006C32.1674 28.0006 30.3687 28.7852 29.0498 30.1658L30.496 31.5473C31.4476 30.5512 32.7281 30.0006 34.0531 30.0006L34.0531 28.0006ZM29.0498 30.1658C27.7325 31.5448 27 33.4058 27 35.3372L29 35.3372C29 33.9074 29.543 32.545 30.496 31.5473L29.0498 30.1658ZM27 35.3372C27 37.2686 27.7325 39.1295 29.0498 40.5086L30.496 39.1271C29.543 38.1294 29 36.7669 29 35.3372L27 35.3372ZM29.0498 40.5086L30.2162 41.7295L31.6624 40.348L30.496 39.1271L29.0498 40.5086ZM30.2162 41.7295L38.7766 50.6908L40.2228 49.3092L31.6624 40.348L30.2162 41.7295ZM40.2228 50.6908L48.7832 41.7295L47.3371 40.348L38.7766 49.3092L40.2228 50.6908ZM48.7832 41.7295L49.9496 40.5086L48.5034 39.1271L47.3371 40.348L48.7832 41.7295ZM49.9494 40.5087C50.6023 39.8256 51.1179 39.017 51.4689 38.1302L49.6093 37.3942C49.3517 38.045 48.9752 38.6334 48.5036 39.1269L49.9494 40.5087ZM51.4689 38.1302C51.8199 37.2435 52 36.2945 52 35.3372H50C50 36.0442 49.8669 36.7433 49.6093 37.3942L51.4689 38.1302ZM52 35.3372C52 34.3798 51.8199 33.4309 51.4689 32.5441L49.6093 33.2802C49.8669 33.9311 50 34.6302 50 35.3372H52ZM51.4689 32.5441C51.1179 31.6573 50.6023 30.8487 49.9494 30.1656L48.5036 31.5475C48.9752 32.041 49.3517 32.6294 49.6093 33.2802L51.4689 32.5441Z"
+                fill="#FFB1F7"
+              />
+            </svg>
+          </button>
           <div class="product__right-height">
             <div class="product__right-height--text">Высота:</div>
             <div class="product__right-height--value">60см</div>
@@ -3555,8 +3832,10 @@
             <div class="product__info-name">Santa Trinita</div>
             <div class="product__info-price">150 000 <span>₽</span></div>
           </div>
-          <div class="product__bottom-btn btn-buy">
-            <img src="./assets/images/common/cart_yellow.svg" alt="Купить" /> Купить
+          <div class="product__bottom-btn btn-border">
+            <button class="product__buy btn-buy">
+              <img src="./assets/images/common/cart_yellow.svg" alt="Купить" /> Купить
+            </button>
           </div>
         </div>
         <div class="product__bottom-mob">
@@ -3566,8 +3845,10 @@
           </div>
           <div class="product__price">
             <div class="product__price-count">150 000 <span>₽</span></div>
-            <div class="product__bottom-btn btn-buy">
-              <img src="./assets/images/common/cart_yellow.svg" alt="Купить" /> Купить
+            <div class="product__bottom-btn btn-border">
+              <button class="product__buy btn-buy">
+                <img src="./assets/images/common/cart_yellow.svg" alt="Купить" /> Купить
+              </button>
             </div>
           </div>
         </div>

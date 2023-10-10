@@ -4,29 +4,36 @@ import noUiSlider from 'nouislider';
 import 'nouislider/dist/nouislider.css';
 import './js/components/header';
 import './js/components/footer';
+import './js/components/categories';
 import './js/pages/home';
 import './js/pages/order';
 import './js/utils/map';
+import './js/utils/counter';
 import './index.scss';
+import 'animate.css';
+import { WOW } from 'wowjs';
+import 'wowjs/css/libs/animate.css';
 
-import { Navigation, Pagination } from 'swiper/modules';
+import { Navigation, Pagination, Mousewheel } from 'swiper/modules';
 
 const blogTop = document.querySelector('.blog__top');
-const filterBtn = document.querySelector('.category__list-filter');
-const filter = document.querySelector('.filter');
+const filterBtn = document.querySelectorAll('.category__list-filter');
 const rangeSlider = document.querySelector('.filter__price-range');
 const inputs = document.querySelectorAll('.filter__price-inp');
 
 const blogCountCurrent = document.querySelector('.blog__count-current');
 const blogCountLast = document.querySelector('.blog__count-last');
 
+new WOW().init();
+
 const swiper1 = new Swiper('.blog__list', {
+  modules: [Navigation, Pagination, Mousewheel],
   slidesPerView: 1,
   spaceBetween: 30,
   pagination: {
     el: '.blog__list-pagination',
   },
-  modules: [Navigation, Pagination],
+  mousewheel: true,
   on: {
     init: function (swiper) {
       if (window.innerWidth < 769) {
@@ -60,12 +67,15 @@ const swiper1 = new Swiper('.blog__list', {
 });
 
 filterBtn &&
-  filterBtn.addEventListener('click', () => {
-    filter.classList.toggle('visible');
+  filterBtn.forEach((item) => {
+    item.addEventListener('click', () => {
+      const filter = item.closest('.category__list-wrapper').querySelector('.filter');
+      filter.classList.toggle('visible');
+    });
   });
 
 if (rangeSlider) {
-  noUiSlider.create(rangeSlider, {
+  var sliderInstance = noUiSlider.create(rangeSlider, {
     start: [67000, 521000],
     // step: [1],
     connect: true,
@@ -83,9 +93,24 @@ if (rangeSlider) {
       },
     },
   });
-
+  const tooltips = document.querySelectorAll('.noUi-tooltip');
   rangeSlider.noUiSlider.on('update', function (values, handle) {
     inputs[handle].value = values[handle];
+    console.log('handle: ', tooltips[1]);
+    var percentage =
+      ((parseFloat(values[handle]) - sliderInstance.options.range.min) /
+        (sliderInstance.options.range.max - sliderInstance.options.range.min)) *
+      100000;
+    console.log('percentage: ', percentage);
+    // Если ползунок находится в промежутке от 80% до 100%
+    if (percentage >= 90) {
+      // Вычисляем новое значение left в зависимости от процента и ширины родительского блока
+      var leftValue = -60 + (percentage - 90); // 1.5 - это коэффициент, на который вы хотите уменьшить left
+      tooltips[1].style.left = leftValue + '%';
+    } else {
+      // Сбрасываем стиль left, если ползунок находится вне промежутка от 80% до 100%
+      tooltips[1].style.left = '50%';
+    }
   });
 
   inputs.forEach(function (input, handle) {

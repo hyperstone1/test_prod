@@ -1,0 +1,1 @@
+export const product = document.querySelector('.product');
