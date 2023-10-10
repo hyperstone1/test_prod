@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <svg xmlns="http://www.w3.org/2000/svg" width="29" height="30" viewBox="0 0 29 30" fill="none">
   <rect x="-0.000976562" y="15.0005" width="20" height="20" rx="2" transform="rotate(-45 -0.000976562 15.0005)" fill="white"/>
   <circle cx="13.999" cy="15.0005" r="8" fill="#BAA5EC"/>
@@ -6,12 +5,3 @@
   <circle cx="13.999" cy="15.0005" r="3" fill="#BAA5EC"/>
   <rect width="2.70716" height="2.70716" rx="1.35358" transform="matrix(0.707107 -0.707107 0.707055 0.707158 11.999 15.0005)" fill="white"/>
 </svg>
-=======
-<svg xmlns="http://www.w3.org/2000/svg" width="43" height="43" viewBox="0 0 43 43" fill="none">
-  <rect x="0.27832" y="21.7866" width="30" height="30" rx="3" transform="rotate(-45.7499 0.27832 21.7866)" fill="white"/>
-  <circle cx="20.7273" cy="21.2902" r="12" transform="rotate(-0.749901 20.7273 21.2902)" fill="#BAA5EC"/>
-  <rect x="13.6484" y="13.833" width="15" height="15" rx="3" transform="rotate(-0.749901 13.6484 13.833)" fill="white"/>
-  <circle cx="20.6662" cy="21.6912" r="5.5" transform="rotate(-0.749901 20.6662 21.6912)" fill="#BAA5EC"/>
-  <rect width="3" height="3" rx="1" transform="matrix(0.697792 -0.716301 0.71625 0.697844 18.9561 21.3711)" fill="white"/>
-</svg>
->>>>>>> main
