@@ -1,279 +1,552 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ 34:
+/***/ 192:
 /***/ (function() {
 
-document.addEventListener('DOMContentLoaded', () => {
-  const cards = document.querySelectorAll('.banner__card');
-  const bannerContainer = document.querySelector('.banner__slider');
-  const modal = document.querySelector('.modal');
-  const headerControls = document.querySelectorAll('.control');
-  const modalClose = document.querySelectorAll('.modal__close');
-  const formLinks = document.querySelectorAll('.form__navigation-link');
-  const register = modal.querySelector('.register');
-  const login = modal.querySelector('.login');
-  const formBtns = modal.querySelectorAll('.form-btn');
-  let currentCard = null; // переменная для хранения текущей карточки
-  const forms = document.querySelectorAll('.form');
-  const inputEmail = document.querySelectorAll('.form__input-email');
-  const inputPass = document.querySelectorAll('.form__input-pass');
-  const linkContacts = document.querySelectorAll('.link-contacts');
-  const contacts = document.querySelector('.contacts');
-  const close = contacts.querySelector('.contacts__close');
-  const productClose = document.querySelector('.product__close');
-  const product = document.querySelector('.product');
+// const minus = document.querySelector('.card__price-counter--minus');
+// const plus = document.querySelector('.card__price-counter--plus');
+// const count = document.querySelector('.card__price-counter--count');
+const counters = document.querySelectorAll('.card__price-counter');
+counters.forEach(counter => {
+  const minus = counter.querySelector('.card__price-counter--minus');
+  const plus = counter.querySelector('.card__price-counter--plus');
+  const count = counter.querySelector('.card__price-counter--count');
+  let currentValue = 1;
+  minus.addEventListener('click', () => {
+    if (currentValue > 1) {
+      currentValue--;
+      updateCounter();
+    }
+  });
+  plus.addEventListener('click', () => {
+    currentValue++;
+    updateCounter();
+  });
+  function updateCounter() {
+    count.textContent = currentValue;
+  }
+});
 
-  //кнопки купить
-  const resultCardBuy = document.querySelectorAll('.result__card-buy');
-  const bannerBuyBtn = document.querySelectorAll('.banner__buy-btn');
-  const categoriesCard = document.querySelectorAll('.categories__card');
-  const categoryList = document.querySelectorAll('.category__list');
-  const listClose = document.querySelector('.list__close');
-  const list = document.querySelector('.list');
+/***/ }),
 
-  // const cartBtn = document.querySelector('. cart-btn');
+/***/ 541:
+/***/ (function() {
 
-  // cartBtn.addEventListener('click', () => {
+(function() {
+  var MutationObserver, Util, WeakMap, getComputedStyle, getComputedStyleRX,
+    bind = function(fn, me){ return function(){ return fn.apply(me, arguments); }; },
+    indexOf = [].indexOf || function(item) { for (var i = 0, l = this.length; i < l; i++) { if (i in this && this[i] === item) return i; } return -1; };
 
-  // })
+  Util = (function() {
+    function Util() {}
 
-  categoriesCard.forEach(card => {
-    card.addEventListener('click', () => {
-      const category = card.dataset.category;
-      categoryList.forEach(list => {
-        if (list.classList.contains(category)) {
-          categoryList.forEach(list => {
-            list.classList.remove('visible');
-          });
-          categoriesCard.forEach(item => {
-            item.classList.remove('active');
-          });
-          card.classList.toggle('active');
-          const container = list.closest('.list');
-          console.log('container: ', container);
-          container.classList.add('visible');
-          list.classList.add('visible');
-          console.log(list);
+    Util.prototype.extend = function(custom, defaults) {
+      var key, value;
+      for (key in defaults) {
+        value = defaults[key];
+        if (custom[key] == null) {
+          custom[key] = value;
+        }
+      }
+      return custom;
+    };
+
+    Util.prototype.isMobile = function(agent) {
+      return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(agent);
+    };
+
+    Util.prototype.createEvent = function(event, bubble, cancel, detail) {
+      var customEvent;
+      if (bubble == null) {
+        bubble = false;
+      }
+      if (cancel == null) {
+        cancel = false;
+      }
+      if (detail == null) {
+        detail = null;
+      }
+      if (document.createEvent != null) {
+        customEvent = document.createEvent('CustomEvent');
+        customEvent.initCustomEvent(event, bubble, cancel, detail);
+      } else if (document.createEventObject != null) {
+        customEvent = document.createEventObject();
+        customEvent.eventType = event;
+      } else {
+        customEvent.eventName = event;
+      }
+      return customEvent;
+    };
+
+    Util.prototype.emitEvent = function(elem, event) {
+      if (elem.dispatchEvent != null) {
+        return elem.dispatchEvent(event);
+      } else if (event in (elem != null)) {
+        return elem[event]();
+      } else if (("on" + event) in (elem != null)) {
+        return elem["on" + event]();
+      }
+    };
+
+    Util.prototype.addEvent = function(elem, event, fn) {
+      if (elem.addEventListener != null) {
+        return elem.addEventListener(event, fn, false);
+      } else if (elem.attachEvent != null) {
+        return elem.attachEvent("on" + event, fn);
+      } else {
+        return elem[event] = fn;
+      }
+    };
+
+    Util.prototype.removeEvent = function(elem, event, fn) {
+      if (elem.removeEventListener != null) {
+        return elem.removeEventListener(event, fn, false);
+      } else if (elem.detachEvent != null) {
+        return elem.detachEvent("on" + event, fn);
+      } else {
+        return delete elem[event];
+      }
+    };
+
+    Util.prototype.innerHeight = function() {
+      if ('innerHeight' in window) {
+        return window.innerHeight;
+      } else {
+        return document.documentElement.clientHeight;
+      }
+    };
+
+    return Util;
+
+  })();
+
+  WeakMap = this.WeakMap || this.MozWeakMap || (WeakMap = (function() {
+    function WeakMap() {
+      this.keys = [];
+      this.values = [];
+    }
+
+    WeakMap.prototype.get = function(key) {
+      var i, item, j, len, ref;
+      ref = this.keys;
+      for (i = j = 0, len = ref.length; j < len; i = ++j) {
+        item = ref[i];
+        if (item === key) {
+          return this.values[i];
+        }
+      }
+    };
+
+    WeakMap.prototype.set = function(key, value) {
+      var i, item, j, len, ref;
+      ref = this.keys;
+      for (i = j = 0, len = ref.length; j < len; i = ++j) {
+        item = ref[i];
+        if (item === key) {
+          this.values[i] = value;
           return;
         }
-      });
-    });
-  });
-  listClose && listClose.addEventListener('click', () => {
-    list.classList.remove('visible');
-    categoryList.forEach(list => {
-      list.classList.remove('visible');
-    });
-    categoriesCard.forEach(item => {
-      item.classList.remove('active');
-    });
-  });
-  bannerBuyBtn.length > 0 && bannerBuyBtn.forEach(btn => {
-    btn.addEventListener('click', () => {
-      product.classList.add('visible');
-    });
-  });
-  resultCardBuy.length > 0 && resultCardBuy.forEach(btn => {
-    btn.addEventListener('click', () => {
-      product.classList.add('visible');
-    });
-  });
-  linkContacts.forEach(btn => {
-    btn.addEventListener('click', () => {
-      contacts.classList.add('visible');
-    });
-  });
-  close && close.addEventListener('click', () => {
-    contacts.classList.remove('visible');
-  });
-  productClose && productClose.addEventListener('click', () => {
-    product.classList.remove('visible');
-  });
-  contacts.addEventListener('click', e => {
-    const target = e.target.closest('.contacts_container');
-    if (!target) {
-      contacts.classList.remove('visible');
-    }
-  });
-  inputEmail.forEach(emailInput => {
-    emailInput.addEventListener('input', function () {
-      const isValid = validateEmail(this.value);
-      this.classList.toggle('invalid', !isValid);
-    });
-  });
-  inputPass.forEach(passInput => {
-    passInput.addEventListener('input', function () {
-      console.log(this.value);
-      const isValid = validatePass(this.value);
-      this.classList.toggle('invalid', !isValid);
-    });
-  });
-
-  // Функция валидации email
-  function validateEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-  }
-  // Функция валидации password
-  function validatePass(pass) {
-    const passRegex = /^(?=.*\d).{3,}$/;
-    console.log(pass);
-    return passRegex.test(pass);
-  }
-  const oldPrices = document.querySelectorAll('.result__card-price--old');
-  forms.forEach(form => {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      const email = e.target.querySelector('input[name="email"]');
-      const pass = e.target.querySelector('input[name="pass"]');
-      const passConfirm = e.target.querySelector('.pass-confirm');
-      console.log(`${email}, ${pass}`);
-      // Проверяем валидность каждого поля
-      const isEmailValid = validateEmail(email.value);
-      const isPassValid = validatePass(pass.value);
-      const isPassConfirm = null;
-      let dataModal = null;
-      if (form.classList.contains('form-register')) {
-        dataModal = 'register';
-        isPassConfirm = passConfirm.value === pass.value;
-        console.log('isPassConfirm: ', isPassConfirm);
-        // Если все поля прошли валидацию, отправляем форму
-        !isPassConfirm ? (passConfirm.classList.add('invalid'), pass.classList.add('invalid')) : (passConfirm.classList.remove('invalid'), pass.classList.remove('invalid'));
-      } else {
-        dataModal = 'login';
       }
-      if (isEmailValid && isPassValid) {
-        const data = new FormData(form);
-        modal.classList.remove(dataModal);
-        localStorage.setItem('auth', true);
-        oldPrices.forEach(item => {
-          item.classList.add('visible');
+      this.keys.push(key);
+      return this.values.push(value);
+    };
+
+    return WeakMap;
+
+  })());
+
+  MutationObserver = this.MutationObserver || this.WebkitMutationObserver || this.MozMutationObserver || (MutationObserver = (function() {
+    function MutationObserver() {
+      if (typeof console !== "undefined" && console !== null) {
+        console.warn('MutationObserver is not supported by your browser.');
+      }
+      if (typeof console !== "undefined" && console !== null) {
+        console.warn('WOW.js cannot detect dom mutations, please call .sync() after loading new content.');
+      }
+    }
+
+    MutationObserver.notSupported = true;
+
+    MutationObserver.prototype.observe = function() {};
+
+    return MutationObserver;
+
+  })());
+
+  getComputedStyle = this.getComputedStyle || function(el, pseudo) {
+    this.getPropertyValue = function(prop) {
+      var ref;
+      if (prop === 'float') {
+        prop = 'styleFloat';
+      }
+      if (getComputedStyleRX.test(prop)) {
+        prop.replace(getComputedStyleRX, function(_, _char) {
+          return _char.toUpperCase();
         });
-        const authorized = document.querySelectorAll('.cabinet__list');
-        authorized.forEach(cabinet => {
-          if (cabinet.classList.contains('authorized')) {
-            cabinet.classList.add('visible');
-          } else {
-            cabinet.classList.add('invisible');
+      }
+      return ((ref = el.currentStyle) != null ? ref[prop] : void 0) || null;
+    };
+    return this;
+  };
+
+  getComputedStyleRX = /(\-([a-z]){1})/g;
+
+  this.WOW = (function() {
+    WOW.prototype.defaults = {
+      boxClass: 'wow',
+      animateClass: 'animated',
+      offset: 0,
+      mobile: true,
+      live: true,
+      callback: null,
+      scrollContainer: null
+    };
+
+    function WOW(options) {
+      if (options == null) {
+        options = {};
+      }
+      this.scrollCallback = bind(this.scrollCallback, this);
+      this.scrollHandler = bind(this.scrollHandler, this);
+      this.resetAnimation = bind(this.resetAnimation, this);
+      this.start = bind(this.start, this);
+      this.scrolled = true;
+      this.config = this.util().extend(options, this.defaults);
+      if (options.scrollContainer != null) {
+        this.config.scrollContainer = document.querySelector(options.scrollContainer);
+      }
+      this.animationNameCache = new WeakMap();
+      this.wowEvent = this.util().createEvent(this.config.boxClass);
+    }
+
+    WOW.prototype.init = function() {
+      var ref;
+      this.element = window.document.documentElement;
+      if ((ref = document.readyState) === "interactive" || ref === "complete") {
+        this.start();
+      } else {
+        this.util().addEvent(document, 'DOMContentLoaded', this.start);
+      }
+      return this.finished = [];
+    };
+
+    WOW.prototype.start = function() {
+      var box, j, len, ref;
+      this.stopped = false;
+      this.boxes = (function() {
+        var j, len, ref, results;
+        ref = this.element.querySelectorAll("." + this.config.boxClass);
+        results = [];
+        for (j = 0, len = ref.length; j < len; j++) {
+          box = ref[j];
+          results.push(box);
+        }
+        return results;
+      }).call(this);
+      this.all = (function() {
+        var j, len, ref, results;
+        ref = this.boxes;
+        results = [];
+        for (j = 0, len = ref.length; j < len; j++) {
+          box = ref[j];
+          results.push(box);
+        }
+        return results;
+      }).call(this);
+      if (this.boxes.length) {
+        if (this.disabled()) {
+          this.resetStyle();
+        } else {
+          ref = this.boxes;
+          for (j = 0, len = ref.length; j < len; j++) {
+            box = ref[j];
+            this.applyStyle(box, true);
           }
-        });
-        fetch('/register', {
-          method: 'POST',
-          body: data
-        }).then(response => response.text()).then(result => console.log(result)).catch(error => console.log(error));
-        console.log(data);
-      } else {
-        email.classList.toggle('invalid', !isEmailValid);
-        pass.classList.toggle('invalid', !isPassValid);
+        }
       }
-    });
-  });
-
-  // // отправка формы
-  // formBtns.forEach((btn) => {
-  //   btn.addEventListener('click', (e) => {
-  //     e.preventDefault();
-  //     const type = e.target.closest('.login');
-  //     if (type) {
-  //       // ваш запрос при логине
-
-  //       console.log('type: ', type);
-  //     } else {
-  //       // ваш запрос при регистрации
-  //       console.log('type: ', type);
-  //     }
-  //   });
-  // });
-
-  modalClose.forEach(btn => {
-    btn.addEventListener('click', () => {
-      console.log('click');
-      modal.classList.remove('favorites', 'login', 'cart', 'register');
-    });
-  });
-  const modalTypes = ['login', 'register', 'favorites', 'cart'];
-  headerControls.forEach(control => {
-    control.addEventListener('click', e => {
-      if (!control.classList.contains('header__controls-user')) {
-        const dataModal = control.dataset.modal;
-        const modalType = modal.querySelector(`.${dataModal}`);
-        headerControls.forEach(item => {
-          const dataModal1 = item.dataset.modal;
-          const modalType1 = modal.querySelector(`.${dataModal1}`);
-          modalType1.classList.remove('visible');
-          modal.classList.remove(dataModal1);
-        });
-        modalTypes.forEach(item => {
-          const modalType1 = modal.querySelector(`.${item}`);
-          modalType1.classList.remove('visible');
-          modal.classList.remove(item);
-        });
-        modalType.classList.add('visible');
-        console.log(modalType);
-        modal.classList.add(dataModal);
+      if (!this.disabled()) {
+        this.util().addEvent(this.config.scrollContainer || window, 'scroll', this.scrollHandler);
+        this.util().addEvent(window, 'resize', this.scrollHandler);
+        this.interval = setInterval(this.scrollCallback, 50);
       }
-    });
-  });
-  formLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (link.classList.contains('link-register')) {
-        modal.classList.remove('favorites', 'login', 'cart', 'register');
-        modal.classList.add('register');
-        login.classList.remove('visible');
-        register.classList.add('visible');
-      } else {
-        modal.classList.remove('favorites', 'login', 'cart', 'register');
-        modal.classList.add('login');
-        register.classList.remove('visible');
-        login.classList.add('visible');
+      if (this.config.live) {
+        return new MutationObserver((function(_this) {
+          return function(records) {
+            var k, len1, node, record, results;
+            results = [];
+            for (k = 0, len1 = records.length; k < len1; k++) {
+              record = records[k];
+              results.push((function() {
+                var l, len2, ref1, results1;
+                ref1 = record.addedNodes || [];
+                results1 = [];
+                for (l = 0, len2 = ref1.length; l < len2; l++) {
+                  node = ref1[l];
+                  results1.push(this.doSync(node));
+                }
+                return results1;
+              }).call(_this));
+            }
+            return results;
+          };
+        })(this)).observe(document.body, {
+          childList: true,
+          subtree: true
+        });
       }
-    });
-  });
+    };
 
-  // window.addEventListener('mousemove', (e) => {
+    WOW.prototype.stop = function() {
+      this.stopped = true;
+      this.util().removeEvent(this.config.scrollContainer || window, 'scroll', this.scrollHandler);
+      this.util().removeEvent(window, 'resize', this.scrollHandler);
+      if (this.interval != null) {
+        return clearInterval(this.interval);
+      }
+    };
 
-  // });
-  function handleHover(e) {
-    const targetCard = e.target.closest('.banner__card'); // находим ближайшую карточку
-    const isInsideBanner = e.target.closest('.banner__slider'); // проверяем, находится ли курсор внутри блока .banner__slider
+    WOW.prototype.sync = function(element) {
+      if (MutationObserver.notSupported) {
+        return this.doSync(this.element);
+      }
+    };
 
-    if (isInsideBanner) {
-      // если курсор находится внутри блока .banner__slider
-      if (targetCard && targetCard !== currentCard) {
-        // если нашли новую карточку
-        currentCard = targetCard; // обновляем текущую карточку
-        cards.forEach(card => {
-          if (card === currentCard) {
-            // если это текущая карточка
-            card.classList.remove('blur');
-            card.classList.add('hover');
+    WOW.prototype.doSync = function(element) {
+      var box, j, len, ref, results;
+      if (element == null) {
+        element = this.element;
+      }
+      if (element.nodeType !== 1) {
+        return;
+      }
+      element = element.parentNode || element;
+      ref = element.querySelectorAll("." + this.config.boxClass);
+      results = [];
+      for (j = 0, len = ref.length; j < len; j++) {
+        box = ref[j];
+        if (indexOf.call(this.all, box) < 0) {
+          this.boxes.push(box);
+          this.all.push(box);
+          if (this.stopped || this.disabled()) {
+            this.resetStyle();
           } else {
-            // если это другая карточка
-            card.classList.add('blur');
-            card.classList.remove('hover');
+            this.applyStyle(box, true);
           }
+          results.push(this.scrolled = true);
+        } else {
+          results.push(void 0);
+        }
+      }
+      return results;
+    };
+
+    WOW.prototype.show = function(box) {
+      this.applyStyle(box);
+      box.className = box.className + " " + this.config.animateClass;
+      if (this.config.callback != null) {
+        this.config.callback(box);
+      }
+      this.util().emitEvent(box, this.wowEvent);
+      this.util().addEvent(box, 'animationend', this.resetAnimation);
+      this.util().addEvent(box, 'oanimationend', this.resetAnimation);
+      this.util().addEvent(box, 'webkitAnimationEnd', this.resetAnimation);
+      this.util().addEvent(box, 'MSAnimationEnd', this.resetAnimation);
+      return box;
+    };
+
+    WOW.prototype.applyStyle = function(box, hidden) {
+      var delay, duration, iteration;
+      duration = box.getAttribute('data-wow-duration');
+      delay = box.getAttribute('data-wow-delay');
+      iteration = box.getAttribute('data-wow-iteration');
+      return this.animate((function(_this) {
+        return function() {
+          return _this.customStyle(box, hidden, duration, delay, iteration);
+        };
+      })(this));
+    };
+
+    WOW.prototype.animate = (function() {
+      if ('requestAnimationFrame' in window) {
+        return function(callback) {
+          return window.requestAnimationFrame(callback);
+        };
+      } else {
+        return function(callback) {
+          return callback();
+        };
+      }
+    })();
+
+    WOW.prototype.resetStyle = function() {
+      var box, j, len, ref, results;
+      ref = this.boxes;
+      results = [];
+      for (j = 0, len = ref.length; j < len; j++) {
+        box = ref[j];
+        results.push(box.style.visibility = 'visible');
+      }
+      return results;
+    };
+
+    WOW.prototype.resetAnimation = function(event) {
+      var target;
+      if (event.type.toLowerCase().indexOf('animationend') >= 0) {
+        target = event.target || event.srcElement;
+        return target.className = target.className.replace(this.config.animateClass, '').trim();
+      }
+    };
+
+    WOW.prototype.customStyle = function(box, hidden, duration, delay, iteration) {
+      if (hidden) {
+        this.cacheAnimationName(box);
+      }
+      box.style.visibility = hidden ? 'hidden' : 'visible';
+      if (duration) {
+        this.vendorSet(box.style, {
+          animationDuration: duration
         });
       }
-    } else {
-      // если курсор не находится внутри блока .banner__slider
-      currentCard = null; // сбрасываем текущую карточку
-      cards.forEach(card => {
-        card.classList.remove('blur');
-        card.classList.remove('hover');
+      if (delay) {
+        this.vendorSet(box.style, {
+          animationDelay: delay
+        });
+      }
+      if (iteration) {
+        this.vendorSet(box.style, {
+          animationIterationCount: iteration
+        });
+      }
+      this.vendorSet(box.style, {
+        animationName: hidden ? 'none' : this.cachedAnimationName(box)
       });
-    }
-  }
-  function handleResize() {
-    if (window.innerWidth < 769) {
-      window.removeEventListener('mousemove', handleHover);
-    } else {
-      window.addEventListener('mousemove', handleHover);
-    }
-  }
-  window.addEventListener('resize', handleResize);
-  window.addEventListener('load', handleResize);
-});
+      return box;
+    };
+
+    WOW.prototype.vendors = ["moz", "webkit"];
+
+    WOW.prototype.vendorSet = function(elem, properties) {
+      var name, results, value, vendor;
+      results = [];
+      for (name in properties) {
+        value = properties[name];
+        elem["" + name] = value;
+        results.push((function() {
+          var j, len, ref, results1;
+          ref = this.vendors;
+          results1 = [];
+          for (j = 0, len = ref.length; j < len; j++) {
+            vendor = ref[j];
+            results1.push(elem["" + vendor + (name.charAt(0).toUpperCase()) + (name.substr(1))] = value);
+          }
+          return results1;
+        }).call(this));
+      }
+      return results;
+    };
+
+    WOW.prototype.vendorCSS = function(elem, property) {
+      var j, len, ref, result, style, vendor;
+      style = getComputedStyle(elem);
+      result = style.getPropertyCSSValue(property);
+      ref = this.vendors;
+      for (j = 0, len = ref.length; j < len; j++) {
+        vendor = ref[j];
+        result = result || style.getPropertyCSSValue("-" + vendor + "-" + property);
+      }
+      return result;
+    };
+
+    WOW.prototype.animationName = function(box) {
+      var animationName, error;
+      try {
+        animationName = this.vendorCSS(box, 'animation-name').cssText;
+      } catch (error) {
+        animationName = getComputedStyle(box).getPropertyValue('animation-name');
+      }
+      if (animationName === 'none') {
+        return '';
+      } else {
+        return animationName;
+      }
+    };
+
+    WOW.prototype.cacheAnimationName = function(box) {
+      return this.animationNameCache.set(box, this.animationName(box));
+    };
+
+    WOW.prototype.cachedAnimationName = function(box) {
+      return this.animationNameCache.get(box);
+    };
+
+    WOW.prototype.scrollHandler = function() {
+      return this.scrolled = true;
+    };
+
+    WOW.prototype.scrollCallback = function() {
+      var box;
+      if (this.scrolled) {
+        this.scrolled = false;
+        this.boxes = (function() {
+          var j, len, ref, results;
+          ref = this.boxes;
+          results = [];
+          for (j = 0, len = ref.length; j < len; j++) {
+            box = ref[j];
+            if (!(box)) {
+              continue;
+            }
+            if (this.isVisible(box)) {
+              this.show(box);
+              continue;
+            }
+            results.push(box);
+          }
+          return results;
+        }).call(this);
+        if (!(this.boxes.length || this.config.live)) {
+          return this.stop();
+        }
+      }
+    };
+
+    WOW.prototype.offsetTop = function(element) {
+      var top;
+      while (element.offsetTop === void 0) {
+        element = element.parentNode;
+      }
+      top = element.offsetTop;
+      while (element = element.offsetParent) {
+        top += element.offsetTop;
+      }
+      return top;
+    };
+
+    WOW.prototype.isVisible = function(box) {
+      var bottom, offset, top, viewBottom, viewTop;
+      offset = box.getAttribute('data-wow-offset') || this.config.offset;
+      viewTop = (this.config.scrollContainer && this.config.scrollContainer.scrollTop) || window.pageYOffset;
+      viewBottom = viewTop + Math.min(this.element.clientHeight, this.util().innerHeight()) - offset;
+      top = this.offsetTop(box);
+      bottom = top + box.clientHeight;
+      return top <= viewBottom && bottom >= viewTop;
+    };
+
+    WOW.prototype.util = function() {
+      return this._util != null ? this._util : this._util = new Util();
+    };
+
+    WOW.prototype.disabled = function() {
+      return !this.config.mobile && this.util().isMobile(navigator.userAgent);
+    };
+
+    return WOW;
+
+  })();
+
+}).call(this);
+
 
 /***/ })
 
@@ -297,7 +570,7 @@ document.addEventListener('DOMContentLoaded', () => {
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __webpack_require__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -6773,8 +7046,397 @@ searchBtn.addEventListener('click', e => {
     }
   }
 });
-// EXTERNAL MODULE: ./src/js/pages/home.js
-var home = __webpack_require__(34);
+;// CONCATENATED MODULE: ./src/js/utils/constants.js
+const product = document.querySelector('.product');
+;// CONCATENATED MODULE: ./src/js/components/categories.js
+
+document.addEventListener('DOMContentLoaded', function () {
+  const categoriesCard = document.querySelectorAll('.categories__card');
+  const categoryList = document.querySelectorAll('.category__list');
+  const listClose = document.querySelector('.list__close');
+  const list = document.querySelector('.list');
+  const filters = document.querySelectorAll('.filter');
+
+  //   const resultBuyBtn = document.querySelectorAll('.result__card-buy');
+  //   const cart = [];
+  const loadItems = {
+    mirrors: {
+      items: 5
+    },
+    lamps: {
+      items: 5
+    },
+    chairs: {
+      items: 5
+    },
+    tables: {
+      items: 5
+    }
+  };
+
+  //   resultBuyBtn.forEach((btn) => {
+  //     btn.addEventListener('click', (e) => {
+  //       const item = e.target.closest('.result__card');
+  //       const name = item.querySelector('.result__card-name').textContent;
+  //       const category = item.querySelector('.result__card-info--category').textContent;
+  //       const price = item.querySelector('.result__card-price--count').textContent;
+  //       const color = item.querySelector('.result__card-color').dataset.color;
+  //       const img = item.querySelector('.result__card-img img').getAttribute('src');
+
+  //       const itemCart = { name, category, price, color, img };
+  //       cart.push(itemCart);
+  //       console.log(itemCart);
+  //     });
+  //   });
+
+  categoriesCard.forEach(card => {
+    card.addEventListener('click', () => {
+      const category = card.dataset.category;
+      let isVisible = false; // Флаг для отслеживания состояния видимости
+
+      categoryList.forEach(list => {
+        if (list.classList.contains(category)) {
+          if (list.classList.contains('visible')) {
+            isVisible = true; // Устанавливаем флаг в true, если элемент уже видим
+          }
+
+          categoryList.forEach(list => {
+            list.classList.remove('visible');
+            const cards = list.querySelectorAll('.result__card');
+            const btn = list.querySelector('.btn-load');
+            cards.forEach((item, id) => {
+              if (id > 4) {
+                item.classList.remove('visible');
+              }
+              item.addEventListener('click', e => {
+                console.log(e.target);
+                if (!e.target.classList.contains('result__card-buy--icon') && !e.target.classList.contains('result__card-buy--text') && !e.target.classList.contains('result__card-buy')) {
+                  product.classList.add('visible');
+                }
+              });
+            });
+            for (let category in loadItems) {
+              loadItems[category].items = 5;
+            }
+            if (loadItems[category].items >= cards.length) {
+              btn.style.display = 'none'; // Если все элементы загружены, скрываем кнопку
+            } else {
+              btn.style.display = 'flex';
+            }
+          });
+          categoriesCard.forEach(item => {
+            item.classList.remove('active');
+          });
+          filters.forEach(filter => {
+            filter.classList.remove('visible');
+          });
+          if (!isVisible) {
+            card.classList.add('active');
+            const container = list.closest('.list');
+            container.classList.add('visible');
+            list.classList.add('visible');
+          }
+          return;
+        }
+      });
+    });
+  });
+  listClose && listClose.addEventListener('click', () => {
+    list.classList.remove('visible');
+    categoryList.forEach(list => {
+      list.classList.remove('visible');
+    });
+    categoriesCard.forEach(item => {
+      item.classList.remove('active');
+    });
+  });
+  categoryList.forEach(list => {
+    const btn = list.querySelector('.btn-load');
+    const resultCards = list.querySelectorAll('.result__card');
+    const category = list.dataset.category;
+    btn.addEventListener('click', function () {
+      loadItems[category].items += 5;
+      for (let i = 0; i < resultCards.length; i++) {
+        if (i < loadItems[category].items) {
+          resultCards[i].classList.add('visible');
+        } else {
+          resultCards[i].classList.remove('visible');
+        }
+      }
+      console.log(loadItems[category].items >= resultCards.length);
+      if (loadItems[category].items >= resultCards.length) {
+        btn.style.display = 'none'; // Если все элементы загружены, скрываем кнопку
+      } else {
+        btn.style.display = 'block';
+      }
+    });
+    for (let i = 0; i < resultCards.length; i++) {
+      if (i < loadItems[category].items) {
+        resultCards[i].classList.add('visible');
+      } else {
+        resultCards[i].classList.remove('visible');
+      }
+    }
+    if (loadItems[category].items >= resultCards.length) {
+      btn.style.display = 'none'; // Если все элементы загружены, скрываем кнопку
+    }
+  });
+});
+;// CONCATENATED MODULE: ./src/js/pages/home.js
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.banner__card');
+  const bannerContainer = document.querySelector('.banner__slider');
+  const modal = document.querySelector('.modal');
+  const headerControls = document.querySelectorAll('.control');
+  const modalClose = document.querySelectorAll('.modal__close');
+  const formLinks = document.querySelectorAll('.form__navigation-link');
+  const register = modal.querySelector('.register');
+  const login = modal.querySelector('.login');
+  const formBtns = modal.querySelectorAll('.form-btn');
+  let currentCard = null; // переменная для хранения текущей карточки
+  const forms = document.querySelectorAll('.form');
+  const inputEmail = document.querySelectorAll('.form__input-email');
+  const inputPass = document.querySelectorAll('.form__input-pass');
+  const linkContacts = document.querySelectorAll('.link-contacts');
+  const contacts = document.querySelector('.contacts');
+  const close = contacts.querySelector('.contacts__close');
+  const productClose = document.querySelector('.product__close');
+
+  //кнопки купить
+  const resultCardBuy = document.querySelectorAll('.result__card-buy');
+  const bannerBuyBtn = document.querySelectorAll('.banner__buy-btn');
+
+  // const cartBtn = document.querySelector('. cart-btn');
+
+  // cartBtn.addEventListener('click', () => {
+
+  // })
+  const btnFavorites = document.querySelectorAll('.product__right-favorites');
+  const cardBtnFavorites = document.querySelectorAll('.card__item-favorite--btn');
+  const categoryCards = document.querySelectorAll('.category__list .result__card');
+  btnFavorites.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+    });
+  });
+  cardBtnFavorites.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btn.classList.toggle('active');
+    });
+  });
+  bannerBuyBtn.length > 0 && bannerBuyBtn.forEach(btn => {
+    btn.addEventListener('click', () => {
+      product.classList.add('visible');
+    });
+  });
+
+  // resultCardBuy.length > 0 &&
+  //   resultCardBuy.forEach((btn) => {
+  //     btn.addEventListener('click', () => {
+  //       product.classList.add('visible');
+  //     });
+  //   });
+
+  linkContacts.forEach(btn => {
+    btn.addEventListener('click', () => {
+      contacts.classList.add('visible');
+    });
+  });
+  close && close.addEventListener('click', () => {
+    contacts.classList.remove('visible');
+  });
+  productClose && productClose.addEventListener('click', () => {
+    product.classList.remove('visible');
+  });
+  contacts.addEventListener('click', e => {
+    const target = e.target.closest('.contacts_container');
+    if (!target) {
+      contacts.classList.remove('visible');
+    }
+  });
+  inputEmail.forEach(emailInput => {
+    emailInput.addEventListener('input', function () {
+      const isValid = validateEmail(this.value);
+      this.classList.toggle('invalid', !isValid);
+    });
+  });
+  inputPass.forEach(passInput => {
+    passInput.addEventListener('input', function () {
+      console.log(this.value);
+      const isValid = validatePass(this.value);
+      this.classList.toggle('invalid', !isValid);
+    });
+  });
+
+  // Функция валидации email
+  function validateEmail(email) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  }
+  // Функция валидации password
+  function validatePass(pass) {
+    const passRegex = /^(?=.*\d).{3,}$/;
+    console.log(pass);
+    return passRegex.test(pass);
+  }
+  const oldPrices = document.querySelectorAll('.result__card-price--old');
+  forms.forEach(form => {
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      const email = e.target.querySelector('input[name="email"]');
+      const pass = e.target.querySelector('input[name="pass"]');
+      const passConfirm = e.target.querySelector('.pass-confirm');
+      console.log(`${email}, ${pass}`);
+      // Проверяем валидность каждого поля
+      const isEmailValid = validateEmail(email.value);
+      const isPassValid = validatePass(pass.value);
+      const isPassConfirm = null;
+      let dataModal = null;
+      if (form.classList.contains('form-register')) {
+        dataModal = 'register';
+        isPassConfirm = passConfirm.value === pass.value;
+        console.log('isPassConfirm: ', isPassConfirm);
+        // Если все поля прошли валидацию, отправляем форму
+        !isPassConfirm ? (passConfirm.classList.add('invalid'), pass.classList.add('invalid')) : (passConfirm.classList.remove('invalid'), pass.classList.remove('invalid'));
+      } else {
+        dataModal = 'login';
+      }
+      if (isEmailValid && isPassValid) {
+        const data = new FormData(form);
+        modal.classList.remove(dataModal);
+        localStorage.setItem('auth', true);
+        oldPrices.forEach(item => {
+          item.classList.add('visible');
+        });
+        const authorized = document.querySelectorAll('.cabinet__list');
+        authorized.forEach(cabinet => {
+          if (cabinet.classList.contains('authorized')) {
+            cabinet.classList.add('visible');
+          } else {
+            cabinet.classList.add('invisible');
+          }
+        });
+        fetch('/register', {
+          method: 'POST',
+          body: data
+        }).then(response => response.text()).then(result => console.log(result)).catch(error => console.log(error));
+        console.log(data);
+      } else {
+        email.classList.toggle('invalid', !isEmailValid);
+        pass.classList.toggle('invalid', !isPassValid);
+      }
+    });
+  });
+
+  // // отправка формы
+  // formBtns.forEach((btn) => {
+  //   btn.addEventListener('click', (e) => {
+  //     e.preventDefault();
+  //     const type = e.target.closest('.login');
+  //     if (type) {
+  //       // ваш запрос при логине
+
+  //       console.log('type: ', type);
+  //     } else {
+  //       // ваш запрос при регистрации
+  //       console.log('type: ', type);
+  //     }
+  //   });
+  // });
+
+  modalClose.forEach(btn => {
+    btn.addEventListener('click', () => {
+      console.log('click');
+      modal.classList.remove('favorites', 'login', 'cart', 'register');
+    });
+  });
+  const modalTypes = ['login', 'register', 'favorites', 'cart'];
+  headerControls.forEach(control => {
+    control.addEventListener('click', e => {
+      if (!control.classList.contains('header__controls-user')) {
+        const dataModal = control.dataset.modal;
+        if (modal.classList.contains(dataModal)) {
+          modal.classList.remove(dataModal);
+        } else {
+          const modalType = modal.querySelector(`.${dataModal}`);
+          headerControls.forEach(item => {
+            const dataModal1 = item.dataset.modal;
+            const modalType1 = modal.querySelector(`.${dataModal1}`);
+            modalType1.classList.remove('visible');
+            modal.classList.remove(dataModal1);
+          });
+          modalTypes.forEach(item => {
+            const modalType1 = modal.querySelector(`.${item}`);
+            modalType1.classList.remove('visible');
+            modal.classList.remove(item);
+          });
+          modalType.classList.add('visible');
+          console.log(modalType);
+          modal.classList.add(dataModal);
+        }
+      }
+    });
+  });
+  formLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (link.classList.contains('link-register')) {
+        modal.classList.remove('favorites', 'login', 'cart', 'register');
+        modal.classList.add('register');
+        login.classList.remove('visible');
+        register.classList.add('visible');
+      } else {
+        modal.classList.remove('favorites', 'login', 'cart', 'register');
+        modal.classList.add('login');
+        register.classList.remove('visible');
+        login.classList.add('visible');
+      }
+    });
+  });
+
+  // window.addEventListener('mousemove', (e) => {
+
+  // });
+  function handleHover(e) {
+    const targetCard = e.target.closest('.banner__card'); // находим ближайшую карточку
+    const isInsideBanner = e.target.closest('.banner__slider'); // проверяем, находится ли курсор внутри блока .banner__slider
+
+    if (isInsideBanner) {
+      // если курсор находится внутри блока .banner__slider
+      if (targetCard && targetCard !== currentCard) {
+        // если нашли новую карточку
+        currentCard = targetCard; // обновляем текущую карточку
+        cards.forEach(card => {
+          if (card === currentCard) {
+            // если это текущая карточка
+            card.classList.remove('blur');
+            card.classList.add('hover');
+          } else {
+            // если это другая карточка
+            card.classList.add('blur');
+            card.classList.remove('hover');
+          }
+        });
+      }
+    } else {
+      // если курсор не находится внутри блока .banner__slider
+      currentCard = null; // сбрасываем текущую карточку
+      cards.forEach(card => {
+        card.classList.remove('blur');
+        card.classList.remove('hover');
+      });
+    }
+  }
+  function handleResize() {
+    if (window.innerWidth < 769) {
+      window.removeEventListener('mousemove', handleHover);
+    } else {
+      window.addEventListener('mousemove', handleHover);
+    }
+  }
+  window.addEventListener('resize', handleResize);
+  window.addEventListener('load', handleResize);
+});
 ;// CONCATENATED MODULE: ./node_modules/imask/esm/core/utils.js
 /** Checks if value is string */
 function isString(str) {
@@ -10294,6 +10956,10 @@ document.addEventListener('DOMContentLoaded', () => {
     return name.length >= 3 && name.length <= 14;
   }
 });
+// EXTERNAL MODULE: ./src/js/utils/counter.js
+var counter = __webpack_require__(192);
+// EXTERNAL MODULE: ./node_modules/wowjs/dist/wow.js
+var wow = __webpack_require__(541);
 ;// CONCATENATED MODULE: ./node_modules/swiper/modules/virtual.mjs
 
 
@@ -10756,7 +11422,7 @@ function Mousewheel(_ref) {
     on,
     emit
   } = _ref;
-  const window = getWindow();
+  const window = ssr_window_esm_getWindow();
   extendParams({
     mousewheel: {
       enabled: false,
@@ -10774,7 +11440,7 @@ function Mousewheel(_ref) {
     enabled: false
   };
   let timeout;
-  let lastScrollTime = now();
+  let lastScrollTime = utils_now();
   let lastEventBeforeSnap;
   const recentWheelEvents = [];
   function normalize(e) {
@@ -10858,7 +11524,7 @@ function Mousewheel(_ref) {
       // Prevent if delta of wheel scroll delta is below configured threshold
       return false;
     }
-    if (swiper.params.mousewheel.thresholdTime && now() - lastScrollTime < swiper.params.mousewheel.thresholdTime) {
+    if (swiper.params.mousewheel.thresholdTime && utils_now() - lastScrollTime < swiper.params.mousewheel.thresholdTime) {
       // Prevent if time between scrolls is below configured threshold
       return false;
     }
@@ -10866,7 +11532,7 @@ function Mousewheel(_ref) {
     // If the movement is NOT big enough and
     // if the last time the user scrolled was too close to the current one (avoid continuously triggering the slider):
     //   Don't go any further (avoid insignificant scroll movement).
-    if (newEvent.delta >= 6 && now() - lastScrollTime < 60) {
+    if (newEvent.delta >= 6 && utils_now() - lastScrollTime < 60) {
       // Return false as a default
       return true;
     }
@@ -10957,7 +11623,7 @@ function Mousewheel(_ref) {
     if (!swiper.params.freeMode || !swiper.params.freeMode.enabled) {
       // Register the new event in a variable which stores the relevant data
       const newEvent = {
-        time: now(),
+        time: utils_now(),
         delta: Math.abs(delta),
         direction: Math.sign(delta),
         raw: event
@@ -10998,7 +11664,7 @@ function Mousewheel(_ref) {
       // or if it's a new scroll (larger delta or inverse sign as last event before
       // an end-of-momentum snap).
       const newEvent = {
-        time: now(),
+        time: utils_now(),
         delta: Math.abs(delta),
         direction: Math.sign(delta)
       };
@@ -11058,7 +11724,7 @@ function Mousewheel(_ref) {
             const snapToThreshold = delta > 0 ? 0.8 : 0.2;
             lastEventBeforeSnap = newEvent;
             recentWheelEvents.splice(0);
-            timeout = nextTick(() => {
+            timeout = utils_nextTick(() => {
               swiper.slideToClosest(swiper.params.speed, true, undefined, snapToThreshold);
             }, 0); // no delay; move on next tick
           }
@@ -11067,7 +11733,7 @@ function Mousewheel(_ref) {
             // if we get here, then we haven't detected the end of a momentum scroll, so
             // we'll consider a scroll "complete" when there haven't been any wheel events
             // for 500ms.
-            timeout = nextTick(() => {
+            timeout = utils_nextTick(() => {
               const snapToThreshold = 0.5;
               lastEventBeforeSnap = newEvent;
               recentWheelEvents.splice(0);
@@ -15236,28 +15902,43 @@ function EffectCards(_ref) {
 
 
 
+
+
+
+
+
 const blogTop = document.querySelector('.blog__top');
-const filterBtn = document.querySelector('.category__list-filter');
-const filter = document.querySelector('.filter');
-const rangeSlider = document.querySelector('.filter__price-range');
-const inputs = document.querySelectorAll('.filter__price-inp');
+const filterBtn = document.querySelectorAll('.category__list-filter');
+const rangeSliders = document.querySelectorAll('.filter__price-range');
 const blogCountCurrent = document.querySelector('.blog__count-current');
 const blogCountLast = document.querySelector('.blog__count-last');
+new wow.WOW().init();
 const swiper1 = new Swiper('.blog__list', {
+  modules: [Navigation, Pagination, Mousewheel],
   slidesPerView: 1,
   spaceBetween: 30,
   pagination: {
     el: '.blog__list-pagination'
   },
-  modules: [Navigation, Pagination],
+  mousewheel: true,
   on: {
     init: function (swiper) {
-      console.log(swiper.slides);
-      blogCountCurrent.textContent = swiper.activeIndex + 3;
-      blogCountLast.textContent = swiper.slides.length;
+      if (window.innerWidth < 769) {
+        console.log(swiper.slides);
+        blogCountCurrent.textContent = 1;
+        blogCountLast.textContent = swiper.slides.length;
+      } else {
+        console.log(swiper.slides);
+        blogCountCurrent.textContent = swiper.activeIndex + 3;
+        blogCountLast.textContent = swiper.slides.length;
+      }
     },
     slideChange: function (swiper) {
-      blogCountCurrent.textContent = swiper.activeIndex + 3;
+      if (window.innerWidth < 769) {
+        blogCountCurrent.textContent = swiper.activeIndex + 1;
+      } else {
+        blogCountCurrent.textContent = swiper.activeIndex + 3;
+      }
     }
   },
   breakpoints: {
@@ -15271,50 +15952,69 @@ const swiper1 = new Swiper('.blog__list', {
     }
   }
 });
-filterBtn && filterBtn.addEventListener('click', () => {
-  filter.classList.toggle('visible');
+filterBtn && filterBtn.forEach(item => {
+  item.addEventListener('click', () => {
+    const filter = item.closest('.category__list-wrapper').querySelector('.filter');
+    filter.classList.toggle('visible');
+  });
 });
-if (rangeSlider) {
-  nouislider.create(rangeSlider, {
-    start: [67000, 521000],
-    // step: [1],
-    connect: true,
-    tooltips: true,
-    range: {
-      min: [0],
-      max: [521000]
-    },
-    format: {
-      to: function (value) {
-        return parseInt(value).toLocaleString('ru-RU') + '';
+if (rangeSliders.length > 0) {
+  rangeSliders.forEach(rangeSlider => {
+    const inputs = rangeSlider.closest('.filter__price').querySelectorAll('.filter__price-inp');
+    var sliderInstance = nouislider.create(rangeSlider, {
+      start: [67000, 401000],
+      // step: [1],
+      connect: true,
+      tooltips: true,
+      range: {
+        min: [0],
+        max: [521000]
       },
-      from: function (value) {
-        return value.replace('', '');
-      }
-    }
-  });
-  rangeSlider.noUiSlider.on('update', function (values, handle) {
-    inputs[handle].value = values[handle];
-  });
-  inputs.forEach(function (input, handle) {
-    input.addEventListener('input', function () {
-      const value = this.value;
-      const selectionStart = this.selectionStart;
-      const prevValueLength = value.length;
-      const newValue = value.replace(/[^0-9]/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ' ').toLocaleString('ru-RU');
-      const diff = newValue.length - prevValueLength;
-      this.value = newValue;
-
-      // Корректировка позиции курсора при удалении первого символа
-      if (diff < 0 && selectionStart <= newValue.indexOf(' ')) {
-        this.setSelectionRange(newValue.indexOf(' ') + 1, newValue.indexOf(' ') + 1);
-      } else {
-        this.setSelectionRange(selectionStart + diff, selectionStart + diff);
+      format: {
+        to: function (value) {
+          return parseInt(value).toLocaleString('ru-RU') + '';
+        },
+        from: function (value) {
+          return value.replace('', '');
+        }
       }
     });
-    input.addEventListener('change', function () {
-      console.log(this.value.replace(/\s/g, ''));
-      rangeSlider.noUiSlider.setHandle(handle, this.value.replace(/\s/g, ''));
+    const tooltips = document.querySelectorAll('.noUi-tooltip');
+    rangeSlider.noUiSlider.on('update', function (values, handle) {
+      inputs[handle].value = values[handle];
+      console.log('handle: ', tooltips[1]);
+      var percentage = (parseFloat(values[handle]) - sliderInstance.options.range.min) / (sliderInstance.options.range.max - sliderInstance.options.range.min) * 100000;
+      console.log('percentage: ', percentage);
+      // Если ползунок находится в промежутке от 80% до 100%
+      if (percentage >= 90) {
+        // Вычисляем новое значение left в зависимости от процента и ширины родительского блока
+        var leftValue = -60 + (percentage - 90); // 1.5 - это коэффициент, на который вы хотите уменьшить left
+        tooltips[1].style.left = leftValue + '%';
+      } else {
+        // Сбрасываем стиль left, если ползунок находится вне промежутка от 80% до 100%
+        tooltips[1].style.left = '50%';
+      }
+    });
+    inputs.forEach(function (input, handle) {
+      input.addEventListener('input', function () {
+        const value = this.value;
+        const selectionStart = this.selectionStart;
+        const prevValueLength = value.length;
+        const newValue = value.replace(/[^0-9]/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ' ').toLocaleString('ru-RU');
+        const diff = newValue.length - prevValueLength;
+        this.value = newValue;
+
+        // Корректировка позиции курсора при удалении первого символа
+        if (diff < 0 && selectionStart <= newValue.indexOf(' ')) {
+          this.setSelectionRange(newValue.indexOf(' ') + 1, newValue.indexOf(' ') + 1);
+        } else {
+          this.setSelectionRange(selectionStart + diff, selectionStart + diff);
+        }
+      });
+      input.addEventListener('change', function () {
+        console.log(this.value.replace(/\s/g, ''));
+        rangeSlider.noUiSlider.setHandle(handle, this.value.replace(/\s/g, ''));
+      });
     });
   });
 }

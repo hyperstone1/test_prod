@@ -3,17 +3,30 @@ import { searchContainer } from './ui/search';
 const search = document.querySelector('.header__search-inp');
 const searchBtn = document.querySelector('.header__search');
 const header = document.querySelector('.header');
-const headerContainer = document.querySelector('.header_container');
+export const headerContainer = document.querySelector('.header_container');
 const result = document.querySelector('.result');
-const cabinet = document.querySelector('.cabinet');
+export const cabinet = document.querySelector('.cabinet');
 const controlsUser = document.querySelector('.header__controls-user');
 const cabinetItems = document.querySelectorAll('.cabinet__list-item');
 const modal = document.querySelector('.modal');
 const formLogin = document.querySelector('.form-login');
 const headerControls = document.querySelectorAll('.control');
 const modalTypes = ['login', 'register', 'favorites', 'cart'];
-controlsUser.addEventListener('click', () => {
+controlsUser.addEventListener('click', (e) => {
   cabinet.classList.toggle('visible');
+  const modalTypeAuth = e.target.dataset.modal;
+  if (!modalTypeAuth) {
+    modal.className = 'modal';
+  }
+  const searchBar = document.querySelector('.search_bar');
+  if (searchBar) {
+    searchBar.classList.add('opac');
+    setTimeout(() => {
+      searchBar.classList.remove('opac');
+      searchBar.classList.remove('visible');
+      searchBar.remove();
+    }, 480);
+  }
 });
 
 cabinetItems.forEach((item) => {
@@ -62,6 +75,9 @@ searchBtn.addEventListener('click', (e) => {
     if (!isSearch) {
       searchContainer.classList.add('appear');
       headerContainer.appendChild(searchContainer);
+      modal.className = 'modal';
+      cabinet.className = 'cabinet';
+
       searchContainer.addEventListener('input', (event) => {
         // здесь ваш код для поиска
         console.log(event.target.value);
