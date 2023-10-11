@@ -206,7 +206,7 @@ html {
           top: 61%;
           // font-size: 21.2rem;
           transform: translate(-50%, -50%) scale(3);
-          font-family: 'Floreste-wavy';
+          font-family: "Floreste-wavy";
         }
         &-image {
           width: 34.772rem;
@@ -325,7 +325,8 @@ html {
       top: 50%;
       left: 50%;
       transform: translate(-50%, -32.6rem) translateZ(0);
-      transition: width 0.7s ease-in-out, height 0.7s ease-in-out, transform 0.7s ease-in-out;
+      transition: width 0.7s ease-in-out, height 0.7s ease-in-out,
+        transform 0.7s ease-in-out;
       will-change: width, height;
     }
     &-img {
@@ -349,12 +350,13 @@ html {
       width: max-content;
       transform: translate(-50%, 50%) translateZ(0) scale(1);
       color: #cbb6ff;
-      font-family: 'Floreste-wavy';
+      font-family: "Floreste-wavy";
       font-size: 7rem;
       font-weight: 400;
       line-height: 1;
       text-transform: uppercase;
-      transition: top 0.7s ease-in-out, transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+      transition: top 0.7s ease-in-out, transform 0.7s ease-in-out,
+        opacity 0.7s ease-in-out;
       will-change: top;
       opacity: 1;
       z-index: 1;
@@ -423,13 +425,13 @@ html {
     position: relative;
     width: 100%;
     // justify-content: center;
-    font-family: 'Floreste-wavy';
+    font-family: "Floreste-wavy";
     margin-top: 2.8rem;
     font-size: 2.8rem;
     opacity: 1;
     transform: translate(0, 0);
-    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out, font-size 0.7s ease-in-out,
-      color 0.7s ease-in-out;
+    transition: opacity 0.7s ease-in-out, transform 0.7s ease-in-out,
+      font-size 0.7s ease-in-out, color 0.7s ease-in-out;
     &-currency {
       margin-top: -0.2rem;
       font-size: 2rem;
@@ -470,7 +472,7 @@ html {
     }
     &-number {
       opacity: 0;
-      font-family: 'Floreste-wavy';
+      font-family: "Floreste-wavy";
       font-size: 4rem;
       font-style: normal;
       font-weight: 400;
@@ -510,7 +512,7 @@ html {
       height: 2.4rem;
     }
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -587,7 +589,7 @@ html {
       display: flex;
       align-items: center;
       flex-direction: column;
-      background-image: url('../assets/images/common/card_border.svg');
+      background-image: url("../assets/images/common/card_border.svg");
       background-size: 100% 100%;
       background-repeat: no-repeat;
     }
@@ -619,7 +621,7 @@ html {
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Floreste-wavy';
+      font-family: "Floreste-wavy";
       transform: rotate(-23deg);
       background-color: #fa8fef;
       border-radius: 50%;
@@ -720,7 +722,7 @@ html {
       transform: rotate(3.993deg);
       background-color: #cbb6ff;
       color: #fff;
-      font-family: 'Floreste-wavy';
+      font-family: "Floreste-wavy";
       font-size: 4rem;
       font-weight: 400;
       line-height: normal;
@@ -742,7 +744,7 @@ html {
       transform: rotate(-1.997deg);
       background-color: #aeceff;
       color: #fff;
-      font-family: 'Floreste-wavy';
+      font-family: "Floreste-wavy";
       font-size: 4rem;
       font-weight: 400;
       line-height: normal;
@@ -789,14 +791,14 @@ html {
     display: flex;
     align-items: center;
     gap: 12.5rem;
-    font-family: 'Floreste-wavy';
+    font-family: "Floreste-wavy";
     font-size: 4rem;
     font-weight: 400;
     line-height: normal;
     letter-spacing: 0.16rem;
     text-transform: uppercase;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 50%;
@@ -830,7 +832,7 @@ html {
       width: 58rem;
       height: 34.3rem;
       background-color: #cbb6ff;
-      clip-path: url('#card_clip');
+      clip-path: url("#card_clip");
     }
     &-top {
       width: 23.1rem;
@@ -883,7 +885,7 @@ html {
       align-items: center;
       justify-content: center;
       flex-direction: column;
-      font-family: 'Floreste-wavy';
+      font-family: "Floreste-wavy";
       transform: rotate(346deg);
       background-color: rgba(255, 255, 255, 0.19);
       border: 2px solid #d9ff5a;
@@ -1192,7 +1194,7 @@ html {
       text-transform: uppercase;
     }
     &-total {
-      font-family: 'Floreste-wavy';
+      font-family: "Floreste-wavy";
 
       display: flex;
       align-items: flex-start;
@@ -1200,7 +1202,7 @@ html {
       b {
         display: flex;
         align-items: flex-start;
-        font-family: 'Euclid Circular A';
+        font-family: "Euclid Circular A";
         margin-top: -0.5rem;
         font-size: 2rem;
         font-style: normal;
@@ -1256,7 +1258,7 @@ html {
       //   z-index: -1;
       // }
       &--number {
-        font-family: 'Floreste-wavy';
+        font-family: "Floreste-wavy";
         font-size: 4.1rem;
         font-weight: 400;
         letter-spacing: 0.164rem;
@@ -1330,7 +1332,7 @@ html {
     font-weight: 500;
     line-height: 1.2;
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -1417,7 +1419,7 @@ html {
       display: flex;
       align-items: center;
       gap: 2.5rem;
-      font-family: 'URWGeometricExt';
+      font-family: "URWGeometricExt";
       font-size: 1.8rem;
       font-weight: 700;
       line-height: 29px; /* 161.111% */
@@ -1447,7 +1449,7 @@ html {
     &-number {
       padding-top: 2.4rem;
       margin-bottom: 4rem;
-      font-family: 'Floreste-wavy';
+      font-family: "Floreste-wavy";
       font-size: 4rem;
       font-weight: 400;
       line-height: normal;
@@ -1577,7 +1579,7 @@ html {
     -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     color: rgba(203, 182, 255, 0.6);
-    font-family: 'Floreste-wavy';
+    font-family: "Floreste-wavy";
     font-size: 21.2rem;
     font-weight: 400;
     line-height: normal;
@@ -1817,7 +1819,7 @@ html {
       gap: 0.7rem;
       align-items: flex-start;
       &--count {
-        font-family: 'Floreste-wavy';
+        font-family: "Floreste-wavy";
         font-size: 2.8rem;
         font-weight: 400;
         line-height: normal;
@@ -1842,7 +1844,7 @@ html {
           flex-direction: row;
         }
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: 60%;
           left: 50%;
@@ -1854,7 +1856,7 @@ html {
         }
         .result__card-price--count {
           color: #fff;
-          font-family: 'Floreste-wavy';
+          font-family: "Floreste-wavy";
           font-size: 2rem;
           font-weight: 400;
           line-height: normal;
@@ -1909,7 +1911,7 @@ html {
       left: 50%;
       transform: translate(-50%, -50%);
       color: rgba(203, 182, 255, 0.6);
-      font-family: 'Floreste-wavy';
+      font-family: "Floreste-wavy";
       font-size: 21.2rem;
       font-weight: 400;
       line-height: normal;
@@ -1995,7 +1997,7 @@ html {
   &-border {
     position: relative;
     &::after {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -2011,7 +2013,7 @@ html {
       z-index: -2;
     }
     &::before {
-      content: '';
+      content: "";
       position: absolute;
       top: 0;
       left: 0;
@@ -2047,7 +2049,7 @@ html {
     height: 2.4rem;
   }
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -0.5rem;
     left: 0;
@@ -2146,6 +2148,8 @@ html {
       width: 7.9rem;
       height: 7.9rem;
       svg {
+        width: 100%;
+        height: 100%;
         circle:nth-of-type(2) {
           stroke: #d9ff5a;
         }
@@ -2208,7 +2212,7 @@ html {
     transform: translate(-50%, -50%);
     color: rgba(203, 182, 255, 0.4);
     text-align: center;
-    font-family: 'Floreste-wavy';
+    font-family: "Floreste-wavy";
     font-size: 33.4rem;
     font-weight: 400;
     line-height: normal;
@@ -2239,7 +2243,7 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-    font-family: 'Floreste-wavy';
+    font-family: "Floreste-wavy";
     &-name {
       font-size: 10rem;
       font-weight: 400;
@@ -2318,7 +2322,7 @@ html {
       &.input__lower {
         position: relative;
         &::before {
-          content: 'от';
+          content: "от";
           position: absolute;
           left: 1.2rem;
           top: 50%;
@@ -2332,7 +2336,7 @@ html {
       &.input__higher {
         position: relative;
         &::before {
-          content: 'до';
+          content: "до";
           position: absolute;
           left: 1.2rem;
           top: 50%;
@@ -2410,7 +2414,7 @@ html {
   box-shadow: none;
 }
 .noUi-touch-area {
-  background-image: url('../assets/images/common/range.svg');
+  background-image: url("../assets/images/common/range.svg");
   background-size: 100% 100%;
 }
 .noUi-horizontal .noUi-handle {
@@ -2479,7 +2483,7 @@ html {
         color: #ae97e8;
         border-radius: 10rem;
         background: #fff;
-        font-family: 'Floreste-wavy';
+        font-family: "Floreste-wavy";
         font-size: 4.8rem;
         font-weight: 400;
         line-height: normal;
@@ -2648,7 +2652,7 @@ html {
         left: -36.2rem;
         gap: 7.2rem;
         transform: rotate(354deg);
-        font-family: 'Floreste-wavy';
+        font-family: "Floreste-wavy";
         font-size: 4rem;
         font-weight: 400;
         line-height: normal;
@@ -2660,7 +2664,7 @@ html {
         left: -51.2rem;
         gap: 7.2rem;
         transform: rotate(8deg);
-        font-family: 'Floreste-wavy';
+        font-family: "Floreste-wavy";
         font-size: 4rem;
         font-weight: 400;
         line-height: normal;
@@ -2679,7 +2683,7 @@ html {
       &-wrapper {
         width: 100%;
         height: 48.6rem;
-        clip-path: url('#card_clip_mob');
+        clip-path: url("#card_clip_mob");
       }
       &-time {
         left: 14.4rem;
@@ -3203,7 +3207,7 @@ html {
         align-items: center;
         gap: 1rem;
         color: #d9ff5a;
-        font-family: 'Floreste-wavy';
+        font-family: "Floreste-wavy";
         font-size: 6rem;
         font-weight: 400;
         line-height: normal;
@@ -3212,7 +3216,7 @@ html {
         span {
           margin-top: -2.7rem;
           color: #d9ff5a;
-          font-family: 'Euclid Circular A';
+          font-family: "Euclid Circular A";
           font-size: 4rem;
           font-weight: 400;
           line-height: normal;
@@ -3292,6 +3296,15 @@ html {
       &::after {
         border-width: 1px;
       }
+    }
+    &-border {
+      border-width: 1px;
+      &::after {
+        border-width: 1px;
+      }
+    }
+    &-load {
+      display: none !important;
     }
   }
   .ymaps-2-1-79-map {
@@ -3460,6 +3473,9 @@ html {
     margin-top: 6.3rem;
     height: 100%;
     &-wrapper {
+    }
+    .result__card {
+      display: flex;
     }
     &-filter {
       display: none;
