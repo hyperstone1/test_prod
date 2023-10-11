@@ -70,7 +70,7 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-10.3%);
+    transform: translateX(-10.48%);
   }
 }
 @keyframes linesMove2 {
@@ -209,8 +209,8 @@ html {
           font-family: 'Floreste-wavy';
         }
         &-image {
-          width: 34.772rem;
-          height: 68.1rem;
+          width: 49.4rem;
+          height: 72.4rem;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -41rem) translateZ(0);
@@ -222,7 +222,7 @@ html {
           }
         }
         &-shadow {
-          display: block;
+          display: none;
           position: absolute;
           top: 18.1rem;
           left: 10.4rem;
@@ -270,8 +270,8 @@ html {
           opacity: 0;
         }
         &-image {
-          width: 21.8rem;
-          height: 35.1rem;
+          width: 23.2rem;
+          height: 34rem;
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%) translateZ(0);
@@ -319,8 +319,8 @@ html {
     }
     &-image {
       position: absolute;
-      width: 26.74rem;
-      height: 43.1rem;
+      width: 29rem;
+      height: 42.5rem;
       // margin-bottom: 9.1rem;
       top: 50%;
       left: 50%;
@@ -703,10 +703,10 @@ html {
       align-items: center;
       gap: 8.2rem;
       &.line_1 {
-        animation: linesMove2 2s linear infinite;
+        animation: linesMove2 3s linear infinite;
       }
       &.line_2 {
-        animation: linesMove 2s linear infinite;
+        animation: linesMove 3s linear infinite;
       }
     }
     &-lavender {
@@ -1036,6 +1036,7 @@ html {
     flex-direction: column;
     gap: 7rem;
     height: calc(100% - 7.5rem);
+    padding-bottom: 1rem;
     overflow-y: auto;
   }
   &__item {
@@ -1176,7 +1177,7 @@ html {
         justify-content: center;
         width: 4.6rem;
         height: 4.6rem;
-        background: #a4b4df;
+        background: rgba(255, 255, 255, 0.19);
         border-radius: 50%;
         border: 0.2rem solid #fff;
       }
@@ -1215,6 +1216,19 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    &-info {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      &--text {
+        display: flex;
+        gap: 0.7rem;
+        font-size: 2rem;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: uppercase;
+      }
+    }
     &-text {
       font-size: 2rem;
       font-weight: 500;
@@ -1229,12 +1243,24 @@ html {
       gap: 0.7rem;
       width: fit-content;
       height: fit-content;
-      padding: 5rem 5.7rem 3.6rem 5.6rem;
-      -webkit-transform: rotate(-13deg);
-      transform: rotate(-13deg);
-      border: 2px solid #d9ff5a;
-      border-radius: 50%;
-      background-color: #a3c0e8;
+      padding: 3.8rem 4.8rem 3.8rem 4.8rem;
+      font-size: 2rem;
+      font-weight: 500;
+      line-height: 1.2;
+      &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: rotate(-5.992deg);
+        transform: rotate(-5.992deg);
+        border: 0.3rem solid #d9ff5a;
+        border-radius: 50%;
+        background-color: rgba(235, 227, 255, 0.19);
+        z-index: -1;
+      }
       &--text {
         display: flex;
         gap: 0.7rem;
@@ -1263,7 +1289,7 @@ html {
         text-transform: uppercase;
       }
       &--currency {
-        margin-top: -0.1rem;
+        margin-top: -0.5rem;
         font-size: 2rem;
         font-weight: 400;
         text-transform: uppercase;
@@ -2454,13 +2480,14 @@ html {
 }
 @media (max-width: 48em) {
   .title {
-    margin-bottom: 3.5rem;
+    margin-bottom: 6.5rem;
     color: #fff;
     font-size: 4.6rem;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
+    text-align: start;
   }
   .banner {
     &_container {
@@ -2498,7 +2525,7 @@ html {
     &__card {
       padding: 0;
       padding-bottom: 3rem;
-      height: 133.2rem;
+      height: 127.2rem;
       &-text {
         width: 44rem;
         color: #fff;
@@ -2526,13 +2553,13 @@ html {
         }
         .banner__card-toast {
           position: absolute;
-          top: 52%;
+          top: 50%;
           left: 1rem;
           display: block;
           color: #d9ff5a;
           text-align: center;
           font-size: 2.4rem;
-          font-weight: 500;
+          font-weight: 400;
           line-height: normal;
           text-transform: uppercase;
         }
@@ -2544,12 +2571,12 @@ html {
           font-size: 4rem;
         }
         .banner__card-image {
-          width: 32.4rem;
-          height: 63.4rem;
-          transform: translate(-50%, -44rem);
+          width: 45.4rem;
+          height: 66.6rem;
+          transform: translate(-50%, -49rem);
         }
         .banner__card-name {
-          font-size: 4.8rem;
+          font-size: 4.5rem;
         }
         .banner__card-text--title,
         .banner__card-text--title--mob {
@@ -2646,24 +2673,24 @@ html {
     &__lines {
       &-blue {
         height: 8.4rem;
-        top: -3rem;
-        left: -36.2rem;
+        top: -11rem;
+        left: -71.2rem;
         gap: 7.2rem;
-        transform: rotate(354deg);
+        transform: rotate(351deg);
         font-family: 'Floreste-wavy';
-        font-size: 4rem;
+        font-size: 5rem;
         font-weight: 400;
         line-height: normal;
         text-transform: uppercase;
       }
       &-lavender {
         height: 8.4rem;
-        bottom: -4rem;
-        left: -51.2rem;
+        bottom: -7rem;
+        left: -62.2rem;
         gap: 7.2rem;
         transform: rotate(8deg);
         font-family: 'Floreste-wavy';
-        font-size: 4rem;
+        font-size: 5rem;
         font-weight: 400;
         line-height: normal;
         text-transform: uppercase;
@@ -2868,22 +2895,30 @@ html {
     }
     &__total {
       padding-top: 7rem;
+      &-info {
+        gap: 3rem;
+        &--text {
+          font-size: 2.5rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 153.846% */
+          text-transform: capitalize;
+        }
+      }
       &-text {
         font-size: 4rem;
       }
       &-sum {
-        padding: 4.6rem 8rem;
+        padding: 7.4rem 8rem;
         width: fit-content;
         height: fit-content;
+        font-size: 3.1rem;
         line-height: 1;
-        transform: rotate(-13deg);
-        background-color: #a3c0e8;
-        border: 2px solid #d9ff5a;
         border-radius: 50%;
         -webkit-backdrop-filter: blur(1.5rem);
         backdrop-filter: blur(1.5rem);
         border-width: 1px;
-        background-color: rgba(255, 255, 255, 0.19);
+        // background-color: rgba(255, 255, 255, 0.19);
         &--text {
           margin-top: 1rem;
           display: flex;
@@ -2891,16 +2926,19 @@ html {
           line-height: 1;
         }
         &::after {
-          display: none;
+          // display: none;
+          transform: rotate(-11.023deg);
           border-width: 1px;
           background-color: rgba(255, 255, 255, 0.19);
         }
         &--number {
           font-size: 6rem;
+          font-weight: 400;
         }
         &--currency {
-          margin-top: -0.7rem;
+          margin-top: -1.7rem;
           font-size: 4rem;
+          font-weight: 400;
         }
       }
     }
