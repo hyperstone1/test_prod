@@ -1,6 +1,8 @@
 import { product } from '../utils/constants';
 import { headerContainer, cabinet } from '../components/header';
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.banner__card');
   const bannerContainer = document.querySelector('.banner__slider');

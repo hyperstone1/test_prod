@@ -25,6 +25,16 @@ const blogCountLast = document.querySelector('.blog__count-last');
 
 new WOW().init();
 
+console.log('loaded');
+if (window.innerWidth < 480) {
+  // Получаем высоту видимой части экрана
+  const windowHeight = window.innerHeight;
+  const banner = document.querySelector('.banner');
+  console.log(banner);
+  banner.style.height = `${windowHeight}px`;
+  // Устанавливаем высоту элемента равной высоте видимой части экрана
+}
+
 const swiper1 = new Swiper('.blog__list', {
   modules: [Navigation, Pagination, Mousewheel],
   slidesPerView: 1,
