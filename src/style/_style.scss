@@ -70,7 +70,7 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(-10.48%);
+    transform: translateX(-10.4%);
   }
 }
 @keyframes linesMove2 {
@@ -78,7 +78,7 @@
     transform: translateX(0%);
   }
   100% {
-    transform: translateX(13.2%);
+    transform: translateX(13.15%);
   }
 }
 
@@ -703,10 +703,10 @@ html {
       align-items: center;
       gap: 8.2rem;
       &.line_1 {
-        animation: linesMove2 3s linear infinite;
+        animation: linesMove2 4s linear infinite;
       }
       &.line_2 {
-        animation: linesMove 3s linear infinite;
+        animation: linesMove 4s linear infinite;
       }
     }
     &-lavender {
@@ -1261,10 +1261,27 @@ html {
         background-color: rgba(235, 227, 255, 0.19);
         z-index: -1;
       }
+      &.sum--order {
+        padding: 5.2rem 5.8rem 4rem 5.8rem;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          -webkit-transform: rotate(-13deg);
+          transform: rotate(-13deg);
+          border: 0.3rem solid #d9ff5a;
+          border-radius: 50%;
+          background-color: rgba(235, 227, 255, 0.19);
+          z-index: -1;
+        }
+      }
       &--text {
         display: flex;
         gap: 0.7rem;
-        transform: rotate(13deg);
+        // transform: rotate(13deg);
         line-height: 0.7;
       }
       // &::after {
@@ -1366,7 +1383,7 @@ html {
       transform: rotate(-6deg);
       border-radius: 50%;
       z-index: 1;
-      border: 1px solid #d9ff5a;
+      border: 2px solid #d9ff5a;
     }
   }
   &__navigation {
@@ -2671,6 +2688,15 @@ html {
   }
   .greetings {
     &__lines {
+      &-container {
+        &.line_1 {
+          animation: linesMove2 3.9s linear infinite;
+        }
+        &.line_2 {
+          animation: linesMove 3.8s linear infinite;
+        }
+      }
+
       &-blue {
         height: 8.4rem;
         top: -11rem;
@@ -2954,6 +2980,7 @@ html {
       bottom: -30rem;
 
       &::before {
+        border-width: 1px;
         transform: rotate(-11.054deg);
       }
     }
