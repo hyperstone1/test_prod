@@ -1,4 +1,5 @@
 import { product } from '../utils/constants';
+import { headerContainer, cabinet } from '../components/header';
 
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.banner__card');
@@ -198,6 +199,18 @@ document.addEventListener('DOMContentLoaded', () => {
           modal.classList.remove(dataModal);
         } else {
           const modalType = modal.querySelector(`.${dataModal}`);
+          const searchBar = document.querySelector('.search_bar');
+          if (searchBar) {
+            searchBar.classList.add('opac');
+            setTimeout(() => {
+              searchBar.classList.remove('opac');
+              searchBar.classList.remove('visible');
+              searchBar.remove();
+            }, 480);
+          }
+          console.log(dataModal);
+          cabinet.className = 'cabinet';
+
           headerControls.forEach((item) => {
             const dataModal1 = item.dataset.modal;
             const modalType1 = modal.querySelector(`.${dataModal1}`);
