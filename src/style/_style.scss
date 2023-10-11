@@ -2590,7 +2590,7 @@ html {
         .banner__card-image {
           width: 45.4rem;
           height: 66.6rem;
-          transform: translate(-50%, -49rem);
+          transform: translate(-50%, -46rem);
         }
         .banner__card-name {
           font-size: 4.5rem;
@@ -3230,14 +3230,15 @@ html {
     }
 
     &__img {
-      top: 18.2rem;
-      width: 32.4rem;
-      height: 63.4rem;
+      top: 14.6rem;
+      width: 45.4rem;
+      height: 66.6rem;
       transform: translateX(-50%) translateY(0);
     }
     &__name {
-      top: 58%;
-      font-size: 14.2rem;
+      top: 60%;
+      font-size: 4.5rem;
+      transform: translate(-50%, -50%) scale(3);
     }
     &__bottom {
       display: none;
