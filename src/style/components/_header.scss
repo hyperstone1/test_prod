@@ -73,11 +73,16 @@
     align-items: center;
     gap: 3.6rem;
     &-favorites,
-    &-user,
-    &-cart {
+    &-user {
       img {
         width: 2.2rem;
         height: 2rem;
+      }
+    }
+    &-cart{
+      img {
+        width: 2.4rem;
+        height: 2.2rem;
       }
     }
     &-contacts--mob {
