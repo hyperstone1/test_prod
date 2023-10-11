@@ -29,6 +29,7 @@ const swiper1 = new Swiper('.blog__list', {
   modules: [Navigation, Pagination, Mousewheel],
   slidesPerView: 1,
   spaceBetween: 30,
+  speed: 600,
   pagination: {
     el: '.blog__list-pagination',
   },
