@@ -3566,3 +3566,14 @@ html {
     }
   }
 }
+@media (max-width: 30em) {
+  .banner{
+    height: 100vh;
+    &_container{
+      height: 100%;
+    }
+    &__card{
+      height: 100%;
+    }
+  }
+}
