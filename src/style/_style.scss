@@ -1034,6 +1034,8 @@ html {
   &__list {
     display: flex;
     flex-direction: column;
+    padding-right: 1rem;
+    margin-right: -1rem;
     gap: 7rem;
     height: calc(100% - 7.5rem);
     padding-bottom: 1rem;
@@ -1324,6 +1326,7 @@ html {
   }
 }
 ::-webkit-scrollbar {
+
   width: 0.5rem;
 }
 ::-webkit-scrollbar-thumb {
@@ -2236,8 +2239,8 @@ html {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 31rem;
-    height: 60.6rem;
+    width: 49.4rem;
+    height: 72.4rem;
     margin-top: 3rem;
     transform: translateX(-50%) translateY(-70%);
     img {
@@ -3567,12 +3570,12 @@ html {
   }
 }
 @media (max-width: 30em) {
-  .banner{
+  .banner {
     height: 100vh;
-    &_container{
+    &_container {
       height: 100%;
     }
-    &__card{
+    &__card {
       height: 100%;
     }
   }
