@@ -6949,8 +6949,21 @@ const modal = document.querySelector('.modal');
 const formLogin = document.querySelector('.form-login');
 const headerControls = document.querySelectorAll('.control');
 const modalTypes = ['login', 'register', 'favorites', 'cart'];
-controlsUser.addEventListener('click', () => {
+controlsUser.addEventListener('click', e => {
   cabinet.classList.toggle('visible');
+  const modalTypeAuth = e.target.dataset.modal;
+  if (!modalTypeAuth) {
+    modal.className = 'modal';
+  }
+  const searchBar = document.querySelector('.search_bar');
+  if (searchBar) {
+    searchBar.classList.add('opac');
+    setTimeout(() => {
+      searchBar.classList.remove('opac');
+      searchBar.classList.remove('visible');
+      searchBar.remove();
+    }, 480);
+  }
 });
 cabinetItems.forEach(item => {
   item.addEventListener('click', () => {
@@ -6996,6 +7009,8 @@ searchBtn.addEventListener('click', e => {
     if (!isSearch) {
       searchContainer.classList.add('appear');
       headerContainer.appendChild(searchContainer);
+      modal.className = 'modal';
+      cabinet.className = 'cabinet';
       searchContainer.addEventListener('input', event => {
         // здесь ваш код для поиска
         console.log(event.target.value);
@@ -7184,6 +7199,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 ;// CONCATENATED MODULE: ./src/js/pages/home.js
 
+
 document.addEventListener('DOMContentLoaded', () => {
   const cards = document.querySelectorAll('.banner__card');
   const bannerContainer = document.querySelector('.banner__slider');
@@ -7360,6 +7376,17 @@ document.addEventListener('DOMContentLoaded', () => {
           modal.classList.remove(dataModal);
         } else {
           const modalType = modal.querySelector(`.${dataModal}`);
+          const searchBar = document.querySelector('.search_bar');
+          if (searchBar) {
+            searchBar.classList.add('opac');
+            setTimeout(() => {
+              searchBar.classList.remove('opac');
+              searchBar.classList.remove('visible');
+              searchBar.remove();
+            }, 480);
+          }
+          console.log(dataModal);
+          cabinet.className = 'cabinet';
           headerControls.forEach(item => {
             const dataModal1 = item.dataset.modal;
             const modalType1 = modal.querySelector(`.${dataModal1}`);
@@ -15913,10 +15940,21 @@ const rangeSliders = document.querySelectorAll('.filter__price-range');
 const blogCountCurrent = document.querySelector('.blog__count-current');
 const blogCountLast = document.querySelector('.blog__count-last');
 new wow.WOW().init();
+console.log('loaded');
+if (window.innerWidth < 480) {
+  // Получаем высоту видимой части экрана
+  const windowHeight = window.innerHeight;
+  const banner = document.querySelector('.banner');
+  console.log(banner);
+  banner.style.height = `${windowHeight}px`;
+  // Устанавливаем высоту элемента равной высоте видимой части экрана
+}
+
 const swiper1 = new Swiper('.blog__list', {
   modules: [Navigation, Pagination, Mousewheel],
   slidesPerView: 1,
   spaceBetween: 30,
+  speed: 600,
   pagination: {
     el: '.blog__list-pagination'
   },
